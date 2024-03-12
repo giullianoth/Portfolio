@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    @include setBrowserCore(box-sizing, border-box);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-raleway;
+    font-size: $font-size-default;
+    color: $color-white;
+    background-color: $color-gunmetal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-poppins;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    @include setBrowserCore(object-fit, cover, ("o"));
+    @include setBrowserCore(object-position, center, ("o"));
+}
+
+input, select, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}

@@ -1,0 +1,142 @@
+// THEME
+@mixin theme() {
+    .th- {
+        @content;
+    }
+}
+
+// CONTAINER
+@mixin containerFluid($fillScreen: false) {
+    width: 100%;
+
+    @if $fillScreen == true {
+        height: 100%;
+    }
+}
+
+@mixin container($maxWidth: $container-max-width, $padding: $container-padding-inline) {
+    max-width: $maxWidth;
+    padding-inline: $padding;
+    margin: 0 auto;
+}
+
+@mixin containerSpacing1($spacing: $container-spacing-block) {
+    margin-block: $spacing;
+}
+
+@mixin containerSpacing2($spacing: $container-spacing-block) {
+    padding-block: $spacing;
+}
+
+// BROWSER CORE ATTRIBUTES
+@mixin setBrowserCore($attr, $value, $cores: $browser-cores-default) {
+    #{$attr}: #{$value};
+
+    @each $core in $cores {
+        -#{$core}-#{$attr}: #{$value};
+    }
+}
+
+// BORDER RADIUS
+@mixin borderRadius($radius) {
+    @include setBrowserCore(border-radius, $radius);
+}
+
+@mixin rounded() {
+    @include borderRadius(50%);
+}// FLEXBOX
+@mixin flex($justifyContent: center, $alignItems: center, $flexWrap: wrap) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+}
+
+@mixin flexBasis($basis, $gap: 0) {
+    @if $gap !=0 {
+        flex-basis: calc($basis - $gap);
+    }
+
+    @else {
+        flex-basis: $basis;
+    }
+}
+
+@mixin flex1($gap: 0) {
+    @include flexBasis(100%, $gap);
+}
+
+@mixin flex2($gap: 0) {
+    @include flexBasis(calc(100% / 2), $gap);
+}
+
+@mixin flex3($gap: 0) {
+    @include flexBasis(calc(100% / 3), $gap);
+}
+
+@mixin flex4($gap: 0) {
+    @include flexBasis(calc(100% / 4), $gap);
+}
+
+// POSITION
+// Relative
+@mixin relative() {
+    position: relative;
+}
+
+// Absolute
+@mixin absolute($top: 0, $left: 0) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absoluteFull($top: 0, $left: 0, $fillScreen: false) {
+    @include absolute($top, $left);
+    @include containerFluid($fillScreen);
+}
+
+// Fixed
+@mixin fixed($top: 0, $left: 0) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
+
+@mixin fixedFull($top: 0, $left: 0, $fillScreen: false) {
+    @include fixed($top, $left);
+    @include containerFluid($fillScreen);
+}
+
+// BACKGROUND IMAGE
+@mixin backgroundImage($image: "", $repeat: no-repeat, $size: cover, $position: center center) {
+    @if $image != "" {
+        background-image: url("#{$image-path}/#{$image}");
+    }
+
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $position;
+}
+
+// TRANSITIONS AND ANIMATIONS
+@mixin transition($property: all, $duration: $transition-duration-default, $timingFunction: ease, $delay: 0s) {
+    transition: $property $duration $timingFunction $delay;
+}
+
+// RESPONSIVE DESIGN
+@mixin setResponsiveDesign($screenWidth, $isMaxWidth: false) {    
+    $width: calc($screenWidth - 1px);
+
+    @if $isMaxWidth == true {
+        @media screen and (max-width: $screenWidth) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
