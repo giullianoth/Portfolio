@@ -6,6 +6,13 @@ const menuIcon = document.querySelector(".j_menu_icon"),
     menuWrapper = document.querySelector(".j_menu_wrapper")
 
 export default function menuCollapse() {
+    window.addEventListener("resize", ({ target }) => {
+        if (target.innerWidth >= 900) {
+            menuIcon.classList.remove("active")
+            menuWrapper.classList.remove("active")
+        }
+    })
+
     menuIcon.addEventListener("click", () => {
 
         if (!isVisible(menuOverlay)) {

@@ -63,6 +63,11 @@ li {
         width: auto;
         padding-block: 40px;
 
+        @include setResponsiveDesign($breakpoint-desktop-sd) {
+            justify-content: flex-start;
+            padding-block: 40px 0;
+        }
+
         a {
             @include flex;
             width: 45px;
@@ -71,6 +76,18 @@ li {
             @include rounded;
             font-size: 1.6em;
             color: $color-moonstone;
+
+            @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                width: 48px;
+                height: 48px;
+                font-size: 1.8em;
+            }
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                width: 54px;
+                height: 54px;
+                font-size: 2em;
+            }
         }
     }
 
@@ -79,5 +96,10 @@ li {
         height: 5px;
         background-color: $color-moonstone;
         margin-inline: auto;
+
+        @include setResponsiveDesign($breakpoint-desktop-sd) {
+            width: 180px;
+            height: 10px;
+        }
     }
 }

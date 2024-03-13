@@ -2,25 +2,30 @@
     &header {
         @include containerFluid;
         @include fixedFull;
+        @include modalIndex;
 
         &__container {
             @include container;
             @include flex(flex-end, center, nowrap);
             height: 60px;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                height: auto;
+            }
         }
 
         &__title {
             display: none;
         }
 
-        &__navigation {
-            cursor: pointer;
-        }
-
         &__menuIcon {
             height: 21px;
             @include flex;
             cursor: pointer;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                display: none;
+            }
 
             .hamb-icon {
                 width: 40px;
@@ -67,6 +72,13 @@
             @include transition;
             @include flex(flex-end);
             display: none;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                display: block !important;
+                position: static;
+                width: auto;
+                height: auto;
+            }
         }
 
         &__menuWrapper {
@@ -82,6 +94,15 @@
                 border-left: 8px solid $color-moonstone;
             }
 
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                transform: none;
+                max-width: none;
+                overflow-x: visible;
+                border: none;
+                padding: 0;
+                background: none;
+            }
+
             &.active {
                 transform: none;
             }
@@ -93,6 +114,16 @@
             @include flex(center, stretch, nowrap);
             flex-direction: column;
             font-family: $font-poppins;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                flex-direction: row;
+                gap: 40px;
+                align-items: center;
+            }
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                gap: 60px;
+            }
         }
 
         &__menuItem {
@@ -105,13 +136,29 @@
                 border-right: 6px solid transparent;
                 @include transition;
 
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    padding-right: 0;
+                    border: none;
+                    font-size: 1em;
+                }
+
                 &:has(a:hover) {
-                    border-color: $color-moonstone
+                    border-color: $color-moonstone;
                 }
 
                 a {
                     padding-block: 12px;
                     display: inline-block;
+                    @include transition;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        padding-block: 26px;
+                        border-bottom: 4px solid transparent;
+
+                        &:hover {
+                            border-color: $color-moonstone;
+                        }
+                    }
                 }
             }
 
@@ -119,6 +166,16 @@
                 a {
                     width: 100%;
                     font-size: 1.6em;
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        font-size: 1em;
+                    }
+                }
+            }
+
+            &.social {
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    display: none;
                 }
             }
         }
