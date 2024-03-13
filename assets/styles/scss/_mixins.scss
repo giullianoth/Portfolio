@@ -108,6 +108,15 @@
     @include containerFluid($fillScreen);
 }
 
+// Z-index
+@mixin modalIndex() {
+    z-index: 10;
+}
+
+@mixin overModalIndex() {
+    z-index: 11;
+}
+
 // BACKGROUND IMAGE
 @mixin backgroundImage($image: "", $repeat: no-repeat, $size: cover, $position: center center) {
     @if $image != "" {

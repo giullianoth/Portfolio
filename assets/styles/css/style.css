@@ -48,6 +48,41 @@ li {
   list-style: none;
 }
 
+.th-button {
+  background-color: #3AAFC9;
+  display: inline-block;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+.th-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: auto;
+  padding-block: 40px;
+}
+.th-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #3AAFC9;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  font-size: 1.6em;
+  color: #3AAFC9;
+}
+
 /* HEADER CONFIG */
 .th-header {
   width: 100%;
@@ -78,6 +113,7 @@ li {
   background-color: #FFF;
   position: relative;
   transition: all 0.3s ease 0s;
+  z-index: 11;
 }
 .th-header__menuIcon .hamb-icon::before {
   content: "";
@@ -114,23 +150,61 @@ li {
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 10;
+  transition: all 0.3s ease 0s;
+  display: none;
 }
 .th-header__menuWrapper {
   width: 100%;
   height: 100%;
+  max-width: 552px;
   background-color: rgba(28, 35, 46, 0.968627451);
   padding: 20px;
+  overflow-x: auto;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  transform: translateX(calc(100% + 8px));
+}
+.th-header__menuWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 8px;
+  height: 100%;
+  background-color: #3AAFC9;
+  transform: inherit;
+}
+.th-header__menuWrapper.active {
+  transform: none;
 }
 .th-header__menu {
   width: 100%;
   height: 100%;
-  overflow-x: auto;
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-wrap: nowrap;
   flex-direction: column;
+  font-family: "Poppins", sans-serif;
 }
 .th-header__menuItem:not(.cv, .social) {
   text-align: right;
+  text-transform: uppercase;
+  font-size: 2.4em;
+  padding-right: 20px;
+  font-weight: 500;
+  border-right: 6px solid transparent;
+  transition: all 0.3s ease 0s;
+}
+.th-header__menuItem:not(.cv, .social):has(a:hover) {
+  border-color: #3AAFC9;
+}
+.th-header__menuItem:not(.cv, .social) a {
+  padding-block: 12px;
+  display: inline-block;
+}
+.th-header__menuItem.cv a {
+  width: 100%;
+  font-size: 1.6em;
 }

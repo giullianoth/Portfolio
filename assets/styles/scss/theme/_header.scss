@@ -24,6 +24,7 @@
                 background-color: $color-white;
                 @include relative;
                 @include transition;
+                @include overModalIndex;
 
                 &::before {
                     content: "";
@@ -58,25 +59,69 @@
         &__navOverlay {
             @include fixedFull;
             height: 100vh;
+            @include modalIndex;
+            @include transition;
+            display: none;
         }
 
         &__menuWrapper {
             @include containerFluid(true);
+            max-width: 552px;
             background-color: $color-raisin-black-alpha;
             padding: 20px;
+            overflow-x: auto;
+            @include relative;
+            @include transition;
+
+            transform: translateX(calc(100% + 8px));
+
+            &::before {
+                content: "";
+                @include absolute(0, -8px);
+                width: 8px;
+                height: 100%;
+                background-color: $color-moonstone;
+                transform: inherit;
+            }
+
+            &.active {
+                transform: none;
+            }
         }
 
         &__menu {
             @include containerFluid(true);
-            overflow-x: auto;
 
             @include flex(center, stretch, nowrap);
             flex-direction: column;
+            font-family: $font-poppins;
         }
 
         &__menuItem {
             &:not(.cv, .social) {
                 text-align: right;
+                text-transform: uppercase;
+                font-size: 2.4em;
+                padding-right: 20px;
+                font-weight: 500;
+                border-right: 6px solid transparent;
+                @include transition;
+
+                &:has(a:hover) {
+                    border-color: $color-moonstone
+                }
+
+                a {
+                    padding-block: 12px;
+                    display: inline-block;
+                }
+            }
+
+            &.cv {
+                a {
+                    width: 100%;
+                    font-size: 1.6em;
+                }
             }
         }
     }
