@@ -18,6 +18,10 @@
         }
 
         &__menuIcon {
+            height: 21px;
+            @include flex;
+            cursor: pointer;
+
             .hamb-icon {
                 width: 40px;
                 height: 3px;
@@ -61,27 +65,21 @@
             height: 100vh;
             @include modalIndex;
             @include transition;
+            @include flex(flex-end);
             display: none;
         }
 
         &__menuWrapper {
             @include containerFluid(true);
-            max-width: 552px;
+            max-width: 560px;
             background-color: $color-raisin-black-alpha;
             padding: 20px;
             overflow-x: auto;
-            @include relative;
             @include transition;
-
             transform: translateX(calc(100% + 8px));
 
-            &::before {
-                content: "";
-                @include absolute(0, -8px);
-                width: 8px;
-                height: 100%;
-                background-color: $color-moonstone;
-                transform: inherit;
+            @include setResponsiveDesign(560px) {
+                border-left: 8px solid $color-moonstone;
             }
 
             &.active {

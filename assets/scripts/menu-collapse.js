@@ -9,13 +9,21 @@ export default function menuCollapse() {
     menuIcon.addEventListener("click", () => {
 
         if (!isVisible(menuOverlay)) {
-            fadeIn(menuOverlay)
+            fadeIn(menuOverlay, "flex")
 
             setTimeout(() => {
                 menuIcon.classList.add("active")
                 menuWrapper.classList.add("active")
             }, transitionGap)
         } else {
+            fadeOut(menuOverlay)
+            menuIcon.classList.remove("active")
+            menuWrapper.classList.remove("active")
+        }
+    })
+
+    menuOverlay.addEventListener("click", ({ target }) => {
+        if (isVisible(menuOverlay) && target.classList.contains("j_menu_overlay") && menuIcon.classList.contains("active") && menuWrapper.classList.contains("active")) {
             fadeOut(menuOverlay)
             menuIcon.classList.remove("active")
             menuWrapper.classList.remove("active")
