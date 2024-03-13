@@ -16,12 +16,14 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
+  font-weight: 400;
   color: #FFF;
   background-color: #222A36;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
+  line-height: 1;
 }
 
 img {
@@ -82,6 +84,12 @@ li {
   font-size: 1.6em;
   color: #3AAFC9;
 }
+.th-divider {
+  width: 120px;
+  height: 5px;
+  background-color: #3AAFC9;
+  margin-inline: auto;
+}
 
 /* HEADER CONFIG */
 .th-header {
@@ -94,7 +102,7 @@ li {
 .th-header__container {
   max-width: 1300px;
   padding-inline: 20px;
-  margin: 0 auto;
+  margin-inline: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -121,7 +129,7 @@ li {
   background-color: #FFF;
   position: relative;
   transition: all 0.3s ease 0s;
-  z-index: 11;
+  z-index: 110;
 }
 .th-header__menuIcon .hamb-icon::before {
   content: "";
@@ -158,7 +166,7 @@ li {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 10;
+  z-index: 100;
   transition: all 0.3s ease 0s;
   display: flex;
   justify-content: flex-end;
@@ -213,4 +221,67 @@ li {
 .th-header__menuItem.cv a {
   width: 100%;
   font-size: 1.6em;
+}
+
+/* HERO CONFIG */
+.th-hero {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  min-height: 812px;
+  background-color: #1C232E;
+  z-index: -1;
+}
+.th-hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.th-hero__bg img {
+  height: 100%;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  filter: saturate(25%);
+  pointer-events: none;
+}
+.th-hero__bg .gradient {
+  position: absolute;
+  top: unset;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 520px;
+  background-image: linear-gradient(to top, #1C232E 20%, transparent 100%);
+}
+.th-hero__container {
+  position: relative;
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.th-hero__infoWrapper {
+  text-align: center;
+}
+.th-hero__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.6em;
+  color: #3AAFC9;
+  margin-bottom: 20px;
+}
+.th-hero__title {
+  font-weight: 900;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.th-hero__info {
+  margin-top: 40px;
 }

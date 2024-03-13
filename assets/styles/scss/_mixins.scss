@@ -17,7 +17,7 @@
 @mixin container($maxWidth: $container-max-width, $padding: $container-padding-inline) {
     max-width: $maxWidth;
     padding-inline: $padding;
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 @mixin containerSpacing1($spacing: $container-spacing-block) {
@@ -110,11 +110,15 @@
 
 // Z-index
 @mixin modalIndex() {
-    z-index: 10;
+    z-index: 100;
 }
 
 @mixin overModalIndex() {
-    z-index: 11;
+    z-index: 110;
+}
+
+@mixin contentBackIndex() {
+    z-index: -1;
 }
 
 // BACKGROUND IMAGE

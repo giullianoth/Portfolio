@@ -12,12 +12,14 @@ html {
 body {
     font-family: $font-raleway;
     font-size: $font-size-default;
+    font-weight: 400;
     color: $color-white;
     background-color: $color-gunmetal;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-poppins;
+    line-height: 1;
 }
 
 img {
@@ -70,5 +72,12 @@ li {
             font-size: 1.6em;
             color: $color-moonstone;
         }
+    }
+
+    &divider {
+        width: 120px;
+        height: 5px;
+        background-color: $color-moonstone;
+        margin-inline: auto;
     }
 }
