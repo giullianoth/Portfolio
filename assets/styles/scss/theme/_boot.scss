@@ -50,15 +50,11 @@ li {
 
 @include theme() {
     &button {
-        background-color: $color-moonstone;
-        display: inline-block;
-        padding: 12px 24px;
-        cursor: pointer;
-        border: none;
-        font-family: $font-poppins;
-        text-transform: uppercase;
-        font-weight: 500;
-        text-align: center;
+        @include button;
+    }
+
+    &button-outline {
+        @include buttonOutline;
     }
 
     &social {
@@ -129,6 +125,20 @@ li {
             text-transform: none;
             color: $color-moonstone;
             margin-bottom: 8px;
+        }
+    }
+
+    &tabs {
+        @include containerFluid;
+
+        &-buttons {
+            @include flex;
+            gap: 10px;
+        }
+
+        &-button {
+            padding: 12px;
+            flex-grow: 1;
         }
     }
 }
