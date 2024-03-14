@@ -53,5 +53,59 @@
         .th-divider {
             margin-bottom: 80px;
         }
+
+        &__skillsItem {
+            margin-top: 40px;
+            @include flex(center, stretch);
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__skillsTitle {
+            text-align: center;
+            color: $color-moonstone;
+            font-size: 1.8em;
+            text-transform: uppercase;
+
+            i {
+                font-size: 2.6em;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__skillsCharts {
+            @include flex(center, stretch);
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__skillsChart {
+            .skill {
+                font-size: 1.2em;
+                margin: 0;
+            }
+
+            .chart {
+                @include flex(flex-start, center, nowrap);
+                gap: 20px;
+            }
+
+            .bar {
+                @include containerFluid;
+                height: 4px;
+                background-color: $color-white;
+                @include relative;
+
+                .progress {
+                    @include absolute(50%);
+                    transform: translateY(-50%);
+                    height: 8px;
+                    background-color: $color-moonstone;
+                    @include transition;
+                    transform-origin: left;
+
+                    width: 75%;
+                }
+            }
+        }
     }
 }

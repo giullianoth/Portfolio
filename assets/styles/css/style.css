@@ -613,3 +613,58 @@ li {
 .th-about .th-divider {
   margin-bottom: 80px;
 }
+.th-about__skillsItem {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
+}
+.th-about__skillsTitle {
+  text-align: center;
+  color: #3AAFC9;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+.th-about__skillsTitle i {
+  font-size: 2.6em;
+  margin-bottom: 10px;
+}
+.th-about__skillsCharts {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.th-about__skillsChart .skill {
+  font-size: 1.2em;
+  margin: 0;
+}
+.th-about__skillsChart .chart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.th-about__skillsChart .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #FFF;
+  position: relative;
+}
+.th-about__skillsChart .bar .progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 8px;
+  background-color: #3AAFC9;
+  transition: all 0.3s ease 0s;
+  transform-origin: left;
+  width: 75%;
+}
