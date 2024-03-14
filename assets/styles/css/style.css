@@ -170,8 +170,33 @@ li {
   gap: 10px;
 }
 .th-tabs-button {
-  padding: 12px;
+  padding: 12px !important;
   flex-grow: 1;
+}
+.th-tabs-button.selected {
+  background-color: #3AAFC9;
+  display: inline-block;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+.th-tabs-button.unselected {
+  background-color: #3AAFC9;
+  display: inline-block;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  background: none;
+  border: 2px solid #3AAFC9;
+  color: #3AAFC9;
 }
 
 /* HEADER CONFIG */
