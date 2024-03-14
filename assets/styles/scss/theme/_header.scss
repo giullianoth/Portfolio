@@ -3,6 +3,12 @@
         @include containerFluid;
         @include fixedFull;
         @include modalIndex;
+        @include transition;
+
+        &.scrolling {
+            background-color: $color-raisin-black;
+            box-shadow: 0 1px 5px rgba($color: #000000, $alpha: 0.2);
+        }
 
         &__container {
             @include container;

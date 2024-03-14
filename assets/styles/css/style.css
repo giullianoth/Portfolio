@@ -125,6 +125,11 @@ li {
   left: 0;
   width: 100%;
   z-index: 100;
+  transition: all 0.3s ease 0s;
+}
+.th-header.scrolling {
+  background-color: #1C232E;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 .th-header__container {
   max-width: 1300px;
