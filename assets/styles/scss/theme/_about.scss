@@ -1,0 +1,34 @@
+@include theme() {
+    &about {
+        @include containerFluid;
+        @include containerSpacing1;
+
+        &__container {
+            @include container;
+        }
+
+        &__info {
+            @include flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        &__photo {
+            width: 100%;
+            max-width: 460px;
+        }
+
+        &__infoTitle {
+            h2 {
+                font-family: $font-raleway;
+                text-align: center;
+                color: $color-moonstone;
+            }
+        }
+
+        .th-divider {
+            margin-bottom: 40px;
+        }
+    }
+}

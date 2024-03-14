@@ -22,8 +22,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 
+p {
+    margin-block: 18px;
+}
+
 img {
-    width: auto;
+    width: 100%;
     height: auto;
     max-width: 100%;
     @include setBrowserCore(object-fit, cover, ("o"));
@@ -100,6 +104,22 @@ li {
         @include setResponsiveDesign($breakpoint-desktop-sd) {
             width: 180px;
             height: 10px;
+        }
+    }
+
+    &section-title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+
+        span {
+            display: block;
+            font-weight: 500;
+            font-size: 0.7em;
+            text-transform: none;
+            color: $color-moonstone;
+            margin-bottom: 8px;
         }
     }
 }
