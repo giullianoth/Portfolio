@@ -11,12 +11,31 @@
             @include flex;
             flex-direction: column;
             gap: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
         }
 
         &__photo {
             width: 100%;
             max-width: 460px;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                max-width: none;
+                @include flex2(20px);
+            }
+        }
+
+        &__infoText {
+            max-width: 600px;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                max-width: none;
+                @include flex2(20px);
+            }
         }
 
         &__infoTitle {
@@ -24,11 +43,15 @@
                 font-family: $font-raleway;
                 text-align: center;
                 color: $color-moonstone;
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    text-align: left;
+                }
             }
         }
 
         .th-divider {
-            margin-bottom: 40px;
+            margin-bottom: 80px;
         }
     }
 }

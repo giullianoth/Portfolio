@@ -113,6 +113,15 @@ li {
         font-size: 1.2em;
         margin-bottom: 20px;
 
+        @include setResponsiveDesign($breakpoint-tablet) {
+            font-size: 1.6em;
+        }
+
+        @include setResponsiveDesign($breakpoint-desktop-sd) {
+            font-size: 2em;
+            text-align: left;
+        }
+
         span {
             display: block;
             font-weight: 500;

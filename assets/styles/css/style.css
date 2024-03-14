@@ -126,6 +126,17 @@ li {
   font-size: 1.2em;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 767px) {
+  .th-section-title {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .th-section-title {
+    font-size: 2em;
+    text-align: left;
+  }
+}
 .th-section-title span {
   display: block;
   font-weight: 500;
@@ -509,17 +520,43 @@ li {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__info {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 .th-about__photo {
   width: 100%;
   max-width: 460px;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__photo {
+    max-width: none;
+    flex-basis: calc(50% - 20px);
+  }
+}
+.th-about__infoText {
+  max-width: 600px;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__infoText {
+    max-width: none;
+    flex-basis: calc(50% - 20px);
+  }
 }
 .th-about__infoTitle h2 {
   font-family: "Raleway", sans-serif;
   text-align: center;
   color: #3AAFC9;
 }
+@media screen and (min-width: 1023px) {
+  .th-about__infoTitle h2 {
+    text-align: left;
+  }
+}
 .th-about .th-divider {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
