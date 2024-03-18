@@ -139,9 +139,17 @@ li {
         &-button {
             padding: 12px !important;
             flex-grow: 1;
+            @include transition;
+
+            &:hover {
+                background-color: $color-moonstone !important;
+                color: $color-white !important;
+                border: 2px solid transparent !important;
+            }
 
             &.selected {
                 @include button;
+                border: 2px solid transparent;
             }
 
             &.unselected {
