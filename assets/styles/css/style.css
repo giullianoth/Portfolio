@@ -624,10 +624,16 @@ li {
   margin-top: 40px;
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 40px;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__skillsItem {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 .th-about__skillsTitle {
   text-align: center;
@@ -635,9 +641,30 @@ li {
   font-size: 1.8em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 767px) {
+  .th-about__skillsTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .th-about__skillsTitle {
+    flex-basis: calc(50% - 40px);
+    font-size: 2em;
+  }
+}
 .th-about__skillsTitle i {
   font-size: 2.6em;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 767px) {
+  .th-about__skillsTitle i {
+    font-size: 3.6em;
+    margin-bottom: 0;
+  }
 }
 .th-about__skillsCharts {
   display: flex;
@@ -646,6 +673,14 @@ li {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
+  max-width: 540px;
+  width: 100%;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__skillsCharts {
+    flex-basis: calc(50% - 40px);
+    max-width: none;
+  }
 }
 .th-about__skillsChart .skill {
   font-size: 1.2em;

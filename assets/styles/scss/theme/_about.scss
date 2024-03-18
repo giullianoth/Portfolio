@@ -59,6 +59,11 @@
             @include flex(center, stretch);
             flex-direction: column;
             gap: 40px;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
         }
         
         &__skillsTitle {
@@ -67,9 +72,24 @@
             font-size: 1.8em;
             text-transform: uppercase;
 
+            @include setResponsiveDesign($breakpoint-tablet) {
+                @include flex;
+                gap: 10px;
+            }
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include flex2(40px);
+                font-size: 2em;
+            }
+
             i {
                 font-size: 2.6em;
                 margin-bottom: 10px;
+
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    font-size: 3.6em;
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -77,6 +97,13 @@
             @include flex(center, stretch);
             flex-direction: column;
             gap: 20px;
+            max-width: 540px;
+            width: 100%;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include flex2(40px);
+                max-width: none;
+            }
         }
 
         &__skillsChart {
