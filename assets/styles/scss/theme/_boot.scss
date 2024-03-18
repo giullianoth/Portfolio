@@ -68,6 +68,10 @@ li {
             padding-block: 40px 0;
         }
 
+        @include setResponsiveDesign(300px, true) {
+            gap: 12px;
+        }
+
         a {
             @include flex;
             width: 45px;

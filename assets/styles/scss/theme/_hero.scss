@@ -67,9 +67,14 @@
             font-size: 1.6em;
             color: $color-moonstone;
             margin-bottom: 20px;
+            line-height: 1;
 
             @include setResponsiveDesign($breakpoint-mobile-landscape) {
                 font-size: 2em;
+            }
+
+            @include setResponsiveDesign(370px, true) {
+                font-size: 1em;
             }
         }
 
@@ -88,6 +93,10 @@
                 max-width: none;
                 margin-inline: 0;
                 font-size: 3em;
+            }
+
+            @include setResponsiveDesign(370px, true) {
+                font-size: 1.2em;
             }
 
             h1 {

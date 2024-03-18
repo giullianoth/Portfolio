@@ -94,6 +94,11 @@ li {
     padding-block: 40px 0;
   }
 }
+@media screen and (max-width: 300px) {
+  .th-social {
+    gap: 12px;
+  }
+}
 .th-social a {
   display: flex;
   justify-content: center;
@@ -488,10 +493,16 @@ li {
   font-size: 1.6em;
   color: #3AAFC9;
   margin-bottom: 20px;
+  line-height: 1;
 }
 @media screen and (min-width: 599px) {
   .th-hero__subtitle {
     font-size: 2em;
+  }
+}
+@media screen and (max-width: 370px) {
+  .th-hero__subtitle {
+    font-size: 1em;
   }
 }
 .th-hero__title {
@@ -511,6 +522,11 @@ li {
     max-width: none;
     margin-inline: 0;
     font-size: 3em;
+  }
+}
+@media screen and (max-width: 370px) {
+  .th-hero__title {
+    font-size: 1.2em;
   }
 }
 .th-hero__title h1 {
