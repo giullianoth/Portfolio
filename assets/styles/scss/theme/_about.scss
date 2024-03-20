@@ -93,7 +93,6 @@
                 }
                 
                 i {
-                    font-size: 100px;
 
                     &:first-child {
                         transform: translateY(-20px);
@@ -106,6 +105,7 @@
             }
 
             i {
+                font-size: 100px;
                 color: $color-moonstone;
 
                 @include setResponsiveDesign($breakpoint-tablet) {

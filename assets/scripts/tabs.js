@@ -21,7 +21,7 @@ const buttonIndex = (button) => tabsButtons(tabsByButton(button)).indexOf(tabsBu
 export default function ToggleTabs() {
     allTabsContent.forEach(content => {
         content.style.maxHeight = `${tabsItems(tabsByContent(content))[0].height}px`
-        content.style.maxHeight = `${tabsItems(tabsByContent(content))[0].offsetHeight}px`
+        content.style.height = `${tabsItems(tabsByContent(content))[0].offsetHeight}px`
     })
 
     allTabsButtons.forEach(button => {
@@ -29,7 +29,6 @@ export default function ToggleTabs() {
             tabsButtons(tabsByButton(button)).forEach(b => b !== button && b.classList.replace("selected", "unselected"))
             button.classList.replace("unselected", "selected")
 
-            // console.log(tabsItems(tabsByButton(button))[buttonIndex(button)]);
             tabsItems(tabsByButton(button)).forEach(item => 
                 tabsItems(tabsByButton(button))[buttonIndex(button)] !== item && isVisible(item) && fadeOut(item))
 

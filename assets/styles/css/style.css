@@ -686,9 +686,6 @@ li {
     padding-block: 20px;
   }
 }
-.th-about__tabsIcons:has(i ~ i) i {
-  font-size: 100px;
-}
 .th-about__tabsIcons:has(i ~ i) i:first-child {
   transform: translateY(-20px);
 }
@@ -696,6 +693,7 @@ li {
   transform: translateY(20px);
 }
 .th-about__tabsIcons i {
+  font-size: 100px;
   color: #3AAFC9;
 }
 @media screen and (min-width: 767px) {
