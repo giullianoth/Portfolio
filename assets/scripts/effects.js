@@ -28,7 +28,7 @@ export function slideDown(element, displayElement = "block") {
         setTimeout(() => {
             element.style.overflow = ""
             element.style.transition = ""
-        }, transitionDuration)
+        }, transitionDuration - transitionGap)
     }, transitionGap)
 }
 
@@ -63,7 +63,7 @@ export function fadeIn(element, displayElement = "block") {
 
         setTimeout(() => {
             element.style.transition = ""
-        }, transitionDuration)
+        }, transitionDuration - transitionGap)
     }, transitionGap)
 }
 

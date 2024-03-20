@@ -215,13 +215,11 @@ li {
   color: #3AAFC9;
 }
 .th-tabs-content {
-  margin-top: 40px;
+  margin-top: 60px;
+  transition: all 0.3s ease 0s;
 }
-.th-tabs-content article {
+.th-tabs-content article:not(:first-child) {
   display: none;
-}
-.th-tabs-content article.active {
-  display: flex;
 }
 
 /* HEADER CONFIG */
@@ -655,7 +653,6 @@ li {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  margin-top: 60px;
 }
 @media screen and (min-width: 1023px) {
   .th-about__tabsItem {
@@ -667,6 +664,9 @@ li {
 .th-about__tabsItem a {
   color: #3AAFC9;
   font-weight: 700;
+}
+.th-about__frameworksItem > div:not(:last-child) {
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 1023px) {
   .th-about__tabsIcons {

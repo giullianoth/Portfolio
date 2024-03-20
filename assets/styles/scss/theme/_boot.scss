@@ -162,13 +162,12 @@ li {
         }
 
         &-content {            
-            margin-top: 40px;
+            margin-top: 60px;
+            @include transition;
 
             article {
-                display: none;
-
-                &.active {
-                    display: flex;
+                &:not(:first-child) {
+                    display: none;
                 }
             }
         }
