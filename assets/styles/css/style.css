@@ -46,8 +46,8 @@ input, select, textarea, button {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 li {
@@ -64,6 +64,7 @@ li {
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
+  outline: none;
 }
 .th-button-outline {
   background-color: #3AAFC9;
@@ -75,6 +76,7 @@ li {
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
+  outline: none;
   background: none;
   border: 2px solid #3AAFC9;
   color: #3AAFC9;
@@ -194,6 +196,7 @@ li {
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
+  outline: none;
   border: 2px solid transparent;
 }
 .th-tabs-button.unselected {
@@ -206,9 +209,19 @@ li {
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
+  outline: none;
   background: none;
   border: 2px solid #3AAFC9;
   color: #3AAFC9;
+}
+.th-tabs-content {
+  margin-top: 40px;
+}
+.th-tabs-content article {
+  display: none;
+}
+.th-tabs-content article.active {
+  display: flex;
 }
 
 /* HEADER CONFIG */
@@ -636,51 +649,105 @@ li {
 .th-about .th-divider {
   margin-bottom: 80px;
 }
-.th-about__skillsItem {
-  margin-top: 40px;
+.th-about__tabsItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
-  gap: 40px;
+  margin-top: 60px;
 }
 @media screen and (min-width: 1023px) {
-  .th-about__skillsItem {
+  .th-about__tabsItem {
     flex-direction: row;
-    flex-wrap: nowrap;
+    gap: 40px;
+    align-items: stretch;
   }
 }
-.th-about__skillsTitle {
-  text-align: center;
+.th-about__tabsItem a {
   color: #3AAFC9;
-  font-size: 1.8em;
-  text-transform: uppercase;
+  font-weight: 700;
 }
-@media screen and (min-width: 767px) {
-  .th-about__skillsTitle {
+@media screen and (min-width: 1023px) {
+  .th-about__tabsIcons {
+    flex-basis: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: nowrap;
+    align-self: flex-start;
   }
+}
+.th-about__tabsIcons:has(i ~ i) {
+  padding-block: 40px;
 }
 @media screen and (min-width: 1023px) {
-  .th-about__skillsTitle {
-    flex-basis: calc(50% - 40px);
-    font-size: 2em;
+  .th-about__tabsIcons:has(i ~ i) {
+    padding-block: 20px;
   }
 }
-.th-about__skillsTitle i {
-  font-size: 2.6em;
-  margin-bottom: 10px;
+.th-about__tabsIcons:has(i ~ i) i {
+  font-size: 100px;
+}
+.th-about__tabsIcons:has(i ~ i) i:first-child {
+  transform: translateY(-20px);
+}
+.th-about__tabsIcons:has(i ~ i) i:last-child {
+  transform: translateY(20px);
+}
+.th-about__tabsIcons i {
+  color: #3AAFC9;
 }
 @media screen and (min-width: 767px) {
-  .th-about__skillsTitle i {
-    font-size: 3.6em;
+  .th-about__tabsIcons i {
+    font-size: 160px;
+  }
+}
+.th-about__tabsIcons img {
+  pointer-events: none;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__tabsText {
+    flex-basis: calc(100% - 200px);
+  }
+}
+.th-about__tabsTitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__tabsTitle {
+    text-align: left;
     margin-bottom: 0;
   }
+}
+.th-about__tabsTitle h3 {
+  color: #3AAFC9;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+@media screen and (min-width: 1023px) {
+  .th-about__tabsTitle h3 {
+    font-size: 2.6em;
+  }
+}
+@media screen and (min-width: 767px) {
+  .th-about__tabsTitle.skills-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-basis: 50%;
+    gap: 14px;
+  }
+  .th-about__tabsTitle.skills-title i {
+    font-size: 160px;
+  }
+}
+.th-about__tabsTitle.skills-title i {
+  font-size: 100px;
+  color: #3AAFC9;
+  margin-bottom: 14px;
 }
 .th-about__skillsCharts {
   display: flex;
@@ -694,8 +761,8 @@ li {
 }
 @media screen and (min-width: 1023px) {
   .th-about__skillsCharts {
-    flex-basis: calc(50% - 40px);
     max-width: none;
+    flex-basis: 50%;
   }
 }
 .th-about__skillsChart .skill {

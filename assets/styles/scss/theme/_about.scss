@@ -54,41 +54,103 @@
             margin-bottom: 80px;
         }
 
-        &__skillsItem {
-            margin-top: 40px;
-            @include flex;
+        &__tabsItem {
+            @include flex(center, center, nowrap);
             flex-direction: column;
-            gap: 40px;
+            margin-top: 60px;
 
             @include setResponsiveDesign($breakpoint-desktop-sd) {
                 flex-direction: row;
-                flex-wrap: nowrap;
+                gap: 40px;
+                align-items: stretch;
+            }
+
+            a {
+                color: $color-moonstone;
+                font-weight: 700;
             }
         }
-        
-        &__skillsTitle {
-            text-align: center;
-            color: $color-moonstone;
-            font-size: 1.8em;
-            text-transform: uppercase;
 
-            @include setResponsiveDesign($breakpoint-tablet) {
-                @include flex;
-                gap: 10px;
+        &__tabsIcons {
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include flexBasis(200px);
+                @include flex(center, center, nowrap);
+                align-self: flex-start;
             }
 
-            @include setResponsiveDesign($breakpoint-desktop-sd) {
-                @include flex2(40px);
-                font-size: 2em;
+            &:has(i ~ i) {
+                padding-block: 40px;
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    padding-block: 20px;
+                }
+                
+                i {
+                    font-size: 100px;
+
+                    &:first-child {
+                        transform: translateY(-20px);
+                    }
+
+                    &:last-child {
+                        transform: translateY(20px);
+                    }
+                }
             }
 
             i {
-                font-size: 2.6em;
-                margin-bottom: 10px;
+                color: $color-moonstone;
 
                 @include setResponsiveDesign($breakpoint-tablet) {
-                    font-size: 3.6em;
-                    margin-bottom: 0;
+                    font-size: 160px;
+                }
+            }
+
+            img {
+                pointer-events: none;
+            }
+        }
+
+        &__tabsText {
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                @include flexBasis(calc(100% - 200px));
+            }
+        }
+
+        &__tabsTitle {
+            text-align: center;
+            margin-bottom: 40px;
+
+            @include setResponsiveDesign($breakpoint-desktop-sd) {
+                text-align: left;
+                margin-bottom: 0;
+            }
+
+            h3 {
+                color: $color-moonstone;
+                text-transform: uppercase;
+                font-size: 2em;
+
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    font-size: 2.6em;
+                }
+            }
+
+            &.skills-title {
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    @include flex(center, center, nowrap);
+                    @include flex2;
+                    gap: 14px;
+
+                    i {
+                        font-size: 160px;
+                    }
+                }
+
+                i {
+                    font-size: 100px;
+                    color: $color-moonstone;
+                    margin-bottom: 14px;
                 }
             }
         }
@@ -101,8 +163,8 @@
             width: 100%;
 
             @include setResponsiveDesign($breakpoint-desktop-sd) {
-                @include flex2(40px);
                 max-width: none;
+                @include flex2;
             }
         }
 
@@ -131,6 +193,7 @@
                     @include transition;
                     transform-origin: left;
 
+                    // Teste
                     width: 75%;
                 }
             }
