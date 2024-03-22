@@ -24,6 +24,13 @@ export default function ToggleTabs() {
         content.style.height = `${tabsItems(tabsByContent(content))[0].offsetHeight}px`
     })
 
+    window.addEventListener("resize", () => {
+        allTabsContent.forEach(content => {
+            content.style.maxHeight = `${tabsItems(tabsByContent(content))[0].height}px`
+            content.style.height = `${tabsItems(tabsByContent(content))[0].offsetHeight}px`
+        })
+    })
+
     allTabsButtons.forEach(button => {
         button.addEventListener("click", () => {
             tabsButtons(tabsByButton(button)).forEach(b => b !== button && b.classList.replace("selected", "unselected"))

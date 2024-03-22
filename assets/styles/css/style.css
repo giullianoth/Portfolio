@@ -63,6 +63,7 @@ li {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
+  color: #FFF;
   text-align: center;
   outline: none;
 }
@@ -75,6 +76,7 @@ li {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
+  color: #FFF;
   text-align: center;
   outline: none;
   background: none;
@@ -158,6 +160,9 @@ li {
     text-align: left;
   }
 }
+.th-section-title h1 {
+  line-height: 1;
+}
 .th-section-title span {
   display: block;
   font-weight: 500;
@@ -195,6 +200,7 @@ li {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
+  color: #FFF;
   text-align: center;
   outline: none;
   border: 2px solid transparent;
@@ -208,6 +214,7 @@ li {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
+  color: #FFF;
   text-align: center;
   outline: none;
   background: none;
@@ -330,7 +337,7 @@ li {
   width: 100%;
   height: 100%;
   max-width: 560px;
-  background-color: rgba(28, 35, 46, 0.968627451);
+  background-color: hsla(217, 24%, 15%, 0.969);
   padding: 20px;
   overflow-x: auto;
   transition: all 0.3s ease 0s;
@@ -790,4 +797,110 @@ li {
   transition: all 0.3s ease 0s;
   transform-origin: left;
   width: 75%;
+}
+
+/* PORTFOLIO SECTION CONFIG */
+.th-portfolio {
+  width: 100%;
+  padding-block: 80px;
+  background-color: #1C232E;
+}
+.th-portfolio__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.th-portfolio__description {
+  max-width: 800px;
+}
+.th-portfolio .th-divider {
+  margin-bottom: 40px;
+}
+.th-portfolio__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.th-portfolio__item {
+  flex-basis: 100%;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  max-width: 420px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 767px) {
+  .th-portfolio__item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 899px) {
+  .th-portfolio__item {
+    flex-basis: calc(33.3333333333% - 20px);
+  }
+}
+.th-portfolio__item:hover .portfolio_info {
+  opacity: 1;
+}
+.th-portfolio__item:nth-child(5), .th-portfolio__item:nth-child(6) {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  .th-portfolio__item:nth-child(5), .th-portfolio__item:nth-child(6) {
+    display: block;
+  }
+}
+.th-portfolio__item .portfolio_info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-bottom: 4px solid #3AAFC9;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, rgba(28, 35, 46, 0) 0%, rgba(29, 36, 47, 0.8) 50%);
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+}
+.th-portfolio__item .portfolio_info .title h2 {
+  color: #3AAFC9;
+  font-size: 1.8em;
+}
+.th-portfolio__item .portfolio_info .technologies {
+  margin-top: 10px;
+}
+.th-portfolio__item .portfolio_info .action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.th-portfolio__item .portfolio_info .action a {
+  width: 40px;
+  height: 40px;
+  background-color: #3AAFC9;
+  font-size: 1.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.th-portfolio__openModal {
+  margin-top: 20px;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
