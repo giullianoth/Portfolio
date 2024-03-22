@@ -93,5 +93,11 @@
             @include flex1;
             @include flex;
         }
+
+        .th-modal {
+            article {
+                display: block;
+            }
+        }
     }
 }
