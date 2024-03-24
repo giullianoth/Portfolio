@@ -40,8 +40,8 @@ input, select, textarea, button {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 li {
@@ -66,6 +66,10 @@ li {
         @include setResponsiveDesign($breakpoint-desktop-sd) {
             justify-content: flex-start;
             padding-block: 40px 0;
+        }
+
+        @include setResponsiveDesign(300px, true) {
+            gap: 12px;
         }
 
         a {
@@ -118,6 +122,10 @@ li {
             text-align: left;
         }
 
+        h1 {
+            line-height: 1;
+        }
+
         span {
             display: block;
             font-weight: 500;
@@ -139,20 +147,75 @@ li {
         &-button {
             padding: 12px !important;
             flex-grow: 1;
+            @include transition;
 
             &:hover {
                 background-color: $color-moonstone !important;
                 color: $color-white !important;
+                border: 2px solid transparent !important;
             }
 
             &.selected {
                 @include button;
-                border: 2px solid $color-moonstone;
+                border: 2px solid transparent;
             }
 
             &.unselected {
                 @include buttonOutline;
             }
+        }
+
+        &-content {            
+            margin-top: 60px;
+            @include transition;
+
+            article {
+                &:not(:first-child) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &modal {
+        @include fixedFull(0, 0, true);
+        @include overModalIndex;
+        background-color: $color-raisin-black-alpha;
+
+        &-close {
+            @include absolute(20px, unset);
+            right: 20px;
+            cursor: pointer;
+            border: 1px sold red;
+            height: 40px;
+            @include flex;
+
+            .icon {
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: $color-white;
+                @include relative;
+                transform: rotate(45deg);
+
+                &::before {
+                    content: "";
+                    @include absoluteFull(0, 0, true);
+                    background-color: $color-white;
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        &-container {
+            @include container;
+            @include containerSpacing2;
+            height: 100%;
+        }
+
+        &-wrapper {
+            height: 100%;
+            overflow-x: auto;
         }
     }
 }

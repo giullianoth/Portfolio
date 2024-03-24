@@ -17,11 +17,12 @@ $color-gunmetal: #222A36;
 $color-raisin-black: #1C232E;
 $color-white: #FFF;
 
-$color-raisin-black-alpha: #1C232EF7;
+$color-raisin-black-alpha: hsla(217, 24%, 15%, 0.969);
 $color-white-alpha: #FFFFFF66;
 
 $gradient-default-1: linear-gradient(to bottom, $color-raisin-black, $color-gunmetal);
 $gradient-default-2: linear-gradient(to bottom, $color-gunmetal, $color-raisin-black);
+$gradient-portfolio: linear-gradient(to bottom, #1C232E00 0%, #1d242fCC 50%);
 
 // TIPOGRAPHY
 $font-poppins: "Poppins", sans-serif;

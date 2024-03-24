@@ -1,0 +1,103 @@
+@include theme() {
+    &portfolio {
+        @include containerFluid;
+        @include containerSpacing2;
+        background-color: $color-raisin-black;
+
+        &__container {
+            @include container;
+        }
+
+        &__description {
+            max-width: 800px;
+        }
+
+        .th-divider {
+            margin-bottom: 40px;
+        }
+
+        &__list {
+            @include flex(flex-start);
+            gap: 20px;
+        }
+
+        &__item {
+            @include flex1;
+            @include relative;
+            cursor: pointer;
+            overflow: hidden;
+            max-width: 420px;
+            margin-inline: auto;
+
+            @include setResponsiveDesign($breakpoint-tablet) {
+                @include flex2(20px);
+            }
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                @include flex3(20px);
+            }
+
+            &:hover {
+                .portfolio_info {
+                    opacity: 1;
+                }
+            }
+
+            &:nth-child(5), &:nth-child(6) {
+                display: none;
+
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    display: block;
+                }
+            }
+
+            .portfolio_info {
+                @include absoluteFull(0, 0, true);
+                @include flex(flex-end, stretch);
+                flex-direction: column;
+                border-bottom: 4px solid $color-moonstone;
+                padding: 20px;
+                background-image: $gradient-portfolio;
+                @include transition;
+                opacity: 0;
+
+                .title {
+                    h2 {
+                        color: $color-moonstone;
+                        font-size: 1.8em;
+                    }
+                }
+
+                .technologies {
+                    margin-top: 10px;
+                }
+
+                .action {
+                    @include flex(flex-start);
+                    gap: 10px;
+
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        background-color: $color-moonstone;
+                        font-size: 1.4em;
+                        @include flex;
+                        @include rounded;
+                    }
+                }
+            }
+        }
+
+        &__openModal {
+            margin-top: 20px;
+            @include flex1;
+            @include flex;
+        }
+
+        .th-modal {
+            article {
+                display: block;
+            }
+        }
+    }
+}
