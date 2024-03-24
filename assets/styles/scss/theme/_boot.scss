@@ -140,8 +140,14 @@ li {
             padding: 12px !important;
             flex-grow: 1;
 
+            &:hover {
+                background-color: $color-moonstone !important;
+                color: $color-white !important;
+            }
+
             &.selected {
                 @include button;
+                border: 2px solid $color-moonstone;
             }
 
             &.unselected {
