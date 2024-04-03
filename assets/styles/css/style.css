@@ -8,6 +8,13 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #3AAFC9;
+  margin-inline: 2px;
+}
 
 html {
   scroll-behavior: smooth;
@@ -225,7 +232,7 @@ li {
   margin-top: 60px;
   transition: all 0.3s ease 0s;
 }
-.th-tabs-content article:not(:first-child) {
+.th-tabs-tab:not(:first-child) {
   display: none;
 }
 .th-modal {
@@ -243,7 +250,6 @@ li {
   left: unset;
   right: 20px;
   cursor: pointer;
-  border: 1px sold red;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -885,6 +891,7 @@ li {
 @media screen and (min-width: 767px) {
   .th-portfolio__item {
     flex-basis: calc(50% - 20px);
+    margin-inline: 0;
   }
 }
 @media screen and (min-width: 899px) {

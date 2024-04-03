@@ -3,6 +3,15 @@
     padding: 0;
     vertical-align: baseline;
     @include setBrowserCore(box-sizing, border-box);
+
+    &::-webkit-scrollbar {
+        width: 6px;
+
+        &-thumb {
+            background-color: $color-moonstone;
+            margin-inline: 2px;
+        }
+    }
 }
 
 html {
@@ -168,11 +177,11 @@ li {
         &-content {            
             margin-top: 60px;
             @include transition;
+        }
 
-            article {
-                &:not(:first-child) {
-                    display: none;
-                }
+        &-tab {
+            &:not(:first-child) {
+                display: none;
             }
         }
     }
@@ -186,7 +195,6 @@ li {
             @include absolute(20px, unset);
             right: 20px;
             cursor: pointer;
-            border: 1px sold red;
             height: 40px;
             @include flex;
 
