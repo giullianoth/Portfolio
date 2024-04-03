@@ -44,7 +44,9 @@
 
 @mixin rounded() {
     @include borderRadius(50%);
-}// FLEXBOX
+}
+
+// FLEXBOX
 @mixin flex($justifyContent: center, $alignItems: center, $flexWrap: wrap) {
     display: flex;
     justify-content: $justifyContent;
