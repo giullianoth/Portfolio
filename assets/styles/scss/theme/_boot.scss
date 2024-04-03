@@ -190,6 +190,7 @@ li {
         @include fixedFull(0, 0, true);
         @include overModalIndex;
         background-color: $color-raisin-black-alpha;
+        display: none;
 
         &-close {
             @include absolute(20px, unset);

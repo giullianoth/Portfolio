@@ -69,15 +69,15 @@
 }
 
 @mixin flex2($gap: 0) {
-    @include flexBasis(calc(100% / 2), $gap);
+    @include flexBasis(calc(100% / 2), calc($gap - ($gap / 2)));
 }
 
 @mixin flex3($gap: 0) {
-    @include flexBasis(calc(100% / 3), $gap);
+    @include flexBasis(calc(100% / 3), calc($gap - ($gap / 3)));
 }
 
 @mixin flex4($gap: 0) {
-    @include flexBasis(calc(100% / 4), $gap);
+    @include flexBasis(calc(100% / 4), calc($gap - ($gap / 4)));
 }
 
 // POSITION

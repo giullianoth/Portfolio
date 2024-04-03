@@ -243,6 +243,7 @@ li {
   height: 100%;
   z-index: 110;
   background-color: hsla(217, 24%, 15%, 0.969);
+  display: none;
 }
 .th-modal-close {
   position: absolute;
@@ -686,7 +687,7 @@ li {
 @media screen and (min-width: 1023px) {
   .th-about__photo {
     max-width: none;
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(50% - 10px);
   }
 }
 .th-about__infoText {
@@ -695,7 +696,7 @@ li {
 @media screen and (min-width: 1023px) {
   .th-about__infoText {
     max-width: none;
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(50% - 10px);
   }
 }
 .th-about__infoTitle h2 {
@@ -890,13 +891,13 @@ li {
 }
 @media screen and (min-width: 767px) {
   .th-portfolio__item {
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(50% - 10px);
     margin-inline: 0;
   }
 }
 @media screen and (min-width: 899px) {
   .th-portfolio__item {
-    flex-basis: calc(33.3333333333% - 20px);
+    flex-basis: calc(33.3333333333% - 13.3333333333px);
   }
 }
 .th-portfolio__item:hover .portfolio_info {

@@ -444,8 +444,8 @@
 
                 <div class="th-divider"></div>
 
-                <section class="th-modal" style="display: none;">
-                    <div class="th-modal-close">
+                <section class="th-modal j_modal" id="portfolio-modal">
+                    <div class="th-modal-close j_close_modal" title="Fechar" data-modalTarget="portfolio-modal">
                         <span class="icon"></span>
                     </div>
 
@@ -459,9 +459,9 @@
                                 </ul>
             
                                 <div class="th-tabs-content j_tabs_content">
-                                    <div class="th-tabs-tab j_tabs_item">
-                                        <div class="th-portfolio__list">
-                                            <article class="th-portfolio__item">
+                                    <div class="th-tabs-tab j_tabs_item" data-noflex>
+                                        <div class="th-portfolio__list j_portfolio_with_filter">
+                                            <article class="th-portfolio__item j_portfolio_item" data-filter="wordpress, elementor">
                                                 <img src="assets/images/portfolio/travel_mobile.jpg" alt="Travel">
                         
                                                 <div class="portfolio_info">
@@ -483,8 +483,8 @@
                                                 </div>
                                             </article>
                         
-                                            <article class="th-portfolio__item">
-                                                <img src="assets/images/portfolio/gym_mobile.jpg" alt="Travel">
+                                            <article class="th-portfolio__item j_portfolio_item" data-filter="wordpress, elementor">
+                                                <img src="assets/images/portfolio/gym_mobile.jpg" alt="Gym">
                         
                                                 <div class="portfolio_info">
                                                     <header class="title">
@@ -505,8 +505,8 @@
                                                 </div>
                                             </article>
                         
-                                            <article class="th-portfolio__item">
-                                                <img src="assets/images/portfolio/youdemi_mobile.jpg" alt="Travel">
+                                            <article class="th-portfolio__item j_portfolio_item" data-filter="wordpress, elementor">
+                                                <img src="assets/images/portfolio/youdemi_mobile.jpg" alt="Youdemi">
                         
                                                 <div class="portfolio_info">
                                                     <header class="title">
@@ -527,8 +527,8 @@
                                                 </div>
                                             </article>
                         
-                                            <article class="th-portfolio__item">
-                                                <img src="assets/images/portfolio/crafti_mobile.jpg" alt="Travel">
+                                            <article class="th-portfolio__item j_portfolio_item" data-filter="wordpress, elementor">
+                                                <img src="assets/images/portfolio/crafti_mobile.jpg" alt="Crafti">
                         
                                                 <div class="portfolio_info">
                                                     <header class="title">
@@ -549,8 +549,8 @@
                                                 </div>
                                             </article>
                         
-                                            <article class="th-portfolio__item">
-                                                <img src="assets/images/portfolio/adex_mobile.jpg" alt="Travel">
+                                            <article class="th-portfolio__item j_portfolio_item" data-filter="wordpress, elementor">
+                                                <img src="assets/images/portfolio/adex_mobile.jpg" alt="Adex">
                         
                                                 <div class="portfolio_info">
                                                     <header class="title">
@@ -571,8 +571,8 @@
                                                 </div>
                                             </article>
                         
-                                            <article class="th-portfolio__item">
-                                                <img src="assets/images/portfolio/mcreative_mobile.jpg" alt="Travel">
+                                            <article class="th-portfolio__item j_portfolio_item" data-filter="html, css">
+                                                <img src="assets/images/portfolio/mcreative_mobile.jpg" alt="MCreative">
                         
                                                 <div class="portfolio_info">
                                                     <header class="title">
@@ -593,8 +593,8 @@
                                                 </div>
                                             </article>
 
-                                            <article class="th-portfolio__item">
-                                                <img src="assets/images/portfolio/loopstudios_mobile.jpg" alt="Travel">
+                                            <article class="th-portfolio__item j_portfolio_item" data-filter="html, css">
+                                                <img src="assets/images/portfolio/loopstudios_mobile.jpg" alt="Loopstudios">
                         
                                                 <div class="portfolio_info">
                                                     <header class="title">
@@ -617,9 +617,9 @@
                                         </div>
                                     </div>
 
-                                    <div class="th-tabs-tab j_tabs_item"></div>
+                                    <div class="th-tabs-tab j_tabs_item j_portfolio_filtered" data-noflex data-filter="wordpress, elementor"></div>
 
-                                    <div class="th-tabs-tab j_tabs_item"></div>
+                                    <div class="th-tabs-tab j_tabs_item j_portfolio_filtered" data-noflex data-filter="html, css"></div>
                                 </div>
                             </div>
                         </div>
@@ -650,7 +650,7 @@
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/gym_mobile.jpg" alt="Travel">
+                        <img src="assets/images/portfolio/gym_mobile.jpg" alt="Gym">
 
                         <div class="portfolio_info">
                             <header class="title">
@@ -672,7 +672,7 @@
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/youdemi_mobile.jpg" alt="Travel">
+                        <img src="assets/images/portfolio/youdemi_mobile.jpg" alt="Youdemi">
 
                         <div class="portfolio_info">
                             <header class="title">
@@ -694,7 +694,7 @@
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/crafti_mobile.jpg" alt="Travel">
+                        <img src="assets/images/portfolio/crafti_mobile.jpg" alt="Crafti">
 
                         <div class="portfolio_info">
                             <header class="title">
@@ -716,7 +716,7 @@
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/adex_mobile.jpg" alt="Travel">
+                        <img src="assets/images/portfolio/adex_mobile.jpg" alt="Adex">
 
                         <div class="portfolio_info">
                             <header class="title">
@@ -738,7 +738,7 @@
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/mcreative_mobile.jpg" alt="Travel">
+                        <img src="assets/images/portfolio/mcreative_mobile.jpg" alt="MCreative">
 
                         <div class="portfolio_info">
                             <header class="title">
@@ -760,7 +760,7 @@
                     </article>
 
                     <div class="th-portfolio__openModal">
-                        <button class="th-button">Ver todos</button>
+                        <button class="th-button j_open_modal" data-modalTarget="portfolio-modal">Ver todos</button>
                     </div>
                 </div>
             </div>
