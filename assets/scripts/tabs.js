@@ -22,7 +22,7 @@ export default function ToggleTabs() {
                 fadeOut(activeTab(tabsGroup))
 
                 setTimeout(() => {
-                    tabsItems(tabsGroup)[index].style.display = "flex"
+                    tabsItems(tabsGroup)[index].style.display = Object.keys(tabsItems(tabsGroup)[index].dataset).includes("noflex") ? "block" : "flex"
                     tabsItems(tabsGroup)[index].style.opacity  = 0
                     
                     tabsContent(tabsGroup).style.maxHeight = `${tabsItems(tabsGroup)[index].offsetHeight}px`
