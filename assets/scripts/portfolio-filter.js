@@ -12,7 +12,7 @@ const portfolioListElement = () => {
     return element
 }
 
-export default function portfolioFilter() {
+export default function PortfolioFilter() {
 
     filteredSections.forEach(section => {
         section.append(portfolioListElement())
