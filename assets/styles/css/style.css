@@ -8,10 +8,11 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-*::-webkit-scrollbar {
+
+::-webkit-scrollbar {
   width: 6px;
 }
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #3AAFC9;
   margin-inline: 2px;
 }
