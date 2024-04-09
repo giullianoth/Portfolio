@@ -8,6 +8,10 @@
 ::-webkit-scrollbar {
     width: 6px;
 
+    &-track {
+        background-color: transparent;
+    }
+
     &-thumb {
         background-color: $color-moonstone;
         margin-inline: 2px;
@@ -48,6 +52,15 @@ input, select, textarea, button {
     font-size: inherit;
 }
 
+input, textarea {
+    border: 2px solid $color-moonstone;
+    background-color: $color-gunmetal;
+    padding: 20px;
+    outline: none;
+    display: block;
+    color: $color-white;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -81,7 +94,7 @@ li {
             gap: 12px;
         }
 
-        a {
+        i {
             @include flex;
             width: 45px;
             height: 45px;

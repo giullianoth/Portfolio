@@ -1,4 +1,3 @@
-import ResponsiveImages from "./responsive-images.js"
 import { normalArray } from "./variables.js"
 
 const portfolio = document.querySelector(".j_portfolio_with_filter")

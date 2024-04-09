@@ -7,6 +7,8 @@ const tabsButtons = (tabsGroup) => normalArray(tabsGroup.querySelectorAll(".j_ta
 const tabsItems = (tabsGroup) => normalArray(tabsGroup.querySelectorAll(".j_tabs_item"))
 const activeTab = (tabsGroup) => tabsItems(tabsGroup).find(tab => isVisible(tab))
 
+const tabDisplay = (tab) => Object.keys(tab.dataset).includes("noflex") ? "block" : "flex"
+
 export default function ToggleTabs() {
 
     tabs.forEach(tabsGroup => {
@@ -22,7 +24,7 @@ export default function ToggleTabs() {
                 fadeOut(activeTab(tabsGroup))
 
                 setTimeout(() => {
-                    tabsItems(tabsGroup)[index].style.display = Object.keys(tabsItems(tabsGroup)[index].dataset).includes("noflex") ? "block" : "flex"
+                    tabsItems(tabsGroup)[index].style.display = tabDisplay(tabsItems(tabsGroup)[index])
                     tabsItems(tabsGroup)[index].style.opacity  = 0
                     
                     tabsContent(tabsGroup).style.maxHeight = `${tabsItems(tabsGroup)[index].offsetHeight}px`
@@ -35,7 +37,7 @@ export default function ToggleTabs() {
 
                         fadeIn(
                             tabsItems(tabsGroup)[index],
-                            Object.keys(tabsItems(tabsGroup)[index].dataset).includes("noflex") ? "block" : "flex"
+                            tabDisplay(tabsItems(tabsGroup)[index])
                         )
                     }, transitionDuration)
                 }, transitionDuration)

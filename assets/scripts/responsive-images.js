@@ -1,4 +1,4 @@
-import { breakPointDesktopSD, breakPointTablet, breakPointTabletLandscape, normalArray } from "./variables.js"
+import { breakPointTablet, breakPointTabletLandscape, normalArray } from "./variables.js"
 
 const images = normalArray(document.querySelectorAll(".j_responsive_image"))
 const imagePath = (img) => img.src

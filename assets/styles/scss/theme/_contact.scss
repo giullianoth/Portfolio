@@ -1,0 +1,81 @@
+@include theme() {
+    &contact {
+        @include containerFluid;
+        @include containerSpacing1;
+
+        &__container {
+            @include container;
+        }
+
+        &__description {
+            margin-bottom: 40px;
+        }
+
+        .th-divider {
+            margin-bottom: 40px;
+        }
+
+        &__wrapper {
+            @include flex;
+            flex-direction: column;
+            row-gap: 40px;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        &__social {
+            max-width: 400px;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                max-width: none;
+                @include flex2;
+            }
+        }
+
+        &__socialMedia {
+            flex-direction: column;
+            align-items: stretch;
+
+            li {
+                @include flex(flex-start, center, nowrap);
+                gap: 10px;
+
+                a {
+                    font-size: 1.2em;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &__form {
+            max-width: 460px;
+
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                max-width: none;
+                @include flex2;
+            }
+
+            form {
+                @include flex;
+                gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    justify-content: flex-start;
+                }
+
+                & > * {
+                    @include flex1;
+                }
+
+                .th-button {
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                        flex-basis: unset;
+                    }
+                }
+            }
+        }
+    }
+}
