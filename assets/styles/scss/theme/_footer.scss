@@ -1,0 +1,18 @@
+@include theme() {
+    &footer {
+        @include containerFluid;
+        background-image: $gradient-default-2;
+
+        &__container {
+            @include container;
+        }
+
+        p {
+            margin: 0;
+            padding-block: 20px;
+            text-align: center;
+            border-top: 1px solid $color-moonstone;
+            font-size: 0.8em;
+        }
+    }
+}

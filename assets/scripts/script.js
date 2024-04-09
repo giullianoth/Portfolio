@@ -1,3 +1,4 @@
+import CopyYear from "./copyright-year.js"
 import FixedHeader from "./header.js"
 import menuCollapse from "./menu-collapse.js"
 import Modal from "./modal.js"
@@ -11,3 +12,4 @@ ToggleTabs()
 Modal()
 ResponsiveImages()
 PortfolioFilter()
+CopyYear()

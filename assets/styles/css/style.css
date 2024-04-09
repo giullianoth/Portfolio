@@ -1063,3 +1063,21 @@ li {
     flex-basis: unset;
   }
 }
+
+/* FOOTER CONFIG */
+.th-footer {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #222A36, #1C232E);
+}
+.th-footer__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.th-footer p {
+  margin: 0;
+  padding-block: 20px;
+  text-align: center;
+  border-top: 1px solid #3AAFC9;
+  font-size: 0.8em;
+}
