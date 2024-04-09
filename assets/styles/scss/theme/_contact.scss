@@ -38,6 +38,7 @@
         &__socialMedia {
             flex-direction: column;
             align-items: stretch;
+            padding: 0;
 
             li {
                 @include flex(flex-start, center, nowrap);
