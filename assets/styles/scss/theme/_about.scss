@@ -184,6 +184,10 @@
             .chart {
                 @include flex(flex-start, center, nowrap);
                 gap: 20px;
+
+                p {
+                    margin-block: 0;
+                }
             }
 
             .bar {

@@ -852,6 +852,9 @@ li {
   flex-wrap: nowrap;
   gap: 20px;
 }
+.th-about__skillsChart .chart p {
+  margin-block: 0;
+}
 .th-about__skillsChart .bar {
   width: 100%;
   height: 4px;
