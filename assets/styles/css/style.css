@@ -32,7 +32,12 @@ body {
   background-color: #222A36;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   line-height: 1;
 }
@@ -51,12 +56,16 @@ img {
   -o-object-position: center;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   font-family: inherit;
   font-size: inherit;
 }
 
-input, textarea {
+input,
+textarea {
   border: 2px solid #3AAFC9;
   background-color: #222A36;
   padding: 20px;
@@ -298,6 +307,37 @@ li {
 .th-modal-wrapper {
   height: 100%;
   overflow-x: auto;
+}
+.th-confirm {
+  width: 100%;
+}
+.th-confirm p {
+  padding: 6px 12px;
+}
+.th-confirm p.success {
+  background: rgb(12, 134, 87);
+}
+.th-confirm p.error {
+  background: rgb(196, 75, 75);
+}
+.th-loader {
+  width: 16px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #FFF;
+  --_m: conic-gradient(#0000 10%, #000),
+      linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: load 1s infinite linear;
+}
+@keyframes load {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /* HEADER CONFIG */

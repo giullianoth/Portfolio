@@ -893,12 +893,13 @@
                     </div>
 
                     <div class="th-contact__form">
-                        <form action="" method="post">
-                            <input type="text" name="name" id="name" placeholder="Digite seu nome">
-                            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
-                            <textarea name="message" id="message" rows="14" placeholder="Digite sua mensagem"></textarea>
-                            <button type="submit" class="th-button">Enviar</button>
+                        <form class="j_contact_form">
+                            <input type="text" id="name" placeholder="Digite seu nome">
+                            <input type="email" id="email" placeholder="Digite seu e-mail">
+                            <textarea id="message" rows="14" placeholder="Digite sua mensagem"></textarea>
+                            <button type="submit" class="th-button j_button_load">Enviar</button>
                         </form>
+                        <div class="th-confirm j_contact_confirm_message"></div>
                     </div>
                 </div>
             </div>
@@ -911,6 +912,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="module" src="assets/scripts/script.js"></script>
 </body>
 </html>

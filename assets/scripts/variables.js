@@ -12,8 +12,21 @@ export const breakPointDesktopFHD = 1920
 
 export const isVisible = (element) => window.getComputedStyle(element).display !== "none"
 
+export const publicKey = "5AVwJAPL4qqDOEAk_"
+export const serviceID = "service_cu4ln3h"
+export const templateID = "template_wkh5a4s"
+
 export const transitionDuration = 300
 export const transitionGap = 10
+
+export const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+export const textTags = /(<([^>]+)>)/ig
+
+export const validateEmail = (email) => emailPattern.test(email)
+export const stripTags = (str) => str.replace(textTags, "")
+
+export const loader = "<div class=\"th-loader j_loader\"></div>"
+export const loaderElement = () => document.querySelector(".j_loader")
 
 export const normalArray = (array) => {
     let newArray = []
