@@ -7,6 +7,7 @@ import Modal from "./modal.js"
 import PortfolioFilter from "./portfolio-filter.js"
 import ResponsiveImages from "./responsive-images.js"
 import ToggleTabs from "./tabs.js"
+import SkillsCharts from "./skills.js"
 
 EmailInitialize()
 
@@ -15,6 +16,7 @@ FixedHeader()
 ToggleTabs()
 Modal()
 ResponsiveImages()
+SkillsCharts()
 PortfolioFilter()
 Contact()
 CopyYear()

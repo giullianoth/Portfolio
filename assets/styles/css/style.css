@@ -895,7 +895,7 @@ li {
 }
 .th-about__skillsChart .bar {
   width: 100%;
-  height: 4px;
+  height: 2px;
   background-color: #FFF;
   position: relative;
 }
@@ -907,8 +907,12 @@ li {
   height: 8px;
   background-color: #3AAFC9;
   transition: all 0.3s ease 0s;
+  transition-timing-function: linear;
   transform-origin: left;
-  width: 75%;
+}
+.th-about__skillsChart .percent {
+  flex-basis: 40px;
+  text-align: right;
 }
 
 /* PORTFOLIO SECTION CONFIG */
