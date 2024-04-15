@@ -50,6 +50,7 @@ export function slideUp(element, removeElement = false) {
         element.style.borderBottomWidth = ""
         element.style.overflow = ""
         element.style.transition = ""
+        removeElement && element.remove()
     }, transitionDuration)
 }
 

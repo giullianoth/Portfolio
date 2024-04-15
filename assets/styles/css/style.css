@@ -8,16 +8,14 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
-::-webkit-scrollbar {
-  width: 6px;
+*::-webkit-scrollbar {
+  width: 3px;
 }
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background-color: transparent;
 }
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #3AAFC9;
-  margin-inline: 2px;
 }
 
 html {
@@ -936,6 +934,24 @@ li {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+.th-portfolio__openModal {
+  max-width: 420px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 767px) {
+  .th-portfolio__openModal {
+    max-width: none;
+    margin-inline: 0;
+  }
+}
+.th-portfolio__openModal button {
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .th-portfolio__openModal button {
+    width: auto;
+  }
 }
 .th-portfolio__item {
   flex-basis: 100%;

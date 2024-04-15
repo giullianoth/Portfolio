@@ -23,9 +23,9 @@ export default function Contact() {
         let valid = false
 
         if (userName === "" || userEmail === "" || message === "") {
-            confirmMessage = confirmElement("Preencha corretamente os dados")
+            confirmMessage = confirmElement("Preencha corretamente os dados.")
         } else if (!validateEmail(userEmail)) {
-            confirmMessage = confirmElement("Endereço de e-mail inválido")
+            confirmMessage = confirmElement("Endereço de e-mail inválido.")
         } else {
             valid = true
         }
@@ -47,7 +47,7 @@ export default function Contact() {
                 },
                 (error) => {
                     if (error.status !== 200) {
-                        confirmMessage = confirmElement("Algo deu errado ao enviar sua mensagem")
+                        confirmMessage = confirmElement("Algo deu errado ao enviar sua mensagem...")
                     }
                 },
             ).finally(() => {

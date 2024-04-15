@@ -3,18 +3,17 @@
     padding: 0;
     vertical-align: baseline;
     @include setBrowserCore(box-sizing, border-box);
-}
 
-::-webkit-scrollbar {
-    width: 6px;
-
-    &-track {
-        background-color: transparent;
-    }
-
-    &-thumb {
-        background-color: $color-moonstone;
-        margin-inline: 2px;
+    &::-webkit-scrollbar {
+        width: 3px;
+    
+        &-track {
+            background-color: transparent;
+        }
+    
+        &-thumb {
+            background-color: $color-moonstone;
+        }
     }
 }
 
