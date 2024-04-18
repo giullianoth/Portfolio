@@ -318,25 +318,6 @@ li {
 .th-confirm p.error {
   background: rgb(196, 75, 75);
 }
-.th-loader {
-  width: 16px;
-  padding: 8px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #FFF;
-  --_m: conic-gradient(#0000 10%, #000),
-      linear-gradient(#000 0 0) content-box;
-  -webkit-mask: var(--_m);
-  mask: var(--_m);
-  -webkit-mask-composite: source-out;
-  mask-composite: subtract;
-  animation: load 1s infinite linear;
-}
-@keyframes load {
-  to {
-    transform: rotate(1turn);
-  }
-}
 
 /* HEADER CONFIG */
 .th-header {

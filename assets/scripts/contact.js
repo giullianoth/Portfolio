@@ -13,6 +13,7 @@ const confirmElement = (text, valid = false) => {
 }
 
 export default function Contact() {
+    console.log(buttonLoad.offsetWidth);
     contactForm.addEventListener("submit", async (event) => {
         event.preventDefault()
 
@@ -30,6 +31,7 @@ export default function Contact() {
             valid = true
         }
 
+        buttonLoad.style.width = `${buttonLoad.offsetWidth}px`
         buttonLoad.innerHTML = loader
 
         if (valid) {
@@ -54,6 +56,7 @@ export default function Contact() {
                 confirm.append(confirmMessage)
                 slideDown(confirmMessage)
                 buttonLoad.innerText = "Enviar"
+                buttonLoad.style.width = ""
 
                 setTimeout(() => {
                     slideUp(confirmMessage, true)
@@ -63,6 +66,7 @@ export default function Contact() {
             confirm.append(confirmMessage)
             slideDown(confirmMessage)
             buttonLoad.innerText = "Enviar"
+            buttonLoad.style.width = ""
 
             setTimeout(() => {
                 slideUp(confirmMessage, true)
