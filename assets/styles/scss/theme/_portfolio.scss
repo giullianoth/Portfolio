@@ -47,6 +47,11 @@
             max-width: 420px;
             margin-inline: auto;
 
+            @include backgroundImage;
+            background-position: top;
+
+            @include transition(background-position, 10s, linear);
+
             @include setResponsiveDesign($breakpoint-tablet) {
                 @include flex2(20px);
                 margin-inline: 0;
@@ -57,6 +62,8 @@
             }
 
             &:hover {
+                background-position: bottom;
+
                 .portfolio_info {
                     opacity: 1;
                 }
@@ -68,6 +75,10 @@
                 @include setResponsiveDesign($breakpoint-tablet) {
                     display: block;
                 }
+            }
+
+            img {
+                @include transition;
             }
 
             .portfolio_info {

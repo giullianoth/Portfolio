@@ -945,6 +945,11 @@ li {
   overflow: hidden;
   max-width: 420px;
   margin-inline: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-position: top;
+  transition: background-position 10s linear 0s;
 }
 @media screen and (min-width: 767px) {
   .th-portfolio__item {
@@ -957,6 +962,9 @@ li {
     flex-basis: calc(33.3333333333% - 13.3333333333px);
   }
 }
+.th-portfolio__item:hover {
+  background-position: bottom;
+}
 .th-portfolio__item:hover .portfolio_info {
   opacity: 1;
 }
@@ -967,6 +975,9 @@ li {
   .th-portfolio__item:nth-child(5), .th-portfolio__item:nth-child(6) {
     display: block;
   }
+}
+.th-portfolio__item img {
+  transition: all 0.3s ease 0s;
 }
 .th-portfolio__item .portfolio_info {
   position: absolute;

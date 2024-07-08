@@ -13,7 +13,6 @@ const confirmElement = (text, valid = false) => {
 }
 
 export default function Contact() {
-    console.log(buttonLoad.offsetWidth);
     contactForm.addEventListener("submit", async (event) => {
         event.preventDefault()
 
