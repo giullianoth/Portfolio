@@ -3,7 +3,8 @@ import { isVisible, transitionGap } from "./variables.js"
 
 const menuIcon = document.querySelector(".j_menu_icon"),
     menuOverlay = document.querySelector(".j_menu_overlay"),
-    menuContainer = document.querySelector(".j_menu_container")
+    menuContainer = document.querySelector(".j_menu_container"),
+    touchable = document.querySelector(".j_touchable")
 
 export default function menuCollapse() {
     window.addEventListener("resize", ({ target }) => {
@@ -32,6 +33,20 @@ export default function menuCollapse() {
 
     menuOverlay.addEventListener("click", ({ target }) => {
         if (isVisible(menuOverlay) && target.classList.contains("j_menu_overlay") && menuIcon.classList.contains("active") && menuContainer.classList.contains("active")) {
+            fadeOut(menuOverlay)
+            menuIcon.classList.remove("active")
+            menuContainer.classList.remove("active")
+        }
+    })
+
+    touchable.addEventListener("touchmove", (event) => touchable.style.transform = `translateX(${event.touches[0].clientX}px)`)
+    
+    touchable.addEventListener("touchend", () => {
+        let positionLeft = Number(window.getComputedStyle(touchable).transform.substring(7, window.getComputedStyle(touchable).transform.indexOf(")")).split(", ")[4])
+        
+        touchable.style.transform = ""
+
+        if (positionLeft > touchable.offsetWidth / 2) {
             fadeOut(menuOverlay)
             menuIcon.classList.remove("active")
             menuContainer.classList.remove("active")

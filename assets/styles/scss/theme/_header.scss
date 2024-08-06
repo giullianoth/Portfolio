@@ -96,6 +96,7 @@
                 @include fixedFull(0, 0, true);
                 @include flex(flex-end);
                 display: none;
+                overflow: hidden;
 
                 @include setResponsiveDesign($breakpoint-large) {
                     display: block;
