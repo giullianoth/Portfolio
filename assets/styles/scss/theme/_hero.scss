@@ -72,6 +72,7 @@
             font-size: 2em;
             font-weight: 800;
             line-height: 1em;
+            text-transform: uppercase;
 
             @include setResponsiveDesign($breakpoint-small) {
                 font-size: 2.4em;

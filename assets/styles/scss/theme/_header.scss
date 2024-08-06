@@ -30,6 +30,10 @@
             @include flex(space-between, center, nowrap)
         }
 
+        &__title {
+            display: none;
+        }
+
         &__navigation {
             padding-block: 20px;
             @include transition;

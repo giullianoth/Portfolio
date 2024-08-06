@@ -107,6 +107,9 @@ img {
   align-items: center;
   flex-wrap: nowrap;
 }
+.th-header__title {
+  display: none;
+}
 .th-header__navigation {
   padding-block: 20px;
   transition: all 0.3s ease 0s;
@@ -390,6 +393,7 @@ img {
   font-size: 2em;
   font-weight: 800;
   line-height: 1em;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 576px) {
   .th-hero__title {
