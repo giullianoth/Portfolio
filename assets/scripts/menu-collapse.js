@@ -39,14 +39,18 @@ export default function menuCollapse() {
         }
     })
 
-    touchable.addEventListener("touchmove", (event) => touchable.style.transform = `translateX(${event.touches[0].clientX}px)`)
+    touchable.addEventListener("touchmove", (event) => {
+        touchable.style.transition = "unset"
+        touchable.style.transform = `translateX(${event.touches[0].clientX}px)`
+    })
     
     touchable.addEventListener("touchend", () => {
         let positionLeft = Number(window.getComputedStyle(touchable).transform.substring(7, window.getComputedStyle(touchable).transform.indexOf(")")).split(", ")[4])
         
+        touchable.style.transition = ""
         touchable.style.transform = ""
 
-        if (positionLeft > touchable.offsetWidth / 2) {
+        if (positionLeft > touchable.offsetWidth / 4) {
             fadeOut(menuOverlay)
             menuIcon.classList.remove("active")
             menuContainer.classList.remove("active")
