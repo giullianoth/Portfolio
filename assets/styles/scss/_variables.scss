@@ -16,6 +16,9 @@ $color-secondary: #1D2935;
 $color-secondary-variant: #3B4856;
 $color-text: #F0FAFF;
 
+$gradient1: linear-gradient($color-background-primary, $color-background-secondary);
+$gradient2: linear-gradient($color-background-secondary, $color-background-primary);
+
 // TIPOGRAPHY
 $font-poppins: "Poppins", sans-serif;
 $font-raleway: "Raleway", sans-serif;

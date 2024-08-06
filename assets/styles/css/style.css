@@ -461,6 +461,43 @@ img {
 }
 
 /* TECHNOLOGIES SECTION CONFIG */
+.th-technologies {
+  width: 100%;
+  padding-block: 20px;
+  background-image: linear-gradient(#191919, #2A2A2A);
+}
+@media screen and (min-width: 1200px) {
+  .th-technologies {
+    padding-block: 40px;
+  }
+}
+.th-technologies__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.th-technologies__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.th-technologies__item i {
+  font-size: 30px;
+  opacity: 0.16;
+  pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  .th-technologies__item i {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .th-technologies__item i {
+    font-size: 80px;
+  }
+}
+
 /* ABOUT SECTION CONFIG */
 /* PORTFOLIO SECTION CONFIG */
 /* CONTACT SECTION CONFIG */

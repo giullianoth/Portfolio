@@ -1,0 +1,35 @@
+@include theme() {
+    &technologies {
+        @include containerFluid;
+        padding-block: 20px;
+        background-image: $gradient1;
+
+        @include setResponsiveDesign($breakpoint-xx-large) {
+            padding-block: 40px;
+        }
+
+        &__container {
+            @include container;
+        }
+
+        &__list {
+            @include flex(space-between, center, nowrap);
+        }
+
+        &__item {
+            i {
+                font-size: 30px;
+                opacity: 0.16;
+                pointer-events: none;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    font-size: 50px;
+                }
+
+                @include setResponsiveDesign($breakpoint-xx-large) {
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}
