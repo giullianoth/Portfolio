@@ -1,28 +1,20 @@
-// LAYOUT AND BREAKPOINTS
-$layout-mobile: 375px;
-$layout-desktop: 1440px;
-
-$breakpoint-mobile: 480px;
-$breakpoint-mobile-landscape: 600px;
-$breakpoint-tablet: 768px;
-$breakpoint-tablet-landscape: 900px;
-$breakpoint-desktop-sd: 1024px;
-$breakpoint-desktop-hd1: 1366px;
-$breakpoint-desktop-hd2: $layout-desktop;
-$breakpoint-desktop-fhd: 1920px;
+// BREAKPOINTS
+$breakpoint-extra-small: 375px;
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extra-large: 1024px;
+$breakpoint-xx-large: 1200px;
 
 // COLORS
-$color-moonstone: #3AAFC9;
-$color-gunmetal: #222A36;
-$color-raisin-black: #1C232E;
-$color-white: #FFF;
+$color-background-primary: #191919;
+$color-background-secondary: #2A2A2A;
+$color-background-overlay: #1A1A1AB3;
 
-$color-raisin-black-alpha: hsla(217, 24%, 15%, 0.969);
-$color-white-alpha: #FFFFFF66;
-
-$gradient-default-1: linear-gradient(to bottom, $color-raisin-black, $color-gunmetal);
-$gradient-default-2: linear-gradient(to bottom, $color-gunmetal, $color-raisin-black);
-$gradient-portfolio: linear-gradient(to bottom, #1C232E00 0%, #1d242fCC 50%);
+$color-primary: #E39E22;
+$color-secondary: #1D2935;
+$color-secondary-variant: #3B4856;
+$color-text: #F0FAFF;
 
 // TIPOGRAPHY
 $font-poppins: "Poppins", sans-serif;
@@ -30,15 +22,15 @@ $font-raleway: "Raleway", sans-serif;
 $font-size-default: 1rem;
 
 // CONTAINER MAX WIDTH
-$container-max-width: 1300px;
-$container-padding-inline: 20px;
-$container-spacing-block: 80px;
+$container-width: 1300px;
+$side-clearance: 20px;
+$section-clearance: 80px;
 
 // TRANSITIONS AND ANIMATIONS
 $transition-duration-default: 0.3s;
 
-// BROWSER CORES
-$browser-cores-default: ("moz", "webkit");
+// BROWSER PREFIXES
+$browser-prefixes-default: ("moz", "webkit");
 
 // IMAGES
 $image-path: "../../../assets/images"

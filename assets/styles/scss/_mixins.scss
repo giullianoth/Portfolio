@@ -14,26 +14,22 @@
     }
 }
 
-@mixin container($maxWidth: $container-max-width, $padding: $container-padding-inline) {
+@mixin container($maxWidth: $container-width, $padding: $side-clearance) {
     max-width: $maxWidth;
     padding-inline: $padding;
     margin-inline: auto;
 }
 
-@mixin containerSpacing1($spacing: $container-spacing-block) {
-    margin-block: $spacing;
-}
-
-@mixin containerSpacing2($spacing: $container-spacing-block) {
+@mixin containerClearance($spacing: $section-clearance) {
     padding-block: $spacing;
 }
 
-// BROWSER CORE ATTRIBUTES
-@mixin setBrowserCore($attr, $value, $cores: $browser-cores-default) {
+// ATTRIBUTES WITH BROWSER PREFIXES
+@mixin setBrowserPrefix($attr, $value, $prefixes: $browser-prefixes-default) {
     #{$attr}: #{$value};
 
-    @each $core in $cores {
-        -#{$core}-#{$attr}: #{$value};
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$attr}: #{$value};
     }
 }
 
@@ -57,6 +53,7 @@
 @mixin flexBasis($basis, $gap: 0) {
     @if $gap !=0 {
         flex-basis: calc($basis - $gap);
+        flex-grow: 1;
     }
 
     @else {
@@ -69,15 +66,15 @@
 }
 
 @mixin flex2($gap: 0) {
-    @include flexBasis(calc(100% / 2), calc($gap - ($gap / 2)));
+    @include flexBasis(calc(100% / 2), $gap);
 }
 
 @mixin flex3($gap: 0) {
-    @include flexBasis(calc(100% / 3), calc($gap - ($gap / 3)));
+    @include flexBasis(calc(100% / 3), $gap);
 }
 
 @mixin flex4($gap: 0) {
-    @include flexBasis(calc(100% / 4), calc($gap - ($gap / 4)));
+    @include flexBasis(calc(100% / 4), $gap);
 }
 
 // POSITION
@@ -111,16 +108,20 @@
 }
 
 // Z-index
-@mixin modalIndex() {
-    z-index: 100;
-}
-
-@mixin overModalIndex() {
+@mixin indexLevel3() {
     z-index: 110;
 }
 
-@mixin contentBackIndex() {
+@mixin indexLevel2() {
+    z-index: 100;
+}
+
+@mixin indexBase() {
     z-index: 0;
+}
+
+@mixin indexOverBase() {
+    z-index: 1;
 }
 
 // BACKGROUND IMAGE
@@ -141,7 +142,6 @@
 
 // RESPONSIVE DESIGN
 @mixin setResponsiveDesign($screenWidth, $isMaxWidth: false) {    
-    $width: calc($screenWidth - 1px);
 
     @if $isMaxWidth == true {
         @media screen and (max-width: $screenWidth) {
@@ -150,30 +150,8 @@
     }
 
     @else {
-        @media screen and (min-width: $width) {
+        @media screen and (min-width: $screenWidth) {
             @content;
         }
     }
-}
-
-// APPEARANCE
-@mixin button() {
-    background-color: $color-moonstone;
-    display: inline-block;
-    padding: 12px 24px;
-    cursor: pointer;
-    border: none;
-    font-family: $font-poppins;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: $color-white;
-    text-align: center;
-    outline: none;
-}
-
-@mixin buttonOutline() {
-    @include button;
-    background: none;
-    border: 2px solid $color-moonstone;
-    color: $color-moonstone;
 }

@@ -3,13 +3,14 @@ import { isVisible, transitionGap } from "./variables.js"
 
 const menuIcon = document.querySelector(".j_menu_icon"),
     menuOverlay = document.querySelector(".j_menu_overlay"),
-    menuWrapper = document.querySelector(".j_menu_wrapper")
+    menuContainer = document.querySelector(".j_menu_container")
 
 export default function menuCollapse() {
     window.addEventListener("resize", ({ target }) => {
         if (target.innerWidth >= 900) {
             menuIcon.classList.remove("active")
-            menuWrapper.classList.remove("active")
+            menuContainer.classList.remove("active")
+            menuOverlay.style.display = ""
         }
     })
 
@@ -20,20 +21,20 @@ export default function menuCollapse() {
 
             setTimeout(() => {
                 menuIcon.classList.add("active")
-                menuWrapper.classList.add("active")
+                menuContainer.classList.add("active")
             }, transitionGap)
         } else {
             fadeOut(menuOverlay)
             menuIcon.classList.remove("active")
-            menuWrapper.classList.remove("active")
+            menuContainer.classList.remove("active")
         }
     })
 
     menuOverlay.addEventListener("click", ({ target }) => {
-        if (isVisible(menuOverlay) && target.classList.contains("j_menu_overlay") && menuIcon.classList.contains("active") && menuWrapper.classList.contains("active")) {
+        if (isVisible(menuOverlay) && target.classList.contains("j_menu_overlay") && menuIcon.classList.contains("active") && menuContainer.classList.contains("active")) {
             fadeOut(menuOverlay)
             menuIcon.classList.remove("active")
-            menuWrapper.classList.remove("active")
+            menuContainer.classList.remove("active")
         }
     })
 }

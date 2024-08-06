@@ -1,20 +1,8 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-    @include setBrowserCore(box-sizing, border-box);
-
-    &::-webkit-scrollbar {
-        width: 3px;
-    
-        &-track {
-            background-color: transparent;
-        }
-    
-        &-thumb {
-            background-color: $color-moonstone;
-        }
-    }
+    @include setBrowserPrefix(box-sizing, border-box);
 }
 
 html {
@@ -22,105 +10,58 @@ html {
 }
 
 body {
+    background-color: $color-background-secondary;
+    color: $color-text;
     font-family: $font-raleway;
-    font-size: $font-size-default;
-    font-weight: 400;
-    color: $color-white;
-    background-color: $color-gunmetal;
+    font-size: 1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: $font-poppins;
-    line-height: 1;
-}
-
-p {
-    margin-block: 18px;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    @include setBrowserCore(object-fit, cover, ("o"));
-    @include setBrowserCore(object-position, center, ("o"));
-}
-
-input,
-select,
-textarea,
-button {
-    font-family: inherit;
-    font-size: inherit;
-}
-
-input,
-textarea {
-    border: 2px solid $color-moonstone;
-    background-color: $color-gunmetal;
-    padding: 20px;
-    outline: none;
-    display: block;
-    color: $color-white;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
 }
 
 li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    @include setBrowserPrefix(object-fit, cover, "o");
+    @include setBrowserPrefix(object-position, center, "o");
+}
+
 @include theme() {
     &button {
-        @include button;
-    }
+        background-color: $color-primary;
+        display: inline-block;
+        border: none;
+        padding: 12px 30px;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        font-family: $font-raleway;
+        color: $color-text;
+        @include transition;
 
-    &button-outline {
-        @include buttonOutline;
-    }
-
-    &social {
-        @include flex;
-        gap: 24px;
-        width: auto;
-        padding-block: 40px;
-
-        @include setResponsiveDesign($breakpoint-desktop-sd) {
-            justify-content: flex-start;
-            padding-block: 40px 0;
+        &:hover {
+            background-color: $color-text;
+            color: $color-background-primary;
         }
 
-        @include setResponsiveDesign(300px, true) {
-            gap: 12px;
-        }
+        &-outline {
+            background-color: transparent;
+            border: 1px solid $color-primary;
+            color: $color-primary;
 
-        i {
-            @include flex;
-            width: 45px;
-            height: 45px;
-            border: 2px solid $color-moonstone;
-            @include rounded;
-            font-size: 1.6em;
-            color: $color-moonstone;
-
-            @include setResponsiveDesign($breakpoint-mobile-landscape) {
-                width: 48px;
-                height: 48px;
-                font-size: 1.8em;
-            }
-
-            @include setResponsiveDesign($breakpoint-desktop-sd) {
-                width: 54px;
-                height: 54px;
-                font-size: 2em;
+            &:hover {
+                border-color: $color-text;
             }
         }
     }
@@ -128,140 +69,6 @@ li {
     &divider {
         width: 120px;
         height: 5px;
-        background-color: $color-moonstone;
-        margin-inline: auto;
-
-        @include setResponsiveDesign($breakpoint-desktop-sd) {
-            width: 180px;
-            height: 10px;
-        }
-    }
-
-    &section-title {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 1.2em;
-        margin-bottom: 20px;
-
-        @include setResponsiveDesign($breakpoint-tablet) {
-            font-size: 1.6em;
-        }
-
-        @include setResponsiveDesign($breakpoint-desktop-sd) {
-            font-size: 2em;
-            text-align: left;
-        }
-
-        h1 {
-            line-height: 1;
-        }
-
-        span {
-            display: block;
-            font-weight: 500;
-            font-size: 0.7em;
-            text-transform: none;
-            color: $color-moonstone;
-            margin-bottom: 8px;
-        }
-    }
-
-    &tabs {
-        @include containerFluid;
-
-        &-buttons {
-            @include flex;
-            gap: 10px;
-        }
-
-        &-button {
-            padding: 12px !important;
-            flex-grow: 1;
-            @include transition;
-
-            &:hover {
-                background-color: $color-moonstone !important;
-                color: $color-white !important;
-                border: 2px solid transparent !important;
-            }
-
-            &.selected {
-                @include button;
-                border: 2px solid transparent;
-            }
-
-            &.unselected {
-                @include buttonOutline;
-            }
-        }
-
-        &-content {
-            margin-top: 60px;
-            @include transition;
-        }
-
-        &-tab {
-            &:not(:first-child) {
-                display: none;
-            }
-        }
-    }
-
-    &modal {
-        @include fixedFull(0, 0, true);
-        @include overModalIndex;
-        background-color: $color-raisin-black-alpha;
-        display: none;
-
-        &-close {
-            @include absolute(20px, unset);
-            right: 20px;
-            cursor: pointer;
-            height: 40px;
-            @include flex;
-
-            .icon {
-                display: block;
-                width: 40px;
-                height: 3px;
-                background-color: $color-white;
-                @include relative;
-                transform: rotate(45deg);
-
-                &::before {
-                    content: "";
-                    @include absoluteFull(0, 0, true);
-                    background-color: $color-white;
-                    transform: rotate(-90deg);
-                }
-            }
-        }
-
-        &-container {
-            @include container;
-            @include containerSpacing2;
-            height: 100%;
-        }
-
-        &-wrapper {
-            height: 100%;
-            overflow-x: auto;
-        }
-    }
-
-    &confirm {
-        @include containerFluid;
-
-        p {
-            padding: 6px 12px;
-
-            &.success {
-                background: rgb(12, 134, 87);
-            }
-
-            &.error {
-                background: rgb(196, 75, 75);
-            }
-        }
+        background-color: $color-primary;
     }
 }
