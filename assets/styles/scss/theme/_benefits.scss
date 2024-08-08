@@ -1,0 +1,75 @@
+@include theme() {
+    &benefits {
+        @include containerFluid;
+        @include containerClearance;
+        @include backgroundOverlay("benefits-bg.jpg");        
+        background-color: $color-secondary;
+
+        &::before {
+            filter: saturate(0);
+        }
+
+        &__container {
+            @include container;
+        }
+
+        &__list {
+            @include flex(space-evenly);
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 60px;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                flex-direction: row;
+            }
+        }
+
+        &__item {
+            @include flex(center, center, nowrap);
+            gap: 8px;
+            text-transform: uppercase;
+
+            &:nth-child(odd) {
+                color: $color-primary
+            }
+
+            i {
+                font-size: 1.8em;
+            }
+        }
+
+        &__info {
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex(space-between, center, nowrap);
+            }
+        }
+
+        &__text {
+            margin-bottom: 40px;
+            font-size: 1.4em;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                margin: 0;
+                width: 620px;
+                text-align: start;
+            }
+
+            @include setResponsiveDesign($breakpoint-xx-large) {
+                width: 730px;
+            }
+        }
+
+        &__cta {
+            @include flex;
+
+            a {
+                flex-grow: 1;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    flex-grow: 0;
+                }
+            }
+        }
+    }
+}

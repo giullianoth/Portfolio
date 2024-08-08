@@ -45,7 +45,19 @@
                 margin-bottom: 20px;
 
                 i {
-                    font-size: 1.8em;
+                    font-size: 1.4em;
+
+                    @include setResponsiveDesign($breakpoint-xx-large) {
+                        font-size: 1.6em;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.2em;
+
+                    @include setResponsiveDesign($breakpoint-xx-large) {
+                        font-size: 1.4em;
+                    }
                 }
             }
         }

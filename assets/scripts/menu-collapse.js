@@ -39,7 +39,7 @@ export default function menuCollapse() {
         }
     })
 
-    touchable.addEventListener("touchmove", (event) => {
+    /*touchable.addEventListener("touchmove", (event) => {
         if (window.innerWidth < 992) {
             touchable.style.transition = "unset"
             touchable.style.transform = `translateX(${event.touches[0].clientX}px)`
@@ -59,5 +59,5 @@ export default function menuCollapse() {
                 menuContainer.classList.remove("active")
             }
         }
-    })
+    })*/
 }
