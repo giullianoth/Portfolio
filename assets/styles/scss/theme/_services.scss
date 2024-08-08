@@ -1,0 +1,71 @@
+@include theme() {
+    &services {
+        @include containerFluid;
+        @include containerClearance;
+
+        &__container {
+            @include container;
+        }
+
+        &__text {
+            max-width: 600px;
+            margin-bottom: 60px;
+        }
+
+        &__list {
+            @include flex(flex-start, stretch);
+            gap: 30px;
+            margin-top: 40px;
+            @include container(400px, 0);
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include container(none, 0);
+            }
+        }
+
+        &__item {
+            @include flex1;
+            padding: 20px;
+            background-color: $color-background-primary;
+            border: 1px solid $color-primary;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include flex2(30px);
+            }
+
+            @include setResponsiveDesign($breakpoint-xx-large) {
+                @include flex4(30px);
+            }
+
+            &-title {
+                @include flex(center, center, nowrap);
+                gap: 14px;
+                color: $color-primary;
+                margin-bottom: 20px;
+
+                i {
+                    font-size: 1.8em;
+                }
+            }
+        }
+
+        &__cta {
+            margin-top: 60px;
+            @include flex;
+            @include container(400px, 0);
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include container(none, 0);
+            }
+
+            .th-button {
+                flex-grow: 1;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    flex-grow: 0;
+                }
+            }
+        }
+    }
+}

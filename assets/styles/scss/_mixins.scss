@@ -22,6 +22,10 @@
 
 @mixin containerClearance($spacing: $section-clearance) {
     padding-block: $spacing;
+
+    @include setResponsiveDesign($breakpoint-small) {
+        padding-block: calc($spacing - 20px);
+    }
 }
 
 // ATTRIBUTES WITH BROWSER PREFIXES

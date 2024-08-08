@@ -8,7 +8,7 @@ const menuIcon = document.querySelector(".j_menu_icon"),
 
 export default function menuCollapse() {
     window.addEventListener("resize", ({ target }) => {
-        if (target.innerWidth >= 900) {
+        if (target.innerWidth >= 992) {
             menuIcon.classList.remove("active")
             menuContainer.classList.remove("active")
             menuOverlay.style.display = ""
@@ -40,20 +40,24 @@ export default function menuCollapse() {
     })
 
     touchable.addEventListener("touchmove", (event) => {
-        touchable.style.transition = "unset"
-        touchable.style.transform = `translateX(${event.touches[0].clientX}px)`
+        if (window.innerWidth < 992) {
+            touchable.style.transition = "unset"
+            touchable.style.transform = `translateX(${event.touches[0].clientX}px)`
+        }
     })
-    
-    touchable.addEventListener("touchend", () => {
-        let positionLeft = Number(window.getComputedStyle(touchable).transform.substring(7, window.getComputedStyle(touchable).transform.indexOf(")")).split(", ")[4])
-        
-        touchable.style.transition = ""
-        touchable.style.transform = ""
 
-        if (positionLeft > touchable.offsetWidth / 4) {
-            fadeOut(menuOverlay)
-            menuIcon.classList.remove("active")
-            menuContainer.classList.remove("active")
+    touchable.addEventListener("touchend", () => {
+        if (window.innerWidth < 992) {
+            let positionLeft = Number(window.getComputedStyle(touchable).transform.substring(7, window.getComputedStyle(touchable).transform.indexOf(")")).split(", ")[4])
+
+            touchable.style.transition = ""
+            touchable.style.transform = ""
+
+            if (positionLeft > touchable.offsetWidth / 4) {
+                fadeOut(menuOverlay)
+                menuIcon.classList.remove("active")
+                menuContainer.classList.remove("active")
+            }
         }
     })
 }
