@@ -39,7 +39,7 @@
 
 // BORDER RADIUS
 @mixin borderRadius($radius) {
-    @include setBrowserCore(border-radius, $radius);
+    @include setBrowserPrefix(border-radius, $radius);
 }
 
 @mixin rounded() {

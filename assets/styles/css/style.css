@@ -753,5 +753,119 @@ img {
 }
 
 /* PORTFOLIO SECTION CONFIG */
+.th-portfolio {
+  width: 100%;
+  padding-block: 80px;
+}
+@media screen and (min-width: 576px) {
+  .th-portfolio {
+    padding-block: 60px;
+  }
+}
+.th-portfolio__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.th-portfolio__text {
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+.th-portfolio__list {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 480px;
+  padding-inline: 0;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .th-portfolio__list {
+    max-width: none;
+  }
+}
+.th-portfolio__item {
+  flex-basis: 100%;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  border: 1px solid #E39E22;
+}
+@media screen and (min-width: 768px) {
+  .th-portfolio__item {
+    flex-basis: calc(50% - 30px);
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .th-portfolio__item {
+    flex-basis: calc(33.3333333333% - 30px);
+    flex-grow: 1;
+  }
+}
+.th-portfolio__item:nth-child(5), .th-portfolio__item:nth-child(6) {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .th-portfolio__item:nth-child(5), .th-portfolio__item:nth-child(6) {
+    display: block;
+  }
+}
+.th-portfolio__item:hover {
+  border-bottom-width: 8px;
+}
+.th-portfolio__item:hover .th-portfolio__item-content {
+  opacity: 1;
+}
+.th-portfolio__item-image {
+  width: 100%;
+  height: 100%;
+}
+.th-portfolio__item-content {
+  position: absolute;
+  top: unset;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 30px;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #E39E22;
+  background-image: linear-gradient(rgba(29, 41, 53, 0) 0%, #1D2935 75%);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+.th-portfolio__cta {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 480px;
+  padding-inline: 0;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .th-portfolio__cta {
+    max-width: none;
+    padding-inline: 0;
+    margin-inline: auto;
+  }
+}
+.th-portfolio__cta .th-button {
+  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .th-portfolio__cta .th-button {
+    flex-grow: 0;
+  }
+}
+
 /* CONTACT SECTION CONFIG */
 /* FOOTER CONFIG */
