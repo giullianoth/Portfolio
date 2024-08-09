@@ -46,10 +46,9 @@
             }
 
             &:hover {
-                border-bottom-width: 8px;
-
                 .th-portfolio__item-content {
                     opacity: 1;
+                    border-color: $color-primary;
                 }
             }
 
@@ -69,6 +68,7 @@
                 background-image: linear-gradient(#1D293500 0%, $color-secondary 75%);
                 opacity: 0;
                 @include transition;
+                border-bottom: 7px solid transparent;
             }
         }
 

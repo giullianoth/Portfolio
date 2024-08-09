@@ -813,11 +813,9 @@ img {
     display: block;
   }
 }
-.th-portfolio__item:hover {
-  border-bottom-width: 8px;
-}
 .th-portfolio__item:hover .th-portfolio__item-content {
   opacity: 1;
+  border-color: #E39E22;
 }
 .th-portfolio__item-image {
   width: 100%;
@@ -840,6 +838,7 @@ img {
   background-image: linear-gradient(rgba(29, 41, 53, 0) 0%, #1D2935 75%);
   opacity: 0;
   transition: all 0.3s ease 0s;
+  border-bottom: 7px solid transparent;
 }
 .th-portfolio__cta {
   margin-top: 60px;
