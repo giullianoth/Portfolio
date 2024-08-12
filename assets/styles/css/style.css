@@ -9,6 +9,10 @@
   -webkit-box-sizing: border-box;
 }
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -147,6 +151,9 @@ img {
 }
 .th-header__title {
   display: none;
+}
+.th-header__logo {
+  width: 40px;
 }
 .th-header__navigation {
   padding-block: 20px;
@@ -416,6 +423,7 @@ img {
   font-weight: 500;
   font-size: 1.2em;
   color: #E39E22;
+  line-height: 1;
 }
 @media screen and (min-width: 576px) {
   .th-hero__subtitle {
@@ -554,7 +562,16 @@ img {
 }
 .th-services__text {
   max-width: 600px;
+  padding-inline: 0;
+  margin-inline: auto;
   margin-bottom: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .th-services__text {
+    margin-inline: 0;
+    text-align: start;
+  }
 }
 .th-services__list {
   display: flex;
@@ -769,7 +786,16 @@ img {
 }
 .th-portfolio__text {
   max-width: 600px;
+  padding-inline: 0;
+  margin-inline: auto;
   margin-bottom: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .th-portfolio__text {
+    margin-inline: 0;
+    text-align: start;
+  }
 }
 .th-portfolio__list {
   margin-top: 40px;
@@ -792,6 +818,7 @@ img {
   position: relative;
   transition: all 0.3s ease 0s;
   border: 1px solid #E39E22;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .th-portfolio__item {
@@ -799,7 +826,7 @@ img {
     flex-grow: 1;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .th-portfolio__item {
     flex-basis: calc(33.3333333333% - 30px);
     flex-grow: 1;
@@ -827,12 +854,12 @@ img {
   left: 0;
   width: 100%;
   bottom: 0;
-  padding: 30px;
+  padding: 20px;
   height: 50%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   color: #E39E22;
   background-image: linear-gradient(rgba(29, 41, 53, 0) 0%, #1D2935 75%);

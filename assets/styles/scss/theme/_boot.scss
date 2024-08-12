@@ -5,6 +5,10 @@
     @include setBrowserPrefix(box-sizing, border-box);
 }
 
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 html {
     scroll-behavior: smooth;
 }

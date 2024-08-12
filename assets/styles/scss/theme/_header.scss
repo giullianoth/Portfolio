@@ -34,6 +34,10 @@
             display: none;
         }
 
+        &__logo {
+            width: 40px;
+        }
+
         &__navigation {
             padding-block: 20px;
             @include transition;

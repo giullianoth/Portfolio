@@ -7,6 +7,7 @@
 
     <script src="https://kit.fontawesome.com/fe0ca3f893.js" crossorigin="anonymous" defer></script>
 
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/css/style.min.css">
 </head>
 <body>
@@ -14,7 +15,10 @@
         <div class="th-header__container">
             <div>
                 <h1 class="th-header__title">Giulliano Tharso - Web Designer</h1>
-                logo
+                
+                <a href="#">
+                    <img src="assets/images/logo.png" alt="Logo" class="th-header__logo">
+                </a>
             </div>
 
             <nav class="th-header__navigation">
@@ -103,7 +107,7 @@
             </div>
         </section>
 
-        <section class="th-services">
+        <section class="th-services" id="servicos">
             <div class="th-services__container">
                 <header class="th-section-title">
                     <h1>
@@ -214,75 +218,111 @@
 
                 <div class="th-portfolio__list">
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/psicovida_mobile.jpeg" alt="PsicoVida" class="th-portfolio__item-image">
-
-                        <div class="th-portfolio__item-content">
-                            <header class="th-portfolio__item-title">
-                                <h2>PsicoVida</h2>
-                            </header>
-
-                            <p class="th-portfolio__item-description">Site Institucional - HTML / CSS</p>
-                        </div>
+                        <a href="https://psicovida.vercel.app/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="assets/images/portfolio/psicovida_desktop.jpeg">
+                                <source media="(min-width: 768px)" srcset="assets/images/portfolio/psicovida_tablet.jpeg">
+                                <img src="assets/images/portfolio/psicovida_mobile.jpeg" alt="PsicoVida" class="th-portfolio__item-image">
+                            </picture>
+    
+                            <div class="th-portfolio__item-content">
+                                <header class="th-portfolio__item-title">
+                                    <h2>PsicoVida</h2>
+                                </header>
+    
+                                <p class="th-portfolio__item-description">Site Institucional - HTML / CSS</p>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/travel_mobile.jpg" alt="Travel" class="th-portfolio__item-image">
-
-                        <div class="th-portfolio__item-content">
-                            <header class="th-portfolio__item-title">
-                                <h2>Travel</h2>
-                            </header>
-
-                            <p class="th-portfolio__item-description">Landing Page - WordPress</p>
-                        </div>
+                        <a href="https://travel-tawny-beta.vercel.app/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="assets/images/portfolio/travel_desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="assets/images/portfolio/travel_tablet.jpg">
+                                <img src="assets/images/portfolio/travel_mobile.jpg" alt="Travel" class="th-portfolio__item-image">
+                            </picture>
+    
+                            <div class="th-portfolio__item-content">
+                                <header class="th-portfolio__item-title">
+                                    <h2>Travel</h2>
+                                </header>
+    
+                                <p class="th-portfolio__item-description">Landing Page - WordPress</p>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/gym_mobile.jpg" alt="Gym" class="th-portfolio__item-image">
-
-                        <div class="th-portfolio__item-content">
-                            <header class="th-portfolio__item-title">
-                                <h2>Gym</h2>
-                            </header>
-
-                            <p class="th-portfolio__item-description">Landing Page - WordPress</p>
-                        </div>
+                        <a href="https://gym-three-green.vercel.app/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="assets/images/portfolio/gym_desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="assets/images/portfolio/gym_tablet.jpg">
+                                <img src="assets/images/portfolio/gym_mobile.jpg" alt="Gym" class="th-portfolio__item-image">
+                            </picture>
+    
+                            <div class="th-portfolio__item-content">
+                                <header class="th-portfolio__item-title">
+                                    <h2>Gym</h2>
+                                </header>
+    
+                                <p class="th-portfolio__item-description">Landing Page - WordPress</p>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/youdemi_mobile.jpg" alt="Youdemi" class="th-portfolio__item-image">
-
-                        <div class="th-portfolio__item-content">
-                            <header class="th-portfolio__item-title">
-                                <h2>Youdemi</h2>
-                            </header>
-
-                            <p class="th-portfolio__item-description">Landing Page - WordPress</p>
-                        </div>
+                        <a href="https://youdemi-mauve.vercel.app/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="assets/images/portfolio/youdemi_desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="assets/images/portfolio/youdemi_tablet.jpg">
+                                <img src="assets/images/portfolio/youdemi_mobile.jpg" alt="Youdemi" class="th-portfolio__item-image">
+                            </picture>
+    
+                            <div class="th-portfolio__item-content">
+                                <header class="th-portfolio__item-title">
+                                    <h2>Youdemi</h2>
+                                </header>
+    
+                                <p class="th-portfolio__item-description">Landing Page - WordPress</p>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/crafti_mobile.jpg" alt="Crafti" class="th-portfolio__item-image">
-
-                        <div class="th-portfolio__item-content">
-                            <header class="th-portfolio__item-title">
-                                <h2>Crafti</h2>
-                            </header>
-
-                            <p class="th-portfolio__item-description">Landing Page - WordPress</p>
-                        </div>
+                        <a href="https://crafti.vercel.app/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="assets/images/portfolio/crafti_desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="assets/images/portfolio/crafti_tablet.jpg">
+                                <img src="assets/images/portfolio/crafti_mobile.jpg" alt="Crafti" class="th-portfolio__item-image">
+                            </picture>
+    
+                            <div class="th-portfolio__item-content">
+                                <header class="th-portfolio__item-title">
+                                    <h2>Crafti</h2>
+                                </header>
+    
+                                <p class="th-portfolio__item-description">Landing Page - WordPress</p>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="th-portfolio__item">
-                        <img src="assets/images/portfolio/adex_mobile.jpg" alt="Adex" class="th-portfolio__item-image">
-
-                        <div class="th-portfolio__item-content">
-                            <header class="th-portfolio__item-title">
-                                <h2>Adex</h2>
-                            </header>
-
-                            <p class="th-portfolio__item-description">Landing Page - WordPress</p>
-                        </div>
+                        <a href="https://adex-gamma.vercel.app/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="assets/images/portfolio/adex_desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="assets/images/portfolio/adex_tablet.jpg">
+                                <img src="assets/images/portfolio/adex_mobile.jpg" alt="Adex" class="th-portfolio__item-image">
+                            </picture>
+    
+                            <div class="th-portfolio__item-content">
+                                <header class="th-portfolio__item-title">
+                                    <h2>Adex</h2>
+                                </header>
+    
+                                <p class="th-portfolio__item-description">Landing Page - WordPress</p>
+                            </div>
+                        </a>
                     </article>
                 </div>
 

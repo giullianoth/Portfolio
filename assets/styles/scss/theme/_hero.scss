@@ -57,6 +57,7 @@
             font-weight: 500;
             font-size: 1.2em;
             color: $color-primary;
+            line-height: 1;
 
             @include setResponsiveDesign($breakpoint-small) {
                 font-size: 1.6em;

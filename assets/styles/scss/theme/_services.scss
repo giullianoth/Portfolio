@@ -8,8 +8,14 @@
         }
 
         &__text {
-            max-width: 600px;
+            @include container(600px, 0);
             margin-bottom: 60px;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                margin-inline: 0;
+                text-align: start;
+            }
         }
 
         &__list {
