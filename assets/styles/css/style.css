@@ -7,10 +7,15 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  scrollbar-width: 4px;
+  scrollbar-color: #3B4856;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3B4856;
 }
 
 html {
@@ -889,6 +894,90 @@ img {
 }
 @media screen and (min-width: 768px) {
   .th-portfolio__cta .th-button {
+    flex-grow: 0;
+  }
+}
+
+/* ABOUT SECTION CONFIG */
+.th-about {
+  width: 100%;
+  padding-block: 80px;
+  background-color: #191919;
+}
+@media screen and (min-width: 576px) {
+  .th-about {
+    padding-block: 60px;
+  }
+}
+.th-about__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.th-about__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .th-about__content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 60px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .th-about__image {
+    flex-basis: calc(50% - 60px);
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 992px) {
+  .th-about__info {
+    flex-basis: calc(50% - 60px);
+    flex-grow: 1;
+  }
+}
+.th-about__info-title {
+  color: #E39E22;
+  line-height: 1;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .th-about__info-title {
+    text-align: start;
+  }
+}
+.th-about__info-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  .th-about__info-text {
+    text-align: start;
+  }
+}
+.th-about__info-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 992px) {
+  .th-about__info-cta {
+    justify-content: flex-start;
+  }
+}
+.th-about__info-cta .th-button {
+  flex-grow: 1;
+}
+@media screen and (min-width: 576px) {
+  .th-about__info-cta .th-button {
     flex-grow: 0;
   }
 }

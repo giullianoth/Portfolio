@@ -3,10 +3,17 @@
     padding: 0;
     vertical-align: baseline;
     @include setBrowserPrefix(box-sizing, border-box);
+
+    scrollbar-width: 4px;
+    scrollbar-color: $color-secondary-variant;
 }
 
-::-webkit-scrollbar-track {
-    background: transparent;
+::-webkit-scrollbar {
+    width: 4px;
+
+    &-thumb {
+        background-color: $color-secondary-variant;
+    }
 }
 
 html {
