@@ -1,0 +1,120 @@
+@include theme() {
+    &contact {
+        @include containerFluid;
+        @include containerClearance;
+
+        &__container {
+            @include container;
+        }
+
+        &__text {
+            @include container(600px, 0);
+            margin-bottom: 60px;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                margin-inline: 0;
+                text-align: start;
+            }
+        }
+
+        &__content {
+            margin-top: 40px;
+            @include flex(space-between, flex-start, nowrap);
+            flex-direction: column;
+            row-gap: 40px;
+            @include container(600px, 0);
+
+            @include setResponsiveDesign($breakpoint-large) {
+                max-width: none;
+                flex-direction: row-reverse;
+            }
+        }
+
+        &__form {
+            @include containerFluid;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                width: auto;
+                @include flex2;
+            }
+
+            form {
+                @include flex(flex-start, stretch);
+                gap: 20px;
+                flex-direction: column;
+
+                .th-button {
+                    @include setResponsiveDesign($breakpoint-small) {
+                        align-self: center;
+                    }
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        align-self: flex-start;
+                    }
+                }
+            }
+        }
+
+        &__social {
+            &-item {
+                @include flex(flex-start, center, nowrap);
+                gap: 20px;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                &:hover {
+                    .th-contact__social-icon {
+                        a {
+                            border-color: $color-text;
+                            background-color: $color-text;
+
+                            i {
+                                color: $color-background-primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-icon {
+                a {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid $color-primary;
+                    @include flex;
+                    @include rounded;
+                    @include transition;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        width: 54px;
+                        height: 54px;
+                    }
+
+                    i {
+                        font-size: 1.6em;
+                        color: $color-primary;
+
+                        @include setResponsiveDesign($breakpoint-large) {
+                            font-size: 1.8em;
+                        }
+                    }
+                }
+            }
+
+            &-text {
+                font-size: 1.2em;
+                font-family: $font-poppins;
+                color: $color-primary;
+                font-weight: 700;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
+}

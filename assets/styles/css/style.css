@@ -51,6 +51,16 @@ img {
   -o-object-position: center;
 }
 
+input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: #191919;
+  padding: 20px;
+  border: 1px solid #E39E22;
+  outline: none;
+}
+
 .th-section-title {
   text-align: center;
   margin-bottom: 40px;
@@ -93,6 +103,7 @@ img {
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
+  font-size: 1em;
   color: #F0FAFF;
   transition: all 0.3s ease 0s;
 }
@@ -983,4 +994,134 @@ img {
 }
 
 /* CONTACT SECTION CONFIG */
+.th-contact {
+  width: 100%;
+  padding-block: 80px;
+}
+@media screen and (min-width: 576px) {
+  .th-contact {
+    padding-block: 60px;
+  }
+}
+.th-contact__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.th-contact__text {
+  max-width: 600px;
+  padding-inline: 0;
+  margin-inline: auto;
+  margin-bottom: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__text {
+    margin-inline: 0;
+    text-align: start;
+  }
+}
+.th-contact__content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 40px;
+  max-width: 600px;
+  padding-inline: 0;
+  margin-inline: auto;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__content {
+    max-width: none;
+    flex-direction: row-reverse;
+  }
+}
+.th-contact__form {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__form {
+    width: auto;
+    flex-basis: 50%;
+  }
+}
+.th-contact__form form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column;
+}
+@media screen and (min-width: 576px) {
+  .th-contact__form form .th-button {
+    align-self: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .th-contact__form form .th-button {
+    align-self: flex-start;
+  }
+}
+.th-contact__social-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.th-contact__social-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.th-contact__social-item:hover .th-contact__social-icon a {
+  border-color: #F0FAFF;
+  background-color: #F0FAFF;
+}
+.th-contact__social-item:hover .th-contact__social-icon a i {
+  color: #191919;
+}
+.th-contact__social-icon a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #E39E22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: all 0.3s ease 0s;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__social-icon a {
+    width: 54px;
+    height: 54px;
+  }
+}
+.th-contact__social-icon a i {
+  font-size: 1.6em;
+  color: #E39E22;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__social-icon a i {
+    font-size: 1.8em;
+  }
+}
+.th-contact__social-text {
+  font-size: 1.2em;
+  font-family: "Poppins", sans-serif;
+  color: #E39E22;
+  font-weight: 700;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__social-text {
+    font-size: 1.6em;
+  }
+}
+
 /* FOOTER CONFIG */

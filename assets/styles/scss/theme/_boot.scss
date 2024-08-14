@@ -47,6 +47,16 @@ img {
     @include setBrowserPrefix(object-position, center, "o");
 }
 
+input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: $color-background-primary;
+    padding: 20px;
+    border: 1px solid $color-primary;
+    outline: none;
+}
+
 @include theme() {
     &section-title {
         text-align: center;
@@ -90,6 +100,7 @@ img {
         text-align: center;
         font-family: $font-raleway;
         font-weight: 500;
+        font-size: 1em;
         color: $color-text;
         @include transition;
 
