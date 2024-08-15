@@ -22,7 +22,10 @@ export default function Modal() {
             fadeIn(modalToOpen)
             modalToOpen.append(close)
 
-            close.addEventListener("click", () => fadeOut(modalToOpen))
+            close.addEventListener("click", () => {
+                fadeOut(modalToOpen)
+                close.remove()
+            })
         })
     })
 }

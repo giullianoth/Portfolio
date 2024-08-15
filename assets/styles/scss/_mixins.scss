@@ -138,7 +138,7 @@
     background-position: $position;
 }
 
-@mixin backgroundOverlay($image: "", $attachment: fixed, $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.4, $blendMode: multiply) {
+@mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.4, $blendMode: multiply) {
     @include relative;
 
     & > * {
@@ -154,7 +154,6 @@
         mix-blend-mode: $blendMode;
 
         @include backgroundImage($image, $repeat, $size, $position);
-        background-attachment: $attachment;
     }
 }
 
