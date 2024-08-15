@@ -4,7 +4,7 @@ import EmailInitialize from "./email.js"
 import FixedHeader from "./header.js"
 import menuCollapse from "./menu-collapse.js"
 import Modal from "./modal.js"
-// import PortfolioFilter from "./portfolio-filter.js"
+import PortfolioFilter from "./portfolio-filter.js"
 // import ResponsiveImages from "./responsive-images.js"
 // import ToggleTabs from "./tabs.js"
 // import SkillsCharts from "./skills.js"
@@ -17,6 +17,6 @@ FixedHeader()
 Modal()
 // ResponsiveImages()
 // SkillsCharts()
-// PortfolioFilter()
+PortfolioFilter()
 // Contact()
 // CopyYear()

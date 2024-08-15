@@ -928,6 +928,12 @@ input, textarea {
     max-width: none;
   }
 }
+.th-portfolio__list .empty-message {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
 .th-portfolio__item {
   flex-basis: 100%;
   position: relative;

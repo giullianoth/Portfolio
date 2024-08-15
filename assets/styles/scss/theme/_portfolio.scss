@@ -27,6 +27,13 @@
             @include setResponsiveDesign($breakpoint-medium) {
                 max-width: none;
             }
+
+            .empty-message {
+                @include flex1;
+                text-align: center;
+                font-size: 1.2em;
+                font-weight: 600;
+            }
         }
 
         &__item {
