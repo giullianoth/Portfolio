@@ -22,6 +22,7 @@
 
             @include setResponsiveDesign($breakpoint-large) {
                 text-align: start;
+                margin-bottom: 20px;
             }
 
             img {

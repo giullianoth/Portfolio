@@ -1159,6 +1159,7 @@ input, textarea {
 @media screen and (min-width: 992px) {
   .th-footer__logo {
     text-align: start;
+    margin-bottom: 20px;
   }
 }
 .th-footer__logo img {
