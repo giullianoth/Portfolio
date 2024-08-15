@@ -130,4 +130,26 @@ input, textarea {
             margin: 0;
         }
     }
+
+    &back {
+        position: fixed;
+        bottom: -30px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        @include transition;
+
+        &.show {
+            bottom: 20px;
+            opacity: 1;
+        }
+
+        a {
+            display: block;
+            background-color: $color-background-primary;
+            @include containerFluid(true);
+            @include flex;
+        }
+    }
 }

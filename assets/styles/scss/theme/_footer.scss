@@ -7,7 +7,7 @@
         &__container {
             @include container;
             @include flex(space-between, center, nowrap);
-            row-gap: 60px;
+            gap: 60px;
             flex-direction: column;
 
             @include setResponsiveDesign($breakpoint-large) {

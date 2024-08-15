@@ -1,5 +1,15 @@
 const header = document.querySelector(".j_header"),
-    changeHeader = () => window.scrollY >= header.offsetHeight * 2 ? header.classList.add("scrolling") : header.classList.remove("scrolling")
+    back = document.querySelector(".j_back")
+
+const changeHeader = () => {
+    if (window.scrollY >= header.offsetHeight * 2) {
+        header.classList.add("scrolling")
+        back.classList.add("show")
+    } else {
+        header.classList.remove("scrolling")
+        back.classList.remove("show")
+    }
+}
 
 export default function FixedHeader() {
     changeHeader()
