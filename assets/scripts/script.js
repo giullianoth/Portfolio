@@ -1,4 +1,4 @@
-// import CopyYear from "./copyright-year.js"
+import CopyYear from "./copyright-year.js"
 // import Contact from "./contact.js"
 import EmailInitialize from "./email.js"
 import FixedHeader from "./header.js"
@@ -19,4 +19,4 @@ Modal()
 // SkillsCharts()
 PortfolioFilter()
 // Contact()
-// CopyYear()
+CopyYear()
