@@ -1125,3 +1125,127 @@ input, textarea {
 }
 
 /* FOOTER CONFIG */
+.th-footer {
+  width: 100%;
+  padding-block: 80px;
+  background-color: #1D2935;
+}
+@media screen and (min-width: 576px) {
+  .th-footer {
+    padding-block: 60px;
+  }
+}
+.th-footer__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  row-gap: 60px;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .th-footer__container {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.th-footer__logo {
+  margin-bottom: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .th-footer__logo {
+    text-align: start;
+  }
+}
+.th-footer__logo img {
+  width: 140px;
+}
+@media screen and (min-width: 992px) {
+  .th-footer__logo img {
+    width: 100px;
+  }
+}
+.th-footer__menu-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 40px;
+}
+@media screen and (min-width: 768px) {
+  .th-footer__menu-list {
+    flex-direction: row;
+    column-gap: 60px;
+  }
+}
+.th-footer__menu-item a {
+  font-size: 1.6em;
+  font-weight: 700;
+  transition: all 0.3s ease 0s;
+}
+@media screen and (min-width: 992px) {
+  .th-footer__menu-item a {
+    font-size: 1.2em;
+  }
+}
+.th-footer__menu-item a:hover {
+  color: #E39E22;
+}
+.th-footer__attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 20px;
+}
+@media screen and (min-width: 992px) {
+  .th-footer__attribution {
+    align-items: flex-end;
+  }
+}
+.th-footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  column-gap: 20px;
+}
+.th-footer__social-item a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #E39E22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: all 0.3s ease 0s;
+}
+.th-footer__social-item a:hover {
+  border-color: #F0FAFF;
+  background-color: #F0FAFF;
+}
+.th-footer__social-item a:hover i {
+  color: #191919;
+}
+.th-footer__social-item a i {
+  color: #E39E22;
+}
+.th-footer__copyright {
+  color: #E39E22;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .th-footer__copyright {
+    text-align: end;
+  }
+}

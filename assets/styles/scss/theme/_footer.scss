@@ -1,0 +1,114 @@
+@include theme() {
+    &footer {
+        @include containerFluid;
+        @include containerClearance;
+        background-color: $color-secondary;
+
+        &__container {
+            @include container;
+            @include flex(space-between, center, nowrap);
+            row-gap: 60px;
+            flex-direction: column;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                flex-direction: row;
+                align-items: flex-end;
+            }
+        }
+
+        &__logo {
+            margin-bottom: 60px;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                text-align: start;
+            }
+
+            img {
+                width: 140px;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    width: 100px;
+                }
+            }
+        }
+
+        &__menu {
+            &-list {
+                @include flex(flex-start, center, nowrap);
+                flex-direction: column;
+                row-gap: 40px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    flex-direction: row;
+                    column-gap: 60px;
+                }
+            }
+
+            &-item {
+                a {
+                    font-size: 1.6em;
+                    font-weight: 700;
+                    @include transition;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        font-size: 1.2em;
+                    }
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+
+        &__attribution {
+            @include flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                align-items: flex-end;
+            }
+        }
+
+        &__social {
+            @include flex(center, center, nowrap);
+            column-gap: 20px;
+
+            &-item {
+                a {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid $color-primary;
+                    @include flex;
+                    @include rounded;
+                    @include transition;
+
+                    &:hover {
+                        border-color: $color-text;
+                        background-color: $color-text;
+
+                        i {
+                            color: $color-background-primary;
+                        }
+                    }
+
+                    i {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+
+        &__copyright {
+            color: $color-primary;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                text-align: end;
+            }
+        }
+    }
+}
