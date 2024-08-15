@@ -153,6 +153,85 @@ input, textarea {
   align-items: center;
   flex-wrap: wrap;
 }
+.th-modal {
+  background-color: rgba(26, 26, 26, 0.7019607843);
+  backdrop-filter: blur(8px);
+  padding-block: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+  overflow: hidden;
+  display: none;
+}
+.th-modal__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  height: 100%;
+}
+.th-modal__wrapper {
+  height: 100%;
+  overflow-y: auto;
+}
+.th-modal .close {
+  position: absolute;
+  top: 10px;
+  left: unset;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.th-modal .close span {
+  width: 100%;
+  height: 3px;
+  background-color: #F0FAFF;
+  display: block;
+  transform: rotate(45deg);
+}
+.th-modal .close span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F0FAFF;
+  transform: rotate(90deg);
+}
+.th-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.th-tabs-tab {
+  flex-grow: 1;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+  border: 1px solid #E39E22;
+  color: #E39E22;
+  transition: all 0.3s ease 0s;
+}
+.th-tabs-tab:hover, .th-tabs-tab.active {
+  background-color: #E39E22;
+  color: #F0FAFF;
+}
 
 /* HEADER CONFIG */
 .th-header {
