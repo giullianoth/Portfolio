@@ -4,6 +4,7 @@ import { isVisible, transitionGap } from "./variables.js"
 const menuIcon = document.querySelector(".j_menu_icon"),
     menuOverlay = document.querySelector(".j_menu_overlay"),
     menuContainer = document.querySelector(".j_menu_container"),
+    menuItems = menuContainer.querySelectorAll(".j_menu_item"),
     touchable = document.querySelector(".j_touchable")
 
 export default function menuCollapse() {
@@ -37,6 +38,16 @@ export default function menuCollapse() {
             menuIcon.classList.remove("active")
             menuContainer.classList.remove("active")
         }
+    })
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            if (window.innerWidth < 992) {
+                fadeOut(menuOverlay)
+                menuIcon.classList.remove("active")
+                menuContainer.classList.remove("active")
+            }
+        })
     })
 
     /*touchable.addEventListener("touchmove", (event) => {
