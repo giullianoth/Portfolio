@@ -54,6 +54,20 @@
                     }
                 }
             }
+
+            &-confirm {
+                p {
+                    padding: 6px 10px;
+
+                    &.success {
+                        background-color: $color-success;
+                    }
+
+                    &.error {
+                        background-color: $color-error;
+                    }
+                }
+            }
         }
 
         &__social {

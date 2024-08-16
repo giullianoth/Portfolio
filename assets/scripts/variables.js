@@ -30,7 +30,3 @@ export const textTags = /(<([^>]+)>)/ig
 // VALIDATION
 export const validateEmail = (email) => emailPattern.test(email)
 export const stripTags = (str) => str.replace(textTags, "")
-
-// LOADER ANIMATION
-export const loader = "<l-trio size=\"16\" speed=\"1.3\" color=\"white\"></l-trio>"
-export const loaderElement = () => document.querySelector(".j_loader")

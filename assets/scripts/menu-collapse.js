@@ -7,7 +7,7 @@ const menuIcon = document.querySelector(".j_menu_icon"),
     menuItems = menuContainer.querySelectorAll(".j_menu_item"),
     touchable = document.querySelector(".j_touchable")
 
-export default function menuCollapse() {
+export default function MenuCollapse() {
     window.addEventListener("resize", ({ target }) => {
         if (target.innerWidth >= 992) {
             menuIcon.classList.remove("active")

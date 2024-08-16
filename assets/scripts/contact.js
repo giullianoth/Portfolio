@@ -1,5 +1,5 @@
 import { slideDown, slideUp } from "./effects.js"
-import { loader, serviceID, stripTags, templateID, validateEmail } from "./variables.js"
+import { serviceID, stripTags, templateID, validateEmail } from "./variables.js"
 
 const contactForm = document.querySelector(".j_contact_form")
 const confirm = document.querySelector(".j_contact_confirm_message")
@@ -29,9 +29,6 @@ export default function Contact() {
         } else {
             valid = true
         }
-
-        buttonLoad.style.width = `${buttonLoad.offsetWidth}px`
-        buttonLoad.innerHTML = loader
 
         if (valid) {
             let params = {
