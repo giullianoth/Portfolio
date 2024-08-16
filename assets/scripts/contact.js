@@ -1,5 +1,5 @@
 import { slideDown, slideUp } from "./effects.js"
-import { serviceID, stripTags, templateID, validateEmail } from "./variables.js"
+import { loader, serviceID, stripTags, templateID, validateEmail } from "./variables.js"
 
 const contactForm = document.querySelector(".j_contact_form")
 const confirm = document.querySelector(".j_contact_confirm_message")
@@ -30,6 +30,10 @@ export default function Contact() {
             valid = true
         }
 
+        buttonLoad.style.width = `${buttonLoad.offsetWidth}px`
+        buttonLoad.style.height = `${buttonLoad.offsetHeight}px`
+        buttonLoad.innerHTML = loader
+
         if (valid) {
             let params = {
                 userName: stripTags(userName),
@@ -53,6 +57,7 @@ export default function Contact() {
                 slideDown(confirmMessage)
                 buttonLoad.innerText = "Enviar"
                 buttonLoad.style.width = ""
+                buttonLoad.style.height = ""
 
                 setTimeout(() => {
                     slideUp(confirmMessage, true)
@@ -63,6 +68,7 @@ export default function Contact() {
             slideDown(confirmMessage)
             buttonLoad.innerText = "Enviar"
             buttonLoad.style.width = ""
+            buttonLoad.style.height = ""
 
             setTimeout(() => {
                 slideUp(confirmMessage, true)
