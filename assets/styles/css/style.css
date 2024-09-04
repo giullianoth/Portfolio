@@ -990,11 +990,11 @@ input, textarea {
     flex-basis: calc(33.3333333333% - 20px);
   }
 }
-.th-portfolio__item:nth-child(5), .th-portfolio__item:nth-child(6) {
+.th-portfolio__item.clearance {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .th-portfolio__item:nth-child(5), .th-portfolio__item:nth-child(6) {
+  .th-portfolio__item.clearance {
     display: block;
   }
 }
