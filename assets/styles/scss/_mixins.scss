@@ -147,7 +147,7 @@
     background-position: $position;
 }
 
-@mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.4, $blendMode: multiply) {
+@mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.2, $blendMode: screen) {
     @include relative;
 
     & > * {

@@ -14,6 +14,9 @@ $color-background-overlay: #1A1A1AB3;
 $color-primary: #E39E22;
 $color-text: #FFF;
 
+$color-gradient-1: linear-gradient($color-background-primary 0%, $color-background-secondary 50%, $color-background-primary 100%);
+$color-gradient-2: linear-gradient(rgba($color: $color-background-primary, $alpha: 0), $color-background-primary);
+
 $color-success: #1A6D27;
 $color-error: #CE2D2D;
 

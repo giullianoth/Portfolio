@@ -113,14 +113,21 @@ input, textarea {
             }
         }
 
-        &-outline {
+        &.outline {
             background-color: transparent;
             border: 1px solid $color-primary;
             color: $color-primary;
 
             &:hover {
                 border-color: $color-text;
+                background-color: $color-text;
+                color: $color-background-primary;
             }
+        }
+
+        &.large {
+            font-size: 1.4em;
+            padding-block: 18px;
         }
     }
 
@@ -190,10 +197,36 @@ input, textarea {
                 (transform: rotate(360deg))
             ), 1s, infinite, cubic-bezier(0.5, 0, 0.5, 1));
 
-            @for $i from 0 through $ringsQt {
+            @for $i from 1 through $ringsQt {
                 &:nth-child(#{$i}) {
                     animation-delay: calc(-0.15s * $i);
                 }
+            }
+        }
+    }
+
+    &carousel {
+        @include containerFluid;
+        @include flex(flex-start, stretch, nowrap);
+        overflow: hidden;
+
+        &-group {
+            @include flex(flex-start, stretch, nowrap);
+        }
+
+        &.infinite {
+            .left {
+                @include animation(spin_to_left, (
+                    (transform: translateX(0)),
+                    (transform: translateX(-100%))
+                ), 120s)
+            }
+
+            .right {
+                @include animation(spin_to_right, (
+                    (transform: translateX(-100%)),
+                    (transform: translateX(0))
+                ), 120s)
             }
         }
     }

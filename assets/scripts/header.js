@@ -1,10 +1,12 @@
-const header = document.querySelector(".j_header")
+import { transitionDuration } from "./variables.js"
+
+const header = () => document.querySelector(".j_header")
 const logoButton = document.querySelector(".j_logo")
 
 export const HeaderBehavior = () => {
-    window.scrollY > header.offsetHeight
-        ? header.classList.add("scrolling")
-        : header.classList.remove("scrolling")
+    window.scrollY > 0
+        ? header().classList.add("scrolling")
+        : header().classList.remove("scrolling")
 }
 
 export const LogoRedirect = () => {

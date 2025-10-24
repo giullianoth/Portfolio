@@ -2,9 +2,9 @@
     &header {
         @include fixedFull;
         @include transition;
+        @include indexLevel2;
 
         &.scrolling {
-            position: sticky;
             background-color: $color-background-primary;
 
             .th-header {
@@ -28,6 +28,10 @@
         }
 
         &__logo {
+            h1 {
+                display: none;
+            }
+
             img {
                 width: 36px;
             }
