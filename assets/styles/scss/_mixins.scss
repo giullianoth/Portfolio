@@ -20,21 +20,13 @@
     margin-inline: auto;
 }
 
-@mixin containerClearance($spacing: $section-clearance) {
-    padding-block: $spacing;
-
-    @include setResponsiveDesign($breakpoint-small) {
-        padding-block: calc($spacing - 20px);
-    }
-}
-
 // ATTRIBUTES WITH BROWSER PREFIXES
-@mixin setBrowserPrefix($attr, $value, $prefixes: $browser-prefixes-default) {
-    #{$attr}: #{$value};
-
+@mixin setBrowserPrefix($attr, $value, $prefixes: $browser-prefixes-default) {    
     @each $prefix in $prefixes {
         -#{$prefix}-#{$attr}: #{$value};
     }
+
+    #{$attr}: #{$value};
 }
 
 // BORDER RADIUS
@@ -64,8 +56,8 @@
     }
 }
 
-@mixin flex1($gap: 0) {
-    @include flexBasis(100%, $gap);
+@mixin flex1() {
+    @include flexBasis(100%, 0);
 }
 
 @mixin flex2($gap: 0) {
@@ -78,6 +70,23 @@
 
 @mixin flex4($gap: 0) {
     @include flexBasis(calc(100% / 4), calc($gap - ($gap / 4)));
+}
+
+// Directions
+@mixin row() {
+    flex-direction: row;
+}
+
+@mixin rowReverse() {
+    flex-direction: row-reverse;
+}
+
+@mixin column() {
+    flex-direction: column;
+}
+
+@mixin columnReverse() {
+    flex-direction: column-reverse;
 }
 
 // POSITION
@@ -160,6 +169,24 @@
 // TRANSITIONS AND ANIMATIONS
 @mixin transition($property: all, $duration: $transition-duration-default, $timingFunction: ease, $delay: 0s) {
     transition: $property $duration $timingFunction $delay;
+}
+
+// Animation and Keyframes
+@mixin animation($name, $setup, $duration: 1s, $iterationCount: infinite, $timingFunction: linear) {
+    animation: $name $duration $iterationCount $timingFunction;
+    
+    @keyframes #{$name} {
+        @for $i from 1 through length($list: $setup) {
+
+            $frame: calc((($i * 100%) / (length($list: $setup) - 1)) - (100% / (length($list: $setup) - 1)));
+            
+            #{$frame} {
+                @each $attr, $value in nth($list: $setup, $n: $i) {
+                    #{$attr}: #{$value};
+                }
+            }
+        }
+    }
 }
 
 // RESPONSIVE DESIGN

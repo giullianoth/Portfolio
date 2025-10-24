@@ -1,4 +1,4 @@
-// BREAKPOINTS
+// BREAKPOINTS (Based on Bootstrap - https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints)
 $breakpoint-extra-small: 375px;
 $breakpoint-small: 576px;
 $breakpoint-medium: 768px;
@@ -12,19 +12,14 @@ $color-background-secondary: #2A2A2A;
 $color-background-overlay: #1A1A1AB3;
 
 $color-primary: #E39E22;
-$color-secondary: #1D2935;
-$color-secondary-variant: #3B4856;
-$color-text: #F0FAFF;
+$color-text: #FFF;
 
 $color-success: #1A6D27;
-$color-error: #AF2D2D;
-
-$gradient1: linear-gradient($color-background-primary, $color-background-secondary);
-$gradient2: linear-gradient($color-background-secondary, $color-background-primary);
+$color-error: #CE2D2D;
 
 // TIPOGRAPHY
-$font-poppins: "Poppins", sans-serif;
-$font-raleway: "Raleway", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
 $font-size-default: 1rem;
 
 // CONTAINER MAX WIDTH
@@ -39,4 +34,4 @@ $transition-duration-default: 0.3s;
 $browser-prefixes-default: ("moz", "webkit");
 
 // IMAGES
-$image-path: "../../../assets/images";
+$image-path: "/assets/images";

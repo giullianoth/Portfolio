@@ -1,17 +1,14 @@
-const header = document.querySelector(".j_header"),
-    back = document.querySelector(".j_back")
+const header = document.querySelector(".j_header")
+const logoButton = document.querySelector(".j_logo")
 
-const changeHeader = () => {
-    if (window.scrollY >= header.offsetHeight * 2) {
-        header.classList.add("scrolling")
-        back.classList.add("show")
-    } else {
-        header.classList.remove("scrolling")
-        back.classList.remove("show")
-    }
+export const HeaderBehavior = () => {
+    window.scrollY > header.offsetHeight
+        ? header.classList.add("scrolling")
+        : header.classList.remove("scrolling")
 }
 
-export default function FixedHeader() {
-    changeHeader()
-    window.addEventListener("scroll", changeHeader)
+export const LogoRedirect = () => {
+    logoButton.addEventListener("click", () => {
+        window.scrollTo(0, 0)
+    })
 }
