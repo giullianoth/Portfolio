@@ -3,21 +3,30 @@ const groupByCarousel = carouselElement => carouselElement.querySelector(".j_car
 
 const Carousel = () => {
     carouselList.forEach(carousel => {
-        const { direction } = carousel.dataset
+        const { direction, duration } = carousel.dataset
         const carouselGroup = groupByCarousel(carousel)
 
-        carouselGroup.classList.add(direction)
-
-        const carouselGroupClone = carouselGroup.cloneNode(true)
-        
-        carouselGroupClone.setAttribute("aria-hidden", true)
-        
-        if (direction === "left") {
-            carousel.append(carouselGroupClone)
+        if (direction && !carouselGroup.classList.contains(direction)) {
+            carouselGroup.classList.add(direction)
         }
 
-        if (direction === "right") {
-            carousel.prepend(carouselGroupClone)
+        if (duration) {
+            carouselGroup.style.animationDuration = duration
+        }
+
+        console.log(carousel.children.length)
+
+        if (carousel.children.length === 1) {
+            const carouselGroupClone = carouselGroup.cloneNode(true)
+            carouselGroupClone.setAttribute("aria-hidden", true)
+
+            if (direction === "left") {
+                carousel.append(carouselGroupClone)
+            }
+
+            if (direction === "right") {
+                carousel.prepend(carouselGroupClone)
+            }
         }
     })
 }

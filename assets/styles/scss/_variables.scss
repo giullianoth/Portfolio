@@ -16,6 +16,7 @@ $color-text: #FFF;
 
 $color-gradient-1: linear-gradient($color-background-primary 0%, $color-background-secondary 50%, $color-background-primary 100%);
 $color-gradient-2: linear-gradient(rgba($color: $color-background-primary, $alpha: 0), $color-background-primary);
+$color-gradient-3: linear-gradient($color-background-primary, rgba($color: $color-background-primary, $alpha: 0));
 
 $color-success: #1A6D27;
 $color-error: #CE2D2D;

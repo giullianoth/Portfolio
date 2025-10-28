@@ -219,14 +219,14 @@ input, textarea {
                 @include animation(spin_to_left, (
                     (transform: translateX(0)),
                     (transform: translateX(-100%))
-                ), 120s)
+                ))
             }
 
             .right {
                 @include animation(spin_to_right, (
                     (transform: translateX(-100%)),
                     (transform: translateX(0))
-                ), 120s)
+                ))
             }
         }
     }

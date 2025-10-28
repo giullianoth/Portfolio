@@ -3,6 +3,7 @@
         @include fixedFull;
         @include transition;
         @include indexLevel2;
+        background-image: $color-gradient-3;
 
         &.scrolling {
             background-color: $color-background-primary;

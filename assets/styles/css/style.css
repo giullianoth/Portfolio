@@ -225,7 +225,7 @@ input, textarea {
   flex-wrap: nowrap;
 }
 .th-carousel.infinite .left {
-  animation: spin_to_left 120s infinite linear;
+  animation: spin_to_left 1s infinite linear;
 }
 @keyframes spin_to_left {
   0% {
@@ -236,7 +236,7 @@ input, textarea {
   }
 }
 .th-carousel.infinite .right {
-  animation: spin_to_right 120s infinite linear;
+  animation: spin_to_right 1s infinite linear;
 }
 @keyframes spin_to_right {
   0% {
@@ -255,6 +255,7 @@ input, textarea {
   width: 100%;
   transition: all 0.3s ease 0s;
   z-index: 100;
+  background-image: linear-gradient(#191919, rgba(25, 25, 25, 0));
 }
 .th-header.scrolling {
   background-color: #191919;
@@ -506,6 +507,7 @@ input, textarea {
   z-index: 0;
   opacity: 0.2;
   mix-blend-mode: screen;
+  filter: blur(2px);
   background-image: url("/assets/images/hero_background_mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -529,6 +531,7 @@ input, textarea {
     z-index: 0;
     opacity: 0.2;
     mix-blend-mode: screen;
+    filter: blur(2px);
     background-image: url("/assets/images/hero_background_tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -553,6 +556,7 @@ input, textarea {
     z-index: 0;
     opacity: 0.2;
     mix-blend-mode: screen;
+    filter: blur(2px);
     background-image: url("/assets/images/hero_background_desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -568,7 +572,7 @@ input, textarea {
   bottom: 0;
   height: 300px;
   background-image: linear-gradient(rgba(25, 25, 25, 0), #191919);
-  z-index: 2;
+  z-index: 1;
 }
 .th-hero__container {
   display: flex;
