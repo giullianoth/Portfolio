@@ -150,6 +150,7 @@
                 text-transform: none;
                 font-family: $font-plus-jakarta-sans;
                 pointer-events: none;
+                @include setBrowserPrefix(user-select, none, ("webkit", "moz", "ms"));
             }
         }
     }

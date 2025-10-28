@@ -26,6 +26,7 @@
         &__container {
             @include container;
             @include flex(space-between, center, nowrap);
+            padding-block: 0 !important;
         }
 
         &__logo {

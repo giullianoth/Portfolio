@@ -14,8 +14,6 @@ const Carousel = () => {
             carouselGroup.style.animationDuration = duration
         }
 
-        console.log(carousel.children.length)
-
         if (carousel.children.length === 1) {
             const carouselGroupClone = carouselGroup.cloneNode(true)
             carouselGroupClone.setAttribute("aria-hidden", true)

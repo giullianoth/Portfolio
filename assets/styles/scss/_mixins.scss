@@ -17,7 +17,12 @@
 @mixin container($maxWidth: $container-width, $padding: $side-clearance) {
     max-width: $maxWidth;
     padding-inline: $padding;
+    padding-block: $section-clearance-mobile;
     margin-inline: auto;
+
+    @include setResponsiveDesign($breakpoint-small) {
+        padding-block: $section-clearance;
+    }
 }
 
 // ATTRIBUTES WITH BROWSER PREFIXES

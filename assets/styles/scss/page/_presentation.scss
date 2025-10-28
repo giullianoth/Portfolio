@@ -1,5 +1,90 @@
 @include theme() {
     &presentation {
-        
+        @include containerFluid;
+        background-color: $color-background-primary;
+
+        &__container {
+            @include flex(center, flex-start);
+            column-gap: 30px;
+            padding-block: 60px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include container;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                padding-bottom: 0;
+            }
+        }
+
+        &__trouble {
+            @include flex1;
+            padding-inline: 20px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                padding-inline: 0;
+                @include flex2(30px);
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex3(30px);
+            }
+
+            &-list {
+                @include flex(center, center, nowrap);
+                @include column;
+                row-gap: 24px;
+                margin-bottom: 30px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    align-items: flex-end;
+                    text-align: right;
+                }
+            }
+
+            &-item {
+                font-size: 1.2em;
+                font-weight: 500;
+
+                strong {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &__image {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include flex2(30px);
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex3(30px);
+            }
+        }
+
+        &__tagline {
+            text-align: center;
+            font-size: 1.2em;
+            padding-inline: 20px;
+            margin-top: -60px;
+            line-height: 1.6;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                padding-inline: 0;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex3(30px);
+                text-align: left;
+                margin-top: 0;
+            }
+
+            span {
+                color: $color-primary;
+                font-weight: 700;
+            }
+        }
     }
 }
