@@ -61,6 +61,10 @@ input, textarea {
   outline: none;
 }
 
+picture {
+  display: flex;
+}
+
 .th-heading {
   display: flex;
   justify-content: center;
@@ -315,6 +319,9 @@ input, textarea {
   .th-header__container {
     padding-block: 80px;
   }
+}
+.th-header__logo {
+  cursor: pointer;
 }
 .th-header__logo h1 {
   display: none;
@@ -993,6 +1000,90 @@ input, textarea {
 }
 
 /* PORTFOLIO SECTION CONFIG */
+.th-portfolio {
+  width: 100%;
+}
+.th-portfolio__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 576px) {
+  .th-portfolio__container {
+    padding-block: 80px;
+  }
+}
+.th-portfolio__tagline {
+  margin-bottom: 60px;
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.th-portfolio__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 440px;
+  margin-inline: auto;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 576px) {
+  .th-portfolio__list {
+    max-width: none;
+  }
+}
+.th-portfolio__project {
+  flex-basis: 100%;
+  position: relative;
+  border: 1px solid #E39E22;
+}
+@media screen and (min-width: 576px) {
+  .th-portfolio__project {
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .th-portfolio__project {
+    flex-basis: calc(25% - 15px);
+  }
+}
+.th-portfolio__project:hover img {
+  opacity: 1;
+}
+.th-portfolio__project:hover .th-portfolio__project-info {
+  visibility: visible;
+  opacity: 1;
+}
+.th-portfolio__project img {
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  opacity: 0.5;
+}
+.th-portfolio__project-info {
+  position: absolute;
+  top: unset;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  bottom: 0;
+  padding: 20px;
+  background-image: linear-gradient(rgba(25, 25, 25, 0), rgba(25, 25, 25, 0.75), #191919);
+  color: #E39E22;
+  border-bottom: 7px solid #E39E22;
+  visibility: hidden;
+  opacity: 0;
+}
+.th-portfolio__cta {
+  text-align: center;
+}
+.th-portfolio__cta .th-button {
+  width: 100%;
+  max-width: fit-content;
+}
+
 /* ABOUT SECTION CONFIG */
 /* CONTACT SECTION CONFIG */
 /* FOOTER CONFIG */

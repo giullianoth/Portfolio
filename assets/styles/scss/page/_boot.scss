@@ -57,6 +57,10 @@ input, textarea {
     outline: none;
 }
 
+picture {
+    display: flex;
+}
+
 @include theme() {
     &heading {
         @include flex;

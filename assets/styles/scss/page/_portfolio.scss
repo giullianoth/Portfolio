@@ -1,5 +1,80 @@
 @include theme() {
     &portfolio {
-        
+        @include containerFluid;
+
+        &__container {
+            @include container;
+        }
+
+        &__tagline {
+            margin-bottom: 60px;
+            text-align: center;
+            max-width: 600px;
+            margin-inline: auto;
+        }
+
+        &__list {
+            @include flex(flex-start, stretch);
+            gap: 20px;
+            max-width: 440px;
+            margin-inline: auto;
+            margin-bottom: 60px;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                max-width: none;
+            }
+        }
+
+        &__project {
+            @include flex1;
+            @include relative;
+            border: 1px solid $color-primary;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                @include flex2(20px);
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex4(20px);
+            }
+
+            &:hover {
+                img {
+                    opacity: 1;
+                }
+
+                .th-portfolio__project-info {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            img {
+                @include containerFluid;
+                @include transition;
+                opacity: 0.5;
+            }
+
+            &-info {
+                @include absoluteFull(unset);
+                @include transition;
+                bottom: 0;
+                padding: 20px;
+                background-image: $color-gradient-4;
+                color: $color-primary;
+                border-bottom: 7px solid $color-primary;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        &__cta {
+            text-align: center;
+
+            .th-button {
+                @include containerFluid;
+                max-width: fit-content;
+            }
+        }
     }
 }
