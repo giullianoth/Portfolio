@@ -15,8 +15,4 @@ export const LogoRedirect = () => {
             window.scrollTo(0, 0)
         })
     })
-
-    // logoButton.addEventListener("click", () => {
-    //     window.scrollTo(0, 0)
-    // })
 }
