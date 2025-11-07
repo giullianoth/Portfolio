@@ -64,6 +64,11 @@ form {
     button, input[type="submit"] {
         @include setResponsiveDesign($breakpoint-small) {
             flex-basis: unset;
+            margin-inline: auto;
+        }
+
+        @include setResponsiveDesign($breakpoint-large) {
+            margin: 0;
         }
     }
 }
@@ -309,10 +314,22 @@ picture {
     &social-icon {
         width: 40px;
         height: 40px;
-        border: 1px solid $color-primary !important;
-        font-size: 1.2em !important;
-        color: $color-primary;
+        border: 1px solid $color-text;
+        font-size: 1.2em;
         @include flex;
         @include rounded;
+    }
+
+    &company-name {
+        text-transform: uppercase;
+        color: $color-primary;
+        letter-spacing: 0.2em;
+        font-size: 1em;
+        font-family: $font-plus-jakarta-sans;
+        font-weight: 400;
+
+        @include setResponsiveDesign($breakpoint-small) {
+            font-size: 1.4em;
+        }
     }
 }

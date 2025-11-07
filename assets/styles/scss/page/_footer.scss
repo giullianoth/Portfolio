@@ -1,5 +1,116 @@
 @include theme() {
     &footer {
+        @include containerFluid;
+        background-color: $color-background-primary;
         
+        &__container {
+            @include container;
+            @include flex(space-between, flex-start);
+            gap: 30px;
+            padding-block: 60px 20px !important;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                padding-bottom: 40px !important;
+            }
+        }
+
+        &__logo {
+            @include flex1;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                flex-basis: unset;
+                text-align: left;
+                justify-content: flex-start;
+            }
+
+            img {
+                width: 80px;
+                margin-inline: auto;
+                margin-bottom: 20px;
+                cursor: pointer;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    margin-inline: 0;
+                }
+            }
+
+            &-heading {
+                margin-bottom: 20px;
+                cursor: pointer;
+            }
+        }
+
+        &__social {
+            @include flex;
+            gap: 30px;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                justify-content: flex-start;
+            }
+        }
+
+        &__navigation {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                flex-basis: unset;
+            }
+            
+            &-list {
+                @include flex;
+                @include column;
+                row-gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    align-items: flex-end;
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    align-items: center;
+                }
+            }
+
+            &-item {
+                a {
+                    font-size: 1.2em;
+                    color: $color-primary;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__copyright {
+            @include flex1;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                flex-basis: unset;
+                align-self: flex-end;
+            }
+
+            &-year {
+                font-size: 0.7em;
+                font-weight: 300;
+            }
+        }
+
+        &__policy {
+            margin-bottom: 30px;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                text-align: right;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                margin-bottom: 20px;
+            }
+
+            a {
+                font-size: 1.2em;
+                color: $color-primary;
+                font-weight: 500;
+            }
+        }
     }
 }

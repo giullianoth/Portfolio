@@ -221,6 +221,10 @@
                 a {
                     padding: 0;
                     display: flex;
+                    color: $color-primary;
+                    border-color: $color-primary;
+                    border-right-width: 1px;
+                    font-size: 1.2em;
                 }
             }
         }

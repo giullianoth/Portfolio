@@ -1,7 +1,7 @@
 import { transitionDuration } from "./variables.js"
 
 const header = () => document.querySelector(".j_header")
-const logoButton = document.querySelector(".j_logo")
+const linkBackButton = Array.from(document.querySelectorAll(".j_link_back"))
 
 export const HeaderBehavior = () => {
     window.scrollY > 0
@@ -10,7 +10,13 @@ export const HeaderBehavior = () => {
 }
 
 export const LogoRedirect = () => {
-    logoButton.addEventListener("click", () => {
-        window.scrollTo(0, 0)
+    linkBackButton.forEach(link => {
+        link.addEventListener("click", () => {
+            window.scrollTo(0, 0)
+        })
     })
+
+    // logoButton.addEventListener("click", () => {
+    //     window.scrollTo(0, 0)
+    // })
 }

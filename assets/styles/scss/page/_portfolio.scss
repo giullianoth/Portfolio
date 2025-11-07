@@ -54,7 +54,6 @@
                 bottom: 0;
                 padding: 20px;
                 background-image: $color-gradient-4;
-                color: $color-primary;
                 border-bottom: 7px solid $color-primary;
 
                 @include setResponsiveDesign($breakpoint-large) {
