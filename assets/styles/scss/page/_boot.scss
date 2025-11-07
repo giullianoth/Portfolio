@@ -47,14 +47,40 @@ img {
     @include setBrowserPrefix(object-position, center, "o");
 }
 
+form {
+    @include flex(flex-start);
+    gap: 20px;
+
+    * {
+        @include flex1;
+
+        &.th-half-field {
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include flex2(20px);
+            }
+        }
+    }
+
+    button, input[type="submit"] {
+        @include setResponsiveDesign($breakpoint-small) {
+            flex-basis: unset;
+        }
+    }
+}
+
 input, textarea {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
     background-color: $color-background-primary;
-    padding: 20px;
+    padding: 12px;
     border: 1px solid $color-primary;
     outline: none;
+    resize: none;
+
+    .th-secondary-background {
+        background-color: $color-background-secondary;
+    }
 }
 
 picture {
@@ -94,6 +120,18 @@ picture {
             color: $color-primary;
             font-weight: 500;
             font-size: 1.2em;
+        }
+    }
+
+    &tagline {
+        max-width: 600px;
+        margin-inline: auto;
+        text-align: center;
+        margin-bottom: 60px;
+
+        @include setResponsiveDesign($breakpoint-large) {
+            margin-inline: 0;
+            text-align: left;
         }
     }
 
@@ -176,7 +214,7 @@ picture {
         }
 
         &__wrapper {
-            height: 100%;      
+            height: 100%;
             overflow-y: auto;
         }
     }
@@ -200,10 +238,8 @@ picture {
             border-radius: 50%;
             border-color: currentColor transparent transparent transparent;
 
-            @include animation(ring, (
-                (transform: rotate(0deg)),
-                (transform: rotate(360deg))
-            ), 1s, infinite, cubic-bezier(0.5, 0, 0.5, 1));
+            @include animation(ring, ((transform: rotate(0deg)),
+                    (transform: rotate(360deg))), 1s, infinite, cubic-bezier(0.5, 0, 0.5, 1));
 
             @for $i from 1 through $ringsQt {
                 &:nth-child(#{$i}) {
@@ -224,17 +260,13 @@ picture {
 
         &.infinite {
             .left {
-                @include animation(spin_to_left, (
-                    (transform: translateX(0)),
-                    (transform: translateX(-100%))
-                ))
+                @include animation(spin_to_left, ((transform: translateX(0)),
+                        (transform: translateX(-100%))))
             }
 
             .right {
-                @include animation(spin_to_right, (
-                    (transform: translateX(-100%)),
-                    (transform: translateX(0))
-                ))
+                @include animation(spin_to_right, ((transform: translateX(-100%)),
+                        (transform: translateX(0))))
             }
         }
     }
@@ -244,23 +276,24 @@ picture {
         border: 1px solid $color-primary;
 
         &-heading {
-                @include flex(flex-start, center, nowrap);
-                column-gap: 20px;
-                margin-bottom: 20px;
-                color: $color-primary;
+            @include flex(flex-start, center, nowrap);
+            column-gap: 20px;
+            margin-bottom: 20px;
+            color: $color-primary;
 
-                i {
-                    font-size: 1.8em;
-                }
+            i {
+                font-size: 1.8em;
+            }
 
-                h2, h3, h4, h5, h6 {
-                    font-size: 1.3em;
-                    font-weight: 600;
-                }
+            h2, h3, h4, h5, h6 {
+                font-size: 1.3em;
+                font-weight: 600;
+            }
         }
     }
 
     &text-wrapper {
+
         p, li {
             line-height: 1.3;
             font-weight: 300;
@@ -271,5 +304,15 @@ picture {
                 margin-bottom: 12px;
             }
         }
+    }
+
+    &social-icon {
+        width: 40px;
+        height: 40px;
+        border: 1px solid $color-primary !important;
+        font-size: 1.2em !important;
+        color: $color-primary;
+        @include flex;
+        @include rounded;
     }
 }

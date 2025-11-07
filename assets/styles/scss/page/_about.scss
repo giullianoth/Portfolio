@@ -1,6 +1,7 @@
 @include theme() {
     &about {
         @include containerFluid;
+        background-image: $color-gradient-1;
 
         &__container {
             @include container;

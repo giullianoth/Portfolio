@@ -1,5 +1,59 @@
 @include theme() {
     &contact {
-        
+        @include containerFluid;
+
+        &__container {
+            @include container(600px);
+            @include flex;
+            gap: 40px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                max-width: $container-width;
+            }
+        }
+
+        &__wrapper {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex2(40px);
+            }
+        }
+
+        .th-tagline {
+            margin-bottom: 40px;
+        }
+
+        &__channels {
+            &-item {
+                color: $color-primary;
+
+                &:first-child {
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    @include flex(flex-start, center, nowrap);
+                    @include transition;
+                    gap: 12px;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        opacity: 0.6;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    .th-social-icon {
+                        flex-basis: 40px;
+                    }
+                }
+            }
+
+            &-text {
+                flex-basis: calc(100% - 40px - 12px);
+            }
+        }
     }
 }

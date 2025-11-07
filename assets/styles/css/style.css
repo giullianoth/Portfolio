@@ -51,14 +51,39 @@ img {
   object-position: center;
 }
 
+form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+form * {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  form *.th-half-field {
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 576px) {
+  form button, form input[type=submit] {
+    flex-basis: unset;
+  }
+}
+
 input, textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   background-color: #191919;
-  padding: 20px;
+  padding: 12px;
   border: 1px solid #E39E22;
   outline: none;
+  resize: none;
+}
+input .th-secondary-background, textarea .th-secondary-background {
+  background-color: #2A2A2A;
 }
 
 picture {
@@ -101,6 +126,18 @@ picture {
   color: #E39E22;
   font-weight: 500;
   font-size: 1.2em;
+}
+.th-tagline {
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 992px) {
+  .th-tagline {
+    margin-inline: 0;
+    text-align: left;
+  }
 }
 .th-button {
   background-color: #E39E22;
@@ -288,6 +325,20 @@ picture {
 }
 .th-text-wrapper p:not(:last-child), .th-text-wrapper ul:not(:last-child), .th-text-wrapper ol:not(:last-child) {
   margin-bottom: 12px;
+}
+.th-social-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #E39E22 !important;
+  font-size: 1.2em !important;
+  color: #E39E22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* HEADER CONFIG */
@@ -522,18 +573,7 @@ picture {
 }
 .th-header__social-item a {
   padding: 0;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #E39E22;
-  font-size: 1.2em;
-  color: #E39E22;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
 }
 
 /* HERO CONFIG */
@@ -896,18 +936,6 @@ picture {
     padding-block: 80px;
   }
 }
-.th-services__tagline {
-  max-width: 600px;
-  margin-inline: auto;
-  text-align: center;
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 992px) {
-  .th-services__tagline {
-    margin-inline: 0;
-    text-align: left;
-  }
-}
 .th-services__list {
   display: flex;
   justify-content: flex-start;
@@ -1021,12 +1049,6 @@ picture {
     padding-block: 80px;
   }
 }
-.th-portfolio__tagline {
-  margin-bottom: 60px;
-  text-align: center;
-  max-width: 600px;
-  margin-inline: auto;
-}
 .th-portfolio__list {
   display: flex;
   justify-content: flex-start;
@@ -1098,6 +1120,7 @@ picture {
 /* ABOUT SECTION CONFIG */
 .th-about {
   width: 100%;
+  background-image: linear-gradient(#191919 0%, #2A2A2A 50%, #191919 100%);
 }
 .th-about__container {
   max-width: 1300px;
@@ -1171,4 +1194,68 @@ picture {
 }
 
 /* CONTACT SECTION CONFIG */
+.th-contact {
+  width: 100%;
+}
+.th-contact__container {
+  max-width: 600px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media screen and (min-width: 576px) {
+  .th-contact__container {
+    padding-block: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .th-contact__container {
+    max-width: 1300px;
+  }
+}
+.th-contact__wrapper {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__wrapper {
+    flex-basis: calc(50% - 20px);
+  }
+}
+.th-contact .th-tagline {
+  margin-bottom: 40px;
+}
+.th-contact__channels-item {
+  color: #E39E22;
+}
+.th-contact__channels-item:first-child {
+  margin-bottom: 20px;
+}
+.th-contact__channels-item a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: all 0.3s ease 0s;
+  gap: 12px;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__channels-item a {
+    opacity: 0.6;
+  }
+}
+.th-contact__channels-item a:hover {
+  opacity: 1;
+}
+.th-contact__channels-item a .th-social-icon {
+  flex-basis: 40px;
+}
+.th-contact__channels-text {
+  flex-basis: calc(100% - 40px - 12px);
+}
+
 /* FOOTER CONFIG */

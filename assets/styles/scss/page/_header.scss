@@ -220,13 +220,7 @@
             &-item {
                 a {
                     padding: 0;
-                    width: 40px;
-                    height: 40px;
-                    border: 1px solid $color-primary;
-                    font-size: 1.2em;
-                    color: $color-primary;
-                    @include flex;
-                    @include rounded;
+                    display: flex;
                 }
             }
         }

@@ -6,13 +6,6 @@
             @include container;
         }
 
-        &__tagline {
-            margin-bottom: 60px;
-            text-align: center;
-            max-width: 600px;
-            margin-inline: auto;
-        }
-
         &__list {
             @include flex(flex-start, stretch);
             gap: 20px;
