@@ -282,6 +282,13 @@ picture {
   font-size: 1.3em;
   font-weight: 600;
 }
+.th-text-wrapper p, .th-text-wrapper li {
+  line-height: 1.3;
+  font-weight: 300;
+}
+.th-text-wrapper p:not(:last-child), .th-text-wrapper ul:not(:last-child), .th-text-wrapper ol:not(:last-child) {
+  margin-bottom: 12px;
+}
 
 /* HEADER CONFIG */
 .th-header {
@@ -1073,8 +1080,12 @@ picture {
   background-image: linear-gradient(rgba(25, 25, 25, 0), rgba(25, 25, 25, 0.75), #191919);
   color: #E39E22;
   border-bottom: 7px solid #E39E22;
-  visibility: hidden;
-  opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .th-portfolio__project-info {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 .th-portfolio__cta {
   text-align: center;
@@ -1085,5 +1096,79 @@ picture {
 }
 
 /* ABOUT SECTION CONFIG */
+.th-about {
+  width: 100%;
+}
+.th-about__container {
+  max-width: 1300px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 576px) {
+  .th-about__container {
+    padding-block: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .th-about__container {
+    padding-bottom: 0;
+  }
+}
+.th-about__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px 60px;
+}
+.th-about__photo {
+  max-width: 440px;
+  margin-inline: auto;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 992px) {
+  .th-about__photo {
+    flex-basis: calc(50% - 30px);
+    margin: 0;
+  }
+}
+.th-about__photo img {
+  width: 100%;
+}
+.th-about__info {
+  flex-basis: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .th-about__info {
+    flex-basis: calc(50% - 30px);
+    text-align: left;
+  }
+}
+.th-about__info-heading {
+  margin-bottom: 20px;
+  color: #E39E22;
+}
+.th-about__info-heading h3 {
+  font-size: 1.2em;
+}
+@media screen and (min-width: 576px) {
+  .th-about__info-heading h3 {
+    font-size: 1.6em;
+  }
+}
+.th-about__info-text {
+  margin-bottom: 20px;
+}
+.th-about__cta .th-button {
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .th-about__cta .th-button {
+    width: auto;
+  }
+}
+
 /* CONTACT SECTION CONFIG */
 /* FOOTER CONFIG */

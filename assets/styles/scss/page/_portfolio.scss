@@ -63,8 +63,11 @@
                 background-image: $color-gradient-4;
                 color: $color-primary;
                 border-bottom: 7px solid $color-primary;
-                visibility: hidden;
-                opacity: 0;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    visibility: hidden;
+                    opacity: 0;
+                }
             }
         }
 

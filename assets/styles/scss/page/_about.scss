@@ -1,5 +1,70 @@
 @include theme() {
     &about {
-        
+        @include containerFluid;
+
+        &__container {
+            @include container;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                padding-bottom: 0;
+            }
+        }
+
+        &__wrapper {
+            @include flex;
+            gap: 40px 60px;
+        }
+
+        &__photo {
+            max-width: 440px;
+            margin-inline: auto;
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex2(60px);
+                margin: 0;
+            }
+
+            img {
+                @include containerFluid;
+            }
+        }
+
+        &__info {
+            @include flex1;
+            text-align: center;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex2(60px);
+                text-align: left;
+            }
+
+            &-heading {
+                margin-bottom: 20px;
+                color: $color-primary;
+
+                h3 {
+                    font-size: 1.2em;
+
+                    @include setResponsiveDesign($breakpoint-small) {
+                        font-size: 1.6em;
+                    }
+                }
+            }
+
+            &-text {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__cta {
+            .th-button {
+                @include containerFluid;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    width: auto;
+                }
+            }
+        }
     }
 }
