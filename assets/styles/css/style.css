@@ -601,8 +601,6 @@ picture {
 /* HERO CONFIG */
 .th-hero {
   width: 100%;
-  height: 100%;
-  position: relative;
   position: relative;
   background-image: linear-gradient(#191919 0%, #2A2A2A 50%, #191919 100%);
   height: 800px;
@@ -622,7 +620,7 @@ picture {
   z-index: 0;
   opacity: 0.2;
   mix-blend-mode: screen;
-  filter: blur(2px);
+  backdrop-filter: blur(50px);
   background-image: url("/assets/images/hero_background_mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -646,7 +644,7 @@ picture {
     z-index: 0;
     opacity: 0.2;
     mix-blend-mode: screen;
-    filter: blur(2px);
+    backdrop-filter: blur(50px);
     background-image: url("/assets/images/hero_background_tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -671,7 +669,7 @@ picture {
     z-index: 0;
     opacity: 0.2;
     mix-blend-mode: screen;
-    filter: blur(2px);
+    backdrop-filter: blur(50px);
     background-image: url("/assets/images/hero_background_desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1246,10 +1244,10 @@ picture {
 .th-contact__channels-item {
   color: #E39E22;
 }
-.th-contact__channels-item:first-child {
+.th-contact__channels-item:not(:last-child) {
   margin-bottom: 20px;
 }
-.th-contact__channels-item a {
+.th-contact__channels-item a, .th-contact__channels-item p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1258,19 +1256,32 @@ picture {
   gap: 12px;
 }
 @media screen and (min-width: 992px) {
-  .th-contact__channels-item a {
+  .th-contact__channels-item a, .th-contact__channels-item p {
     opacity: 0.6;
   }
 }
-.th-contact__channels-item a:hover {
+.th-contact__channels-item a:hover, .th-contact__channels-item p:hover {
   opacity: 1;
 }
-.th-contact__channels-item a .th-social-icon {
+.th-contact__channels-item a .th-social-icon, .th-contact__channels-item p .th-social-icon {
   flex-basis: 40px;
   border-color: #E39E22;
 }
-.th-contact__channels-text {
+.th-contact__channels-item a .th-contact__channels-text {
   flex-basis: calc(100% - 40px - 12px);
+}
+@media screen and (min-width: 992px) {
+  .th-contact__channels-item p {
+    opacity: 1;
+  }
+}
+.th-contact__channels-item p .th-social-icon {
+  border: none;
+}
+@media screen and (min-width: 992px) {
+  .th-contact__channels-item p .th-social-icon {
+    transform: rotate(270deg);
+  }
 }
 
 /* FOOTER CONFIG */

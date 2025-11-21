@@ -28,11 +28,11 @@
             &-item {
                 color: $color-primary;
 
-                &:first-child {
+                &:not(:last-child) {
                     margin-bottom: 20px;
                 }
 
-                a {
+                a, p {
                     @include flex(flex-start, center, nowrap);
                     @include transition;
                     gap: 12px;
@@ -50,10 +50,26 @@
                         border-color: $color-primary;
                     }
                 }
-            }
 
-            &-text {
-                flex-basis: calc(100% - 40px - 12px);
+                a {
+                    .th-contact__channels-text {
+                        flex-basis: calc(100% - 40px - 12px);
+                    }
+                }
+
+                p {
+                    @include setResponsiveDesign($breakpoint-large) {
+                        opacity: 1;
+                    }
+
+                    .th-social-icon {
+                        border: none;
+
+                        @include setResponsiveDesign($breakpoint-large) {
+                            transform: rotate(270deg);
+                        }
+                    }
+                }
             }
         }
     }

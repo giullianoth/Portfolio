@@ -152,7 +152,7 @@
     background-position: $position;
 }
 
-@mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.2, $blendMode: screen, $blur: 2px) {
+@mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.2, $blendMode: screen, $blur: 50px) {
     @include relative;
 
     & > * {
@@ -166,7 +166,7 @@
         z-index: 0;
         opacity: $opacity;
         mix-blend-mode: $blendMode;
-        filter: blur($blur);
+        backdrop-filter: blur($blur);
 
         @include backgroundImage($image, $repeat, $size, $position);
     }

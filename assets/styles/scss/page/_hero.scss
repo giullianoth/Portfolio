@@ -1,8 +1,7 @@
 @include theme() {
     &hero {
-        @include containerFluid(true);
+        @include containerFluid;
         @include backgroundOverlay("hero_background_mobile.jpg");
-        @include relative;
         background-image: $color-gradient-1;
         height: 800px;
         min-height: 800px;
