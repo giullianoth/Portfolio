@@ -183,6 +183,12 @@
                     text-align: left;
                 }
 
+                &:last-child {
+                    @include setResponsiveDesign($breakpoint-large) {
+                        display: none;
+                    }
+                }
+
                 a {
                     display: inline-block;
                     padding: 20px 25px 20px 0;
@@ -212,10 +218,6 @@
             @include flex(center, center, nowrap);
             margin-top: 60px;
             gap: 20px;
-
-            @include setResponsiveDesign($breakpoint-large) {
-                display: none;
-            }
 
             &-item {
                 a {

@@ -554,6 +554,11 @@ picture {
     text-align: left;
   }
 }
+@media screen and (min-width: 992px) {
+  .th-header__menu-item:last-child {
+    display: none;
+  }
+}
 .th-header__menu-item a {
   display: inline-block;
   padding: 20px 25px 20px 0;
@@ -583,11 +588,6 @@ picture {
   flex-wrap: nowrap;
   margin-top: 60px;
   gap: 20px;
-}
-@media screen and (min-width: 992px) {
-  .th-header__social {
-    display: none;
-  }
 }
 .th-header__social-item a {
   padding: 0;
@@ -884,6 +884,7 @@ picture {
   flex-direction: column;
   row-gap: 24px;
   margin-bottom: 30px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .th-presentation__trouble-list {
