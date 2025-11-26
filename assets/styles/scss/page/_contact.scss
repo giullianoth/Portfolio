@@ -33,7 +33,8 @@
                 }
 
                 a, p {
-                    @include flex(flex-start, center, nowrap);
+                    display: inline-flex;
+                    align-items: center;
                     @include transition;
                     gap: 12px;
 
@@ -69,6 +70,10 @@
                             transform: rotate(270deg);
                         }
                     }
+                }
+
+                i {
+                    color: $color-secondary
                 }
             }
         }

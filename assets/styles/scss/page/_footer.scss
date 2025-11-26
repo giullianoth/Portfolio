@@ -74,24 +74,14 @@
             &-item {
                 a {
                     font-size: 1.2em;
-                    color: $color-primary;
+                    color: $color-text;
                     font-weight: 500;
+                    @include transition;
+
+                    &:hover {
+                        color: $color-secondary;
+                    }
                 }
-            }
-        }
-
-        &__copyright {
-            @include flex1;
-            text-align: center;
-
-            @include setResponsiveDesign($breakpoint-large) {
-                flex-basis: unset;
-                align-self: flex-end;
-            }
-
-            &-year {
-                font-size: 0.7em;
-                font-weight: 300;
             }
         }
 
@@ -108,8 +98,29 @@
 
             a {
                 font-size: 1.2em;
-                color: $color-primary;
+                color: $color-text;
                 font-weight: 500;
+                @include transition;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        &__copyright {
+            @include flex1;
+            text-align: center;
+            color: $color-text-support;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                flex-basis: unset;
+                align-self: flex-end;
+            }
+
+            &-year {
+                font-size: 0.7em;
+                font-weight: 300;
             }
         }
     }
