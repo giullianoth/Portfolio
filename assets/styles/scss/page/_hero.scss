@@ -3,8 +3,7 @@
         @include containerFluid;
         @include backgroundOverlay("hero_background_mobile.jpg");
         background-image: $color-gradient-1;
-        height: 800px;
-        min-height: 800px;
+        height: 900px;
 
         @include setResponsiveDesign($breakpoint-small) {
             @include backgroundOverlay("hero_background_tablet.jpg");
