@@ -419,12 +419,6 @@ picture {
     padding-block: 80px;
   }
 }
-.th-header__logo {
-  cursor: pointer;
-}
-.th-header__logo h1 {
-  display: none;
-}
 .th-header__logo img {
   width: 36px;
 }
@@ -753,22 +747,22 @@ picture {
 .th-hero__heading {
   margin-bottom: 30px;
 }
-.th-hero__heading h2 {
+.th-hero__heading h1 {
   font-size: 1.8em;
   font-weight: 500;
   line-height: 1;
 }
 @media screen and (min-width: 576px) {
-  .th-hero__heading h2 {
+  .th-hero__heading h1 {
     font-size: 2.4em;
   }
 }
 @media screen and (min-width: 992px) {
-  .th-hero__heading h2 {
+  .th-hero__heading h1 {
     font-size: 2.6em;
   }
 }
-.th-hero__heading h2 span {
+.th-hero__heading h1 span {
   display: block;
   font-size: 1.4em;
   font-weight: 800;
