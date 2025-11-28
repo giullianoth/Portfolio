@@ -154,6 +154,9 @@ picture {
     text-align: left;
   }
 }
+.th-emphasis {
+  color: #E39E22;
+}
 .th-button {
   background-color: #FFC107;
   display: inline-block;
@@ -1401,7 +1404,6 @@ picture {
   }
 }
 .th-footer__navigation-item a {
-  font-size: 1.2em;
   color: #E0E0E0;
   font-weight: 500;
   transition: all 0.3s ease 0s;
@@ -1423,7 +1425,6 @@ picture {
   }
 }
 .th-footer__policy a {
-  font-size: 1.2em;
   color: #E0E0E0;
   font-weight: 500;
   transition: all 0.3s ease 0s;

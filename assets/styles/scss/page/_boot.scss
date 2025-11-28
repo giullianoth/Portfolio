@@ -152,6 +152,10 @@ picture {
         }
     }
 
+    &emphasis {
+        color: $color-primary;
+    }
+
     &button {
         background-color: $color-secondary;
         display: inline-block;
