@@ -4,7 +4,7 @@
 
         &__container {
             @include container(600px);
-            @include flex;
+            @include flex(flex-start, stretch);
             gap: 40px;
 
             @include setResponsiveDesign($breakpoint-large) {
@@ -17,6 +17,14 @@
 
             @include setResponsiveDesign($breakpoint-large) {
                 @include flex2(40px);
+            }
+
+            form {
+                .th-button {
+                    @include setResponsiveDesign($breakpoint-small, true) {
+                        font-size: 0.8em;
+                    }
+                }
             }
         }
 

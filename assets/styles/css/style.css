@@ -84,18 +84,45 @@ label {
   cursor: pointer;
 }
 
-input, textarea {
+input, textarea, select, ::picker(select) {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   background-color: #191919;
   padding: 12px;
   border: 1px solid #E39E22;
+  border-radius: 0;
   outline: none;
   resize: none;
 }
-input .th-secondary-background, textarea .th-secondary-background {
+input .th-secondary-background, textarea .th-secondary-background, select .th-secondary-background, ::picker(select) .th-secondary-background {
   background-color: #212121;
+}
+
+select, ::picker(select) {
+  cursor: pointer;
+  appearance: base-select;
+}
+
+::picker(select) {
+  padding: 0;
+  margin-block: 5px;
+}
+
+select::picker-icon {
+  color: #E39E22;
+  transition: all 0.3s ease 0s;
+}
+
+select:open::picker-icon {
+  transform: rotate(180deg);
+}
+
+option {
+  padding: 12px;
+}
+option::checkmark {
+  display: none;
 }
 
 picture {
@@ -1242,8 +1269,8 @@ picture {
   padding-block: 60px;
   margin-inline: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -1263,6 +1290,11 @@ picture {
 @media screen and (min-width: 992px) {
   .th-contact__wrapper {
     flex-basis: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .th-contact__wrapper form .th-button {
+    font-size: 0.8em;
   }
 }
 .th-contact .th-tagline {

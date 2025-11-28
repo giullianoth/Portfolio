@@ -79,18 +79,46 @@ label {
     cursor: pointer;
 }
 
-input, textarea {
+input, textarea, select, ::picker(select) {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
     background-color: $color-background-primary;
     padding: 12px;
     border: 1px solid $color-primary;
+    border-radius: 0;
     outline: none;
     resize: none;
 
     .th-secondary-background {
         background-color: $color-background-secondary;
+    }
+}
+
+select, ::picker(select) {
+    cursor: pointer;
+    appearance: base-select;
+}
+
+::picker(select) {
+    padding: 0;
+    margin-block: 5px;
+}
+
+select::picker-icon {
+    color: $color-primary;
+    @include transition;
+}
+
+select:open::picker-icon {
+    transform: rotate(180deg);
+}
+
+option {
+    padding: 12px;
+
+    &::checkmark {
+        display: none;
     }
 }
 
