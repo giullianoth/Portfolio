@@ -257,22 +257,48 @@ picture {
     }
 
     &modal {
-        background-color: $color-background-overlay;
-        backdrop-filter: blur(8px);
-        padding-block: 40px;
         @include fixedFull(0, 0, true);
         @include indexLevel3;
-        overflow: hidden;
-        display: none;
+        @include flex;
+        background-color: $color-background-overlay;
+        backdrop-filter: blur(8px);
+        padding: 20px;
+        // display: none;
+
+        @include setResponsiveDesign($breakpoint-large) {
+            padding-block: 40px;
+        }
 
         &__container {
+            @include containerFluid;
             @include container;
-            height: 100%;
+            @include flex;
+            padding: 0 !important;
+            height: auto;
+            max-height: calc(100vh - 40px);
+
+            @include setResponsiveDesign($breakpoint-large) {
+                max-height: calc(100vh - 80px);
+            }
         }
 
         &__wrapper {
-            height: 100%;
+            height: auto;
+            max-height: calc(100vh - 40px);
             overflow-y: auto;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                max-height: calc(100vh - 80px);
+            }
+        }
+
+        .th-heading h2 {
+            font-size: 1.4em;
+            color: $color-primary;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                font-size: 1.6em;
+            }
         }
     }
 
@@ -295,8 +321,10 @@ picture {
             border-radius: 50%;
             border-color: currentColor transparent transparent transparent;
 
-            @include animation(ring, ((transform: rotate(0deg)),
-                    (transform: rotate(360deg))), 1s, infinite, cubic-bezier(0.5, 0, 0.5, 1));
+            @include animation(ring, (
+                (transform: rotate(0deg)),
+                (transform: rotate(360deg))
+            ), 1s, infinite, cubic-bezier(0.5, 0, 0.5, 1));
 
             @for $i from 1 through $ringsQt {
                 &:nth-child(#{$i}) {
@@ -341,6 +369,10 @@ picture {
             i {
                 font-size: 1.8em;
                 color: $color-secondary;
+            }
+
+            img {
+                width: 2.2em;
             }
 
             h2, h3, h4, h5, h6 {
