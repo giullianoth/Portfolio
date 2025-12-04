@@ -77,5 +77,92 @@
                 max-width: fit-content;
             }
         }
+
+        &__popup {
+            max-width: $breakpoint-small;
+
+            @include setResponsiveDesign($breakpoint-xx-large) {
+                max-width: none;
+                height: calc(100vh - 80px);
+            }
+
+            &-container {
+                @include flex;
+                gap: 40px 60px;
+
+                @include setResponsiveDesign($breakpoint-xx-large) {
+                    height: 100%;
+                    align-items: flex-end;
+                }
+            }
+
+            &-image {
+                @include flex1;
+                height: 400px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    height: 600px;
+                }
+
+                @include setResponsiveDesign($breakpoint-xx-large) {
+                    @include flex2(60px);
+                    height: 100%;
+                }
+
+                picture, img {
+                    @include containerFluid(true);
+                }
+
+                img {
+                    border: 2px solid $color-secondary;
+                    @include setBrowserPrefix(object-position, top, "o");
+                }
+
+                &-desktop {
+                    display: none;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        display: block;
+                    }
+                }
+
+                &-mobile {
+                    margin-bottom: 40px !important;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-info {
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-xx-large) {
+                    @include flex2(60px);
+                }
+            }
+
+            &-links {
+                margin-top: 40px;
+                @include flex;
+                gap: 20px;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    justify-content: flex-start;
+                }
+
+                li {
+                    margin: 0 !important;
+                }
+
+                a {
+                    border-color: $color-primary;
+                    font-size: 1.6em;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
     }
 }

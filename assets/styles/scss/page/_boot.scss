@@ -8,7 +8,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 3px;
 
     &-thumb {
         background-color: $color-primary;
@@ -234,28 +234,6 @@ picture {
         }
     }
 
-    &back {
-        position: fixed;
-        bottom: -30px;
-        right: 20px;
-        width: 30px;
-        height: 30px;
-        opacity: 0;
-        @include transition;
-
-        &.show {
-            bottom: 20px;
-            opacity: 1;
-        }
-
-        a {
-            display: block;
-            background-color: $color-background-primary;
-            @include containerFluid(true);
-            @include flex;
-        }
-    }
-
     &modal {
         @include fixedFull(0, 0, true);
         @include indexLevel3;
@@ -263,7 +241,7 @@ picture {
         background-color: $color-background-overlay;
         backdrop-filter: blur(8px);
         padding: 20px;
-        // display: none;
+        display: none;
 
         @include setResponsiveDesign($breakpoint-large) {
             padding-block: 40px;
@@ -289,6 +267,10 @@ picture {
 
             @include setResponsiveDesign($breakpoint-large) {
                 max-height: calc(100vh - 80px);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $color-background-secondary;
             }
         }
 
@@ -388,9 +370,21 @@ picture {
             font-weight: 300;
         }
 
-        p, ul, ol {
+        p, ul, ol, li {
             &:not(:last-child) {
                 margin-bottom: 12px;
+            }
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        a {
+            color: $color-primary;
+
+            &:not(:has(i)):hover {
+                text-decoration: underline;
             }
         }
     }
