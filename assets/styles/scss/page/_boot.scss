@@ -232,6 +232,16 @@ picture {
                 font-weight: 400;
             }
         }
+
+        &.clear {
+            padding: 0;
+            background-color: transparent;
+            color: $color-secondary;
+
+            &:hover {
+                color: $color-text !important;
+            }
+        }
     }
 
     &modal {
@@ -279,7 +289,7 @@ picture {
             color: $color-primary;
 
             @include setResponsiveDesign($breakpoint-large) {
-                font-size: 1.6em;
+                font-size: 2.2em;
             }
         }
     }

@@ -15,28 +15,44 @@
             @include setResponsiveDesign($breakpoint-small) {
                 max-width: none;
             }
+
+            &-main {
+                .th-portfolio__project {
+                    &:last-child {
+                        @include setResponsiveDesign($breakpoint-large) {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
 
         &__project {
             @include flex1;
             @include relative;
             @include transition;
-            border: 1px solid $color-primary;
             cursor: pointer;
+            border: 1px solid $color-primary;
             background-color: $color-background-primary;
+            overflow: hidden;
 
             @include setResponsiveDesign($breakpoint-small) {
                 @include flex2(20px);
             }
 
             @include setResponsiveDesign($breakpoint-large) {
-                @include flex4(20px);
+                @include flex3(20px);
             }
 
             &:hover {
                 border-color: $color-secondary;
 
-                img {
+                .th-portfolio__project-image {
+                    opacity: 1;
+                }
+
+                .th-portfolio__project-preview {
+                    visibility: visible;
                     opacity: 1;
                 }
 
@@ -47,10 +63,30 @@
                 }
             }
 
-            img {
+            &-image {
                 @include containerFluid;
                 @include transition;
                 opacity: 0.5;
+            }
+
+            &-preview {
+                @include absoluteFull(0, 0, true);
+                @include transition;
+                visibility: hidden;
+                opacity: 0;
+
+                @include animation(preview_animation, (
+                    (transform: translateY(0%)),
+                    (transform: translateY(0%)),
+                    (transform: translateY(calc(100% - var(--preview-height)))),
+                    (transform: translateY(calc(100% - var(--preview-height)))),
+                ), 3s, infinite, linear alternate);
+
+                img {
+                    @include containerFluid;
+                    height: auto;
+                    display: block;
+                }
             }
 
             &-info {
@@ -65,6 +101,21 @@
                     visibility: hidden;
                     opacity: 0;
                 }
+            }
+
+            &-name {
+                margin-bottom: 10px;
+                font-size: 1.1em;
+            }
+
+            &-type {
+                color: $color-text-support;
+                font-size: 0.9em;
+                margin-bottom: 8px;
+            }
+
+            &-description {
+                margin-bottom: 10px;
             }
         }
 
