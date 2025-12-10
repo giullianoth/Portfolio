@@ -1,7 +1,10 @@
+@use "../variables" as var;
+@use "../mixins" as *;
+
 @include theme() {
     &processes {
         @include containerFluid;
-        background-image: $color-gradient-1;
+        background-image: var.$color-gradient-1;
 
         &__container {
             @include container(1080px);
@@ -12,7 +15,7 @@
             text-align: center;
 
             h2 {
-                color: $color-secondary;
+                color: var.$color-secondary;
             }
         }
 
@@ -25,15 +28,15 @@
 
         &__process {
             max-width: 600px;
-            background-color: $color-background-secondary;
-            box-shadow: 0 0 12px rgba($color: $color-background-primary, $alpha: 1.0);
+            background-color: var.$color-background-secondary;
+            box-shadow: 0 0 12px rgba($color: var.$color-background-primary, $alpha: 1.0);
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 @include flex(flex-start, center, nowrap);
                 column-gap: 40px;
             }
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 max-width: 700px;
             }
 
@@ -42,7 +45,7 @@
             }
 
             &-heading, &-text {
-                @include setResponsiveDesign($breakpoint-small) {
+                @include setResponsiveDesign(var.$breakpoint-small) {
                     flex-grow: 1;
                     margin: 0;
                 }
@@ -50,7 +53,7 @@
 
             &-heading {
                     h3 {
-                        @include setResponsiveDesign($breakpoint-large) {
+                        @include setResponsiveDesign(var.$breakpoint-large) {
                         font-size: 1.6em;
                     }
                 }

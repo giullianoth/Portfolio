@@ -1,3 +1,6 @@
+@use "../variables" as var;
+@use "../mixins" as *;
+
 @include theme() {
     &services {
         @include containerFluid;
@@ -13,13 +16,13 @@
 
         &__service {
             @include flex1;
-            background-color: $color-background-primary;
+            background-color: var.$color-background-primary;
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 @include flex2(20px);
             }
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 @include flex4(20px);
             }
 

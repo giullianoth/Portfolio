@@ -1,3 +1,7 @@
+@use "variables" as *;
+@use "sass:list";
+@use "sass:math";
+
 // THEME
 @mixin theme() {
     .th- {
@@ -143,33 +147,33 @@
 
 // BACKGROUND IMAGE
 @mixin backgroundImage($image: "", $repeat: no-repeat, $size: cover, $position: center center) {
-    @if $image != "" {
-        background-image: url("#{$image-path}/#{$image}");
-    }
-
     background-repeat: $repeat;
     background-size: $size;
     background-position: $position;
+    
+    @if $image != "" {
+        background-image: url("#{$image-path}/#{$image}");
+    }
 }
 
 @mixin backgroundOverlay($image: "", $repeat: no-repeat, $size: cover, $position: center center, $opacity: 0.2, $blendMode: screen, $blur: 5px) {
     @include relative;
     overflow: hidden;
 
-    & > * {
-        position: relative;
-        z-index: 2;
-    }
-
     &::before {
-        content: "";
         @include absoluteFull(0, 0, true);
+        content: "";
         z-index: 0;
         opacity: $opacity;
         mix-blend-mode: $blendMode;
         filter: blur($blur);
 
         @include backgroundImage($image, $repeat, $size, $position);
+    }
+
+    & > * {
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -183,12 +187,12 @@
     animation: $name $duration $iterationCount $timingFunction;
     
     @keyframes #{$name} {
-        @for $i from 1 through length($list: $setup) {
+        @for $i from 1 through list.length($setup) {
 
-            $frame: calc((($i * 100%) / (length($list: $setup) - 1)) - (100% / (length($list: $setup) - 1)));
+            $frame: calc((($i * 100%) / (list.length($setup) - 1)) - (100% / (list.length($setup) - 1)));
             
             #{$frame} {
-                @each $attr, $value in nth($list: $setup, $n: $i) {
+                @each $attr, $value in list.nth($setup, $i) {
                     #{$attr}: #{$value};
                 }
             }

@@ -1,15 +1,18 @@
+@use "../variables" as var;
+@use "../mixins" as *;
+
 @include theme() {
     &footer {
         @include containerFluid;
-        background-color: $color-background-primary;
+        background-color: var.$color-background-primary;
         
         &__container {
-            @include container;
             @include flex(space-between, flex-start);
             gap: 30px;
             padding-block: 60px 20px !important;
+            @include container;
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 padding-bottom: 40px !important;
             }
         }
@@ -18,7 +21,7 @@
             @include flex1;
             text-align: center;
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 flex-basis: unset;
                 text-align: left;
                 justify-content: flex-start;
@@ -30,7 +33,7 @@
                 margin-bottom: 20px;
                 cursor: pointer;
 
-                @include setResponsiveDesign($breakpoint-small) {
+                @include setResponsiveDesign(var.$breakpoint-small) {
                     margin-inline: 0;
                 }
             }
@@ -45,7 +48,7 @@
             @include flex;
             gap: 30px;
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 justify-content: flex-start;
             }
         }
@@ -53,7 +56,7 @@
         &__navigation {
             @include flex1;
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 flex-basis: unset;
             }
             
@@ -62,24 +65,24 @@
                 @include column;
                 row-gap: 20px;
 
-                @include setResponsiveDesign($breakpoint-small) {
+                @include setResponsiveDesign(var.$breakpoint-small) {
                     align-items: flex-end;
                 }
 
-                @include setResponsiveDesign($breakpoint-large) {
+                @include setResponsiveDesign(var.$breakpoint-large) {
                     align-items: center;
                 }
             }
 
             &-item {
                 a {
-                    // font-size: 1.2em;
-                    color: $color-text;
-                    font-weight: 500;
                     @include transition;
+                    // font-size: 1.2em;
+                    color: var.$color-text;
+                    font-weight: 500;
 
                     &:hover {
-                        color: $color-secondary;
+                        color: var.$color-secondary;
                     }
                 }
             }
@@ -88,22 +91,22 @@
         &__policy {
             margin-bottom: 30px;
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 text-align: right;
             }
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 margin-bottom: 20px;
             }
 
             a {
-                // font-size: 1.2em;
-                color: $color-text;
-                font-weight: 500;
                 @include transition;
+                // font-size: 1.2em;
+                color: var.$color-text;
+                font-weight: 500;
 
                 &:hover {
-                    color: $color-secondary;
+                    color: var.$color-secondary;
                 }
             }
         }
@@ -111,9 +114,9 @@
         &__copyright {
             @include flex1;
             text-align: center;
-            color: $color-text-support;
+            color: var.$color-text-support;
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 flex-basis: unset;
                 align-self: flex-end;
             }

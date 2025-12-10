@@ -1,12 +1,15 @@
+@use "../variables" as var;
+@use "../mixins" as *;
+
 @include theme() {
     &about {
         @include containerFluid;
-        background-image: $color-gradient-1;
+        background-image: var.$color-gradient-1;
 
         &__container {
             @include container;
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 padding-bottom: 0;
             }
         }
@@ -17,11 +20,11 @@
         }
 
         &__photo {
+            @include flex1;
             max-width: 440px;
             margin-inline: auto;
-            @include flex1;
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 @include flex2(60px);
                 margin: 0;
             }
@@ -35,19 +38,19 @@
             @include flex1;
             text-align: center;
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 @include flex2(60px);
                 text-align: left;
             }
 
             &-heading {
                 margin-bottom: 20px;
-                color: $color-primary;
+                color: var.$color-primary;
 
                 h3 {
                     font-size: 1.2em;
 
-                    @include setResponsiveDesign($breakpoint-small) {
+                    @include setResponsiveDesign(var.$breakpoint-small) {
                         font-size: 1.6em;
                     }
                 }
@@ -62,7 +65,7 @@
             .th-button {
                 @include containerFluid;
 
-                @include setResponsiveDesign($breakpoint-small) {
+                @include setResponsiveDesign(var.$breakpoint-small) {
                     width: auto;
                 }
             }

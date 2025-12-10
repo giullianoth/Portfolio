@@ -1,3 +1,6 @@
+@use "../variables" as var;
+@use "../mixins" as *;
+
 @include theme() {
     &portfolio {
         @include containerFluid;
@@ -12,14 +15,14 @@
             max-width: 440px;
             margin-inline: auto;
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 max-width: none;
             }
 
             &-main {
                 .th-portfolio__project {
                     &:last-child {
-                        @include setResponsiveDesign($breakpoint-large) {
+                        @include setResponsiveDesign(var.$breakpoint-large) {
                             display: none;
                         }
                     }
@@ -32,20 +35,20 @@
             @include relative;
             @include transition;
             cursor: pointer;
-            border: 1px solid $color-primary;
-            background-color: $color-background-primary;
+            border: 1px solid var.$color-primary;
+            background-color: var.$color-background-primary;
             overflow: hidden;
 
-            @include setResponsiveDesign($breakpoint-small) {
+            @include setResponsiveDesign(var.$breakpoint-small) {
                 @include flex2(20px);
             }
 
-            @include setResponsiveDesign($breakpoint-large) {
+            @include setResponsiveDesign(var.$breakpoint-large) {
                 @include flex3(20px);
             }
 
             &:hover {
-                border-color: $color-secondary;
+                border-color: var.$color-secondary;
 
                 .th-portfolio__project-image {
                     opacity: 1;
@@ -59,7 +62,7 @@
                 .th-portfolio__project-info {
                     visibility: visible;
                     opacity: 1;
-                    border-color: $color-secondary;
+                    border-color: var.$color-secondary;
                 }
             }
 
@@ -75,17 +78,18 @@
                 visibility: hidden;
                 opacity: 0;
 
-                @include animation(preview_animation, (
-                    (transform: translateY(0%)),
-                    (transform: translateY(0%)),
-                    (transform: translateY(calc(100% - var(--preview-height)))),
-                    (transform: translateY(calc(100% - var(--preview-height)))),
-                ), 3s, infinite, linear alternate);
-
                 img {
                     @include containerFluid;
+                    @include transition(transform);
                     height: auto;
                     display: block;
+
+                    @include animation(preview_animation, (
+                        (transform: translateY(0%)),
+                        (transform: translateY(0%)),
+                        (transform: translateY(calc(100% - var(--preview-height)))),
+                        (transform: translateY(calc(100% - var(--preview-height)))),
+                    ), 3s, infinite, linear alternate);
                 }
             }
 
@@ -94,10 +98,10 @@
                 @include transition;
                 bottom: 0;
                 padding: 40px 20px 20px 20px;
-                background-image: $color-gradient-4;
-                border-bottom: 7px solid $color-primary;
+                background-image: var.$color-gradient-4;
+                border-bottom: 7px solid var.$color-primary;
 
-                @include setResponsiveDesign($breakpoint-large) {
+                @include setResponsiveDesign(var.$breakpoint-large) {
                     visibility: hidden;
                     opacity: 0;
                 }
@@ -109,7 +113,7 @@
             }
 
             &-type {
-                color: $color-text-support;
+                color: var.$color-text-support;
                 font-size: 0.9em;
                 margin-bottom: 8px;
             }
@@ -130,9 +134,9 @@
         }
 
         &__popup {
-            max-width: $breakpoint-small;
+            max-width: var.$breakpoint-small;
 
-            @include setResponsiveDesign($breakpoint-xx-large) {
+            @include setResponsiveDesign(var.$breakpoint-xx-large) {
                 max-width: none;
                 height: calc(100vh - 80px);
             }
@@ -141,7 +145,7 @@
                 @include flex;
                 gap: 40px 60px;
 
-                @include setResponsiveDesign($breakpoint-xx-large) {
+                @include setResponsiveDesign(var.$breakpoint-xx-large) {
                     height: 100%;
                     align-items: flex-end;
                 }
@@ -151,11 +155,11 @@
                 @include flex1;
                 height: 400px;
 
-                @include setResponsiveDesign($breakpoint-medium) {
+                @include setResponsiveDesign(var.$breakpoint-medium) {
                     height: 600px;
                 }
 
-                @include setResponsiveDesign($breakpoint-xx-large) {
+                @include setResponsiveDesign(var.$breakpoint-xx-large) {
                     @include flex2(60px);
                     height: 100%;
                 }
@@ -165,14 +169,14 @@
                 }
 
                 img {
-                    border: 2px solid $color-secondary;
                     @include setBrowserPrefix(object-position, top, "o");
+                    border: 2px solid var.$color-secondary;
                 }
 
                 &-desktop {
                     display: none;
 
-                    @include setResponsiveDesign($breakpoint-large) {
+                    @include setResponsiveDesign(var.$breakpoint-large) {
                         display: block;
                     }
                 }
@@ -180,7 +184,7 @@
                 &-mobile {
                     margin-bottom: 40px !important;
 
-                    @include setResponsiveDesign($breakpoint-large) {
+                    @include setResponsiveDesign(var.$breakpoint-large) {
                         display: none;
                     }
                 }
@@ -189,17 +193,17 @@
             &-info {
                 @include flex1;
 
-                @include setResponsiveDesign($breakpoint-xx-large) {
+                @include setResponsiveDesign(var.$breakpoint-xx-large) {
                     @include flex2(60px);
                 }
             }
 
             &-links {
-                margin-top: 40px;
                 @include flex;
+                margin-top: 40px;
                 gap: 20px;
 
-                @include setResponsiveDesign($breakpoint-large) {
+                @include setResponsiveDesign(var.$breakpoint-large) {
                     justify-content: flex-start;
                 }
 
@@ -208,7 +212,7 @@
                 }
 
                 a {
-                    border-color: $color-primary;
+                    border-color: var.$color-primary;
                     font-size: 1.6em;
                     width: 50px;
                     height: 50px;

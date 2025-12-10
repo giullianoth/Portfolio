@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 /* BOOT CONFIG */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 *, *::before, *::after {
-  margin: 0;
-  padding: 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   scrollbar-width: 4px;
   scrollbar-color: #E39E22;
 }
@@ -44,13 +44,13 @@ a {
 }
 
 img {
-  display: block;
-  width: auto;
-  max-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+  display: block;
+  width: auto;
+  max-width: 100%;
 }
 
 form {
@@ -96,7 +96,7 @@ input, textarea, select, ::picker(select) {
   outline: none;
   resize: none;
 }
-input .th-secondary-background, textarea .th-secondary-background, select .th-secondary-background, ::picker(select) .th-secondary-background {
+input.th-secondary-background, textarea.th-secondary-background, select.th-secondary-background, ::picker(select).th-secondary-background {
   background-color: #212121;
 }
 
@@ -111,8 +111,8 @@ select, ::picker(select) {
 }
 
 select::picker-icon {
-  color: #E39E22;
   transition: all 0.3s ease 0s;
+  color: #E39E22;
 }
 
 select:open::picker-icon {
@@ -186,6 +186,7 @@ picture {
   color: #E39E22;
 }
 .th-button {
+  transition: all 0.3s ease 0s;
   background-color: #FFC107;
   display: inline-block;
   border: none;
@@ -198,7 +199,6 @@ picture {
   font-weight: 600;
   font-size: 1em;
   color: #191919;
-  transition: all 0.3s ease 0s;
 }
 .th-button:hover {
   background-color: #E0E0E0;
@@ -256,10 +256,6 @@ picture {
 }
 .th-modal__container {
   width: 100%;
-  max-width: 1300px;
-  padding-inline: 20px;
-  padding-block: 60px;
-  margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,6 +263,10 @@ picture {
   padding: 0 !important;
   height: auto;
   max-height: calc(100vh - 40px);
+  max-width: 1300px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 576px) {
   .th-modal__container {
@@ -301,12 +301,12 @@ picture {
   }
 }
 .th-load {
+  position: relative;
+  transition: color 0.3s ease 0s;
   color: #E0E0E0;
   display: inline-block;
   width: 20px;
   height: 20px;
-  position: relative;
-  transition: color 0.3s ease 0s;
 }
 .th-load div {
   box-sizing: border-box;
@@ -422,10 +422,6 @@ picture {
   font-weight: 600;
 }
 .th-social-icon {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #E0E0E0;
-  font-size: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -433,6 +429,10 @@ picture {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #E0E0E0;
+  font-size: 1.2em;
 }
 .th-company-name {
   text-transform: uppercase;
@@ -470,15 +470,15 @@ picture {
   }
 }
 .th-header__container {
-  max-width: 1300px;
-  padding-inline: 20px;
-  padding-block: 60px;
-  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   padding-block: 0 !important;
+  max-width: 1300px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 576px) {
   .th-header__container {
@@ -489,8 +489,8 @@ picture {
   width: 36px;
 }
 .th-header__navigation {
-  padding-block: 20px;
   transition: all 0.3s ease 0s;
+  padding-block: 20px;
 }
 @media screen and (min-width: 992px) {
   .th-header__navigation {
@@ -512,14 +512,14 @@ picture {
   transform: none;
 }
 .th-header__icon {
-  cursor: pointer;
-  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
   z-index: 110;
+  cursor: pointer;
+  height: 36px;
 }
 @media screen and (min-width: 992px) {
   .th-header__icon {
@@ -527,22 +527,22 @@ picture {
   }
 }
 .th-header__icon-bar {
+  position: relative;
+  transition: all 0.3s ease 0s;
   display: block;
   width: 40px;
   height: 3px;
   background-color: #E39E22;
-  position: relative;
-  transition: all 0.3s ease 0s;
 }
 .th-header__icon-bar::before, .th-header__icon-bar::after {
-  content: "";
-  background-color: #E39E22;
   position: absolute;
   top: unset;
   left: 0;
   width: 100%;
   height: 100%;
   transition: all 0.3s ease 0s;
+  content: "";
+  background-color: #E39E22;
 }
 .th-header__icon-bar::before {
   bottom: 9px;
@@ -643,6 +643,7 @@ picture {
   }
 }
 .th-header__menu-item a {
+  transition: all 0.3s ease 0s;
   display: inline-block;
   padding: 20px 25px 20px 0;
   font-size: 1.6em;
@@ -650,7 +651,6 @@ picture {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   border-right: 6px solid transparent;
-  transition: all 0.3s ease 0s;
 }
 @media screen and (min-width: 992px) {
   .th-header__menu-item a {
@@ -684,55 +684,55 @@ picture {
 /* HERO CONFIG */
 .th-hero {
   width: 100%;
-  position: relative;
-  overflow: hidden;
   background-color: #191919;
   height: 900px;
-}
-.th-hero > * {
   position: relative;
-  z-index: 2;
+  overflow: hidden;
 }
 .th-hero::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  content: "";
   z-index: 0;
   opacity: 0.2;
   mix-blend-mode: screen;
   filter: blur(5px);
-  background-image: url("/assets/images/hero_background_mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-image: url("/assets/images/hero_background_mobile.jpg");
+}
+.th-hero > * {
+  position: relative;
+  z-index: 2;
 }
 @media screen and (min-width: 576px) {
   .th-hero {
     position: relative;
     overflow: hidden;
   }
-  .th-hero > * {
-    position: relative;
-    z-index: 2;
-  }
   .th-hero::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    content: "";
     z-index: 0;
     opacity: 0.2;
     mix-blend-mode: screen;
     filter: blur(5px);
-    background-image: url("/assets/images/hero_background_tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-image: url("/assets/images/hero_background_tablet.jpg");
+  }
+  .th-hero > * {
+    position: relative;
+    z-index: 2;
   }
 }
 @media screen and (min-width: 992px) {
@@ -740,33 +740,33 @@ picture {
     position: relative;
     overflow: hidden;
   }
-  .th-hero > * {
-    position: relative;
-    z-index: 2;
-  }
   .th-hero::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    content: "";
     z-index: 0;
     opacity: 0.2;
     mix-blend-mode: screen;
     filter: blur(5px);
-    background-image: url("/assets/images/hero_background_desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-image: url("/assets/images/hero_background_desktop.jpg");
+  }
+  .th-hero > * {
+    position: relative;
+    z-index: 2;
   }
 }
 .th-hero::after {
-  content: "";
   position: absolute;
   top: unset;
   left: 0;
   width: 100%;
+  content: "";
   bottom: 0;
   height: 300px;
   background-image: linear-gradient(rgba(25, 25, 25, 0), #191919);
@@ -901,16 +901,16 @@ picture {
   column-gap: 10px;
 }
 .th-hero__keywords-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   text-wrap: nowrap;
   border-color: #E0E0E0 !important;
   color: #E0E0E0 !important;
   text-transform: none;
   font-family: "Plus Jakarta Sans", sans-serif;
   pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 /* PRESENTATION SECTION CONFIG */
@@ -950,8 +950,8 @@ picture {
 }
 @media screen and (min-width: 768px) {
   .th-presentation__trouble {
-    padding-inline: 0;
     flex-basis: calc(50% - 15px);
+    padding-inline: 0;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1214,6 +1214,12 @@ picture {
   transition: all 0.3s ease 0s;
   visibility: hidden;
   opacity: 0;
+}
+.th-portfolio__project-preview img {
+  width: 100%;
+  transition: transform 0.3s ease 0s;
+  height: auto;
+  display: block;
   animation: preview_animation 3s infinite linear alternate;
 }
 @keyframes preview_animation {
@@ -1229,11 +1235,6 @@ picture {
   100% {
     transform: translateY(calc(100% - var(--preview-height)));
   }
-}
-.th-portfolio__project-preview img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 .th-portfolio__project-info {
   position: absolute;
@@ -1314,9 +1315,9 @@ picture {
   height: 100%;
 }
 .th-portfolio__popup-image img {
-  border: 2px solid #FFC107;
   -o-object-position: top;
   object-position: top;
+  border: 2px solid #FFC107;
 }
 .th-portfolio__popup-image-desktop {
   display: none;
@@ -1343,11 +1344,11 @@ picture {
   }
 }
 .th-portfolio__popup-links {
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 40px;
   gap: 20px;
 }
 @media screen and (min-width: 992px) {
@@ -1394,9 +1395,9 @@ picture {
   gap: 40px 60px;
 }
 .th-about__photo {
+  flex-basis: 100%;
   max-width: 440px;
   margin-inline: auto;
-  flex-basis: 100%;
 }
 @media screen and (min-width: 992px) {
   .th-about__photo {
@@ -1446,15 +1447,15 @@ picture {
   width: 100%;
 }
 .th-contact__container {
-  max-width: 600px;
-  padding-inline: 20px;
-  padding-block: 60px;
-  margin-inline: auto;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 40px;
+  max-width: 600px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 576px) {
   .th-contact__container {
@@ -1489,9 +1490,9 @@ picture {
   margin-bottom: 20px;
 }
 .th-contact__channels-item a, .th-contact__channels-item p {
+  transition: all 0.3s ease 0s;
   display: inline-flex;
   align-items: center;
-  transition: all 0.3s ease 0s;
   gap: 12px;
 }
 @media screen and (min-width: 992px) {
@@ -1532,16 +1533,16 @@ picture {
   background-color: #191919;
 }
 .th-footer__container {
-  max-width: 1300px;
-  padding-inline: 20px;
-  padding-block: 60px;
-  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 30px;
   padding-block: 60px 20px !important;
+  max-width: 1300px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 576px) {
   .th-footer__container {
@@ -1618,9 +1619,9 @@ picture {
   }
 }
 .th-footer__navigation-item a {
+  transition: all 0.3s ease 0s;
   color: #E0E0E0;
   font-weight: 500;
-  transition: all 0.3s ease 0s;
 }
 .th-footer__navigation-item a:hover {
   color: #FFC107;
@@ -1639,9 +1640,9 @@ picture {
   }
 }
 .th-footer__policy a {
+  transition: all 0.3s ease 0s;
   color: #E0E0E0;
   font-weight: 500;
-  transition: all 0.3s ease 0s;
 }
 .th-footer__policy a:hover {
   color: #FFC107;
