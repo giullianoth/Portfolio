@@ -1205,37 +1205,6 @@ picture {
   transition: all 0.3s ease 0s;
   opacity: 0.5;
 }
-.th-portfolio__project-preview {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s ease 0s;
-  visibility: hidden;
-  opacity: 0;
-}
-.th-portfolio__project-preview img {
-  width: 100%;
-  transition: transform 0.3s ease 0s;
-  height: auto;
-  display: block;
-  animation: preview_animation 3s infinite linear alternate;
-}
-@keyframes preview_animation {
-  0% {
-    transform: translateY(0%);
-  }
-  33.3333333333% {
-    transform: translateY(0%);
-  }
-  66.6666666667% {
-    transform: translateY(calc(100% - var(--preview-height)));
-  }
-  100% {
-    transform: translateY(calc(100% - var(--preview-height)));
-  }
-}
 .th-portfolio__project-info {
   position: absolute;
   top: unset;

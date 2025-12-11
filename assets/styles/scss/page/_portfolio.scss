@@ -72,27 +72,6 @@
                 opacity: 0.5;
             }
 
-            &-preview {
-                @include absoluteFull(0, 0, true);
-                @include transition;
-                visibility: hidden;
-                opacity: 0;
-
-                img {
-                    @include containerFluid;
-                    @include transition(transform);
-                    height: auto;
-                    display: block;
-
-                    @include animation(preview_animation, (
-                        (transform: translateY(0%)),
-                        (transform: translateY(0%)),
-                        (transform: translateY(calc(100% - var(--preview-height)))),
-                        (transform: translateY(calc(100% - var(--preview-height)))),
-                    ), 3s, infinite, linear alternate);
-                }
-            }
-
             &-info {
                 @include absoluteFull(unset);
                 @include transition;
