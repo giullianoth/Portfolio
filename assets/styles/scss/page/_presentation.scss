@@ -20,6 +20,10 @@
             }
         }
 
+        &__heading {
+            display: none;
+        }
+
         &__trouble {
             @include flex1;
             padding-inline: 20px;
