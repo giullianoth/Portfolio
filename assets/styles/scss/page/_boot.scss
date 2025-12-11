@@ -83,7 +83,8 @@ label {
     font-size: 0.8em;
 }
 
-input, textarea, select, ::picker(select) {
+input, textarea, select {
+    @include setBrowserPrefix(appearance, none);
     font-family: inherit;
     font-size: inherit;
     color: inherit;
@@ -100,8 +101,22 @@ input, textarea, select, ::picker(select) {
 }
 
 select, ::picker(select) {
+    @include setBrowserPrefix(appearance, none);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var.$color-background-primary;
+    padding: 12px;
+    border: 1px solid var.$color-primary;
+    border-radius: 0;
+    outline: none;
+    resize: none;
     cursor: pointer;
     appearance: base-select;
+
+    &.th-secondary-background {
+        background-color: var.$color-background-secondary;
+    }
 }
 
 ::picker(select) {
@@ -420,6 +435,10 @@ picture {
         height: 40px;
         border: 1px solid var.$color-text;
         font-size: 1.2em;
+
+        span {
+            display: none;
+        }
     }
 
     &company-name {

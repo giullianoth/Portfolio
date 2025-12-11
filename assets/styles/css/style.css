@@ -85,7 +85,10 @@ label {
   font-size: 0.8em;
 }
 
-input, textarea, select, ::picker(select) {
+input, textarea, select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -96,13 +99,28 @@ input, textarea, select, ::picker(select) {
   outline: none;
   resize: none;
 }
-input.th-secondary-background, textarea.th-secondary-background, select.th-secondary-background, ::picker(select).th-secondary-background {
+input.th-secondary-background, textarea.th-secondary-background, select.th-secondary-background {
   background-color: #212121;
 }
 
 select, ::picker(select) {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: #191919;
+  padding: 12px;
+  border: 1px solid #E39E22;
+  border-radius: 0;
+  outline: none;
+  resize: none;
   cursor: pointer;
   appearance: base-select;
+}
+select.th-secondary-background, ::picker(select).th-secondary-background {
+  background-color: #212121;
 }
 
 ::picker(select) {
@@ -433,6 +451,9 @@ picture {
   height: 40px;
   border: 1px solid #E0E0E0;
   font-size: 1.2em;
+}
+.th-social-icon span {
+  display: none;
 }
 .th-company-name {
   text-transform: uppercase;
