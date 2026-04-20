@@ -19,6 +19,8 @@
 
         &__logo {
             @include flex1;
+            @include flex;
+            gap: 20px;
             text-align: center;
 
             @include setResponsiveDesign(var.$breakpoint-small) {
@@ -28,7 +30,7 @@
             }
 
             img {
-                width: 80px;
+                width: 50px;
                 margin-inline: auto;
                 margin-bottom: 20px;
                 cursor: pointer;
@@ -42,72 +44,9 @@
                 margin-bottom: 20px;
                 cursor: pointer;
             }
-        }
 
-        &__social {
-            @include flex;
-            gap: 30px;
-
-            @include setResponsiveDesign(var.$breakpoint-small) {
-                justify-content: flex-start;
-            }
-        }
-
-        &__navigation {
-            @include flex1;
-
-            @include setResponsiveDesign(var.$breakpoint-small) {
-                flex-basis: unset;
-            }
-            
-            &-list {
-                @include flex;
-                @include column;
-                row-gap: 20px;
-
-                @include setResponsiveDesign(var.$breakpoint-small) {
-                    align-items: flex-end;
-                }
-
-                @include setResponsiveDesign(var.$breakpoint-large) {
-                    align-items: center;
-                }
-            }
-
-            &-item {
-                a {
-                    @include transition;
-                    // font-size: 1.2em;
-                    color: var.$color-text;
-                    font-weight: 500;
-
-                    &:hover {
-                        color: var.$color-secondary;
-                    }
-                }
-            }
-        }
-
-        &__policy {
-            margin-bottom: 30px;
-
-            @include setResponsiveDesign(var.$breakpoint-small) {
-                text-align: right;
-            }
-
-            @include setResponsiveDesign(var.$breakpoint-large) {
-                margin-bottom: 20px;
-            }
-
-            a {
-                @include transition;
-                // font-size: 1.2em;
-                color: var.$color-text;
-                font-weight: 500;
-
-                &:hover {
-                    color: var.$color-secondary;
-                }
+            .th-brand {
+                letter-spacing: unset;
             }
         }
 
@@ -119,11 +58,23 @@
             @include setResponsiveDesign(var.$breakpoint-large) {
                 flex-basis: unset;
                 align-self: flex-end;
+                text-align: right;
             }
 
-            &-year {
+            &-text {
                 font-size: 0.7em;
                 font-weight: 300;
+            }
+        }
+
+        &__link {
+            margin-top: 12px;
+            font-size: 0.8em;
+            font-weight: 700;
+            @include transition;
+
+            &:hover {
+                color: var.$color-primary;
             }
         }
     }

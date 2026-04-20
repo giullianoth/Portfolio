@@ -2,33 +2,38 @@
 @use "../mixins" as *;
 
 @include theme() {
-    &services {
+    &skills {
         @include containerFluid;
 
         &__container {
             @include container;
         }
 
-        &__list {
+        &__wrapper {
             @include flex(flex-start, stretch);
             gap: 20px;
         }
 
-        &__service {
+        &__group {
             @include flex1;
             background-color: var.$color-background-primary;
 
             @include setResponsiveDesign(var.$breakpoint-small) {
                 @include flex2(20px);
             }
-
-            @include setResponsiveDesign(var.$breakpoint-large) {
-                @include flex4(20px);
-            }
-
-            &-text {
-                text-align: center;
-            }
         }
+
+        // &__service {
+        //     @include flex1;
+        //     background-color: var.$color-background-primary;
+
+        //     @include setResponsiveDesign(var.$breakpoint-small) {
+        //         @include flex2(20px);
+        //     }
+
+        //     &-text {
+        //         text-align: center;
+        //     }
+        // }
     }
 }

@@ -55,6 +55,7 @@ img {
     display: block;
     width: auto;
     max-width: 100%;
+    height: auto;
 }
 
 form {
@@ -124,30 +125,14 @@ select, ::picker(select) {
     }
 }
 
-::picker(select) {
-    padding: 0;
-    margin-block: 5px;
-}
-
-select::picker-icon {
-    @include transition;
-    color: var.$color-primary;
-}
-
-select:open::picker-icon {
-    transform: rotate(180deg);
-}
-
-option {
-    padding: 12px;
-
-    &::checkmark {
-        display: none;
-    }
-}
-
 picture {
     display: flex;
+}
+
+i.fa-solid,
+i.fa-regular,
+i.fa-brands {
+    vertical-align: middle;
 }
 
 @include theme() {
@@ -446,7 +431,7 @@ picture {
         }
     }
 
-    &company-name {
+    &brand {
         text-transform: uppercase;
         color: var.$color-primary;
         letter-spacing: 0.2em;

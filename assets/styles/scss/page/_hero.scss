@@ -41,7 +41,7 @@
 
         &__info {
             @include containerFluid;
-            max-width: 900px;
+            max-width: var.$breakpoint-large;
             padding-inline: var.$side-clearance;
             text-align: center;
 

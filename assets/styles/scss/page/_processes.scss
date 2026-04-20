@@ -27,6 +27,7 @@
         }
 
         &__process {
+            @include containerFluid;
             max-width: 600px;
             background-color: var.$color-background-secondary;
             box-shadow: 0 0 12px rgba($color: var.$color-background-primary, $alpha: 1.0);
@@ -37,25 +38,30 @@
             }
 
             @include setResponsiveDesign(var.$breakpoint-large) {
-                max-width: 700px;
+                max-width: 800px;
             }
 
             &-right {
                 margin-left: auto;
             }
 
-            &-heading, &-text {
+            &-heading {
                 @include setResponsiveDesign(var.$breakpoint-small) {
-                    flex-grow: 1;
                     margin: 0;
+                    @include flexBasis(220px);
+                }
+
+                h3 {
+                    @include setResponsiveDesign(var.$breakpoint-large) {
+                        font-size: 1.4em;
+                    }
                 }
             }
 
-            &-heading {
-                    h3 {
-                        @include setResponsiveDesign(var.$breakpoint-large) {
-                        font-size: 1.6em;
-                    }
+            &-text {
+                @include setResponsiveDesign(var.$breakpoint-small) {
+                    flex-grow: 1;
+                    @include flexBasis(calc(100% - 220px));
                 }
             }
         }
