@@ -1,6 +1,8 @@
 /* BOOT CONFIG */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -33,7 +35,12 @@ body {
   font-size: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Montserrat", sans-serif;
   color: #FFF;
   font-weight: 600;
@@ -75,13 +82,15 @@ form * {
   }
 }
 @media screen and (min-width: 36em) {
-  form button, form input[type=submit] {
+  form button,
+  form input[type=submit] {
     flex-basis: unset;
     margin-inline: auto;
   }
 }
 @media screen and (min-width: 62em) {
-  form button, form input[type=submit] {
+  form button,
+  form input[type=submit] {
     margin: 0;
   }
 }
@@ -91,7 +100,9 @@ label {
   font-size: 0.8em;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -105,11 +116,14 @@ input, textarea, select {
   outline: none;
   resize: none;
 }
-input.th-secondary-background, textarea.th-secondary-background, select.th-secondary-background {
+input.th-secondary-background,
+textarea.th-secondary-background,
+select.th-secondary-background {
   background-color: #212121;
 }
 
-select, ::picker(select) {
+select,
+::picker(select) {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -125,7 +139,8 @@ select, ::picker(select) {
   cursor: pointer;
   appearance: base-select;
 }
-select.th-secondary-background, ::picker(select).th-secondary-background {
+select.th-secondary-background,
+::picker(select).th-secondary-background {
   background-color: #212121;
 }
 
@@ -401,15 +416,40 @@ i.fa-brands {
 .th-card-heading img {
   width: 2.2em;
 }
-.th-card-heading h2, .th-card-heading h3, .th-card-heading h4, .th-card-heading h5, .th-card-heading h6 {
+.th-card-heading h2,
+.th-card-heading h3,
+.th-card-heading h4,
+.th-card-heading h5,
+.th-card-heading h6 {
   font-size: 1.3em;
   font-weight: 600;
 }
-.th-text-wrapper p, .th-text-wrapper li {
+.th-card-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.813em;
+  font-weight: 500;
+  background: #212121;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  transition: all 0.3s ease 0s;
+  cursor: default;
+}
+.th-card-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #E39E22;
+}
+.th-text-wrapper p,
+.th-text-wrapper li {
   line-height: 1.3;
   font-weight: 300;
 }
-.th-text-wrapper p:not(:last-child), .th-text-wrapper ul:not(:last-child), .th-text-wrapper ol:not(:last-child), .th-text-wrapper li:not(:last-child) {
+.th-text-wrapper p:not(:last-child),
+.th-text-wrapper ul:not(:last-child),
+.th-text-wrapper ol:not(:last-child),
+.th-text-wrapper li:not(:last-child) {
   margin-bottom: 12px;
 }
 .th-text-wrapper strong {
@@ -697,7 +737,7 @@ i.fa-brands {
 .th-hero {
   width: 100%;
   background-color: #191919;
-  height: 900px;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -790,22 +830,27 @@ i.fa-brands {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  row-gap: 60px;
-  height: 100%;
+  row-gap: 50px;
+  min-height: inherit;
+  max-width: 1300px;
+  padding-inline: 20px;
+  padding-block: 60px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 36em) {
+  .th-hero__container {
+    padding-block: 80px;
+  }
+}
+.th-hero__container {
+  padding-block: 80px;
+  padding-inline: 0;
 }
 @media screen and (min-width: 62em) {
   .th-hero__container {
-    align-items: flex-start;
-    row-gap: 80px;
-    max-width: 1300px;
     padding-inline: 20px;
-    padding-block: 60px;
-    margin-inline: auto;
-  }
-}
-@media screen and (min-width: 62em) and (min-width: 36em) {
-  .th-hero__container {
-    padding-block: 80px;
+    align-items: flex-start;
+    row-gap: 60px;
   }
 }
 .th-hero__info {
@@ -816,6 +861,7 @@ i.fa-brands {
 }
 @media screen and (min-width: 62em) {
   .th-hero__info {
+    padding-inline: 0;
     text-align: left;
   }
 }
@@ -828,11 +874,11 @@ i.fa-brands {
 .th-hero__heading h1 {
   font-size: 1.8em;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.2;
 }
 @media screen and (min-width: 36em) {
   .th-hero__heading h1 {
-    font-size: 2.4em;
+    font-size: 2.2em;
   }
 }
 @media screen and (min-width: 62em) {
@@ -900,11 +946,11 @@ i.fa-brands {
   flex-direction: column;
   width: 100%;
   gap: 10px;
-  opacity: 0.1;
-  max-width: 820px;
+  opacity: 0.2;
 }
 @media screen and (min-width: 62em) {
   .th-hero__keywords {
+    max-width: 800px;
     margin-left: auto;
   }
 }
@@ -1039,6 +1085,7 @@ i.fa-brands {
 /* SERVICES SECTION CONFIG */
 .th-skills {
   width: 100%;
+  background-image: linear-gradient(#191919 0%, #212121 50%, #191919 100%);
 }
 .th-skills__container {
   max-width: 1300px;
@@ -1061,17 +1108,28 @@ i.fa-brands {
 .th-skills__group {
   flex-basis: 100%;
   background-color: #191919;
+  text-align: center;
 }
 @media screen and (min-width: 36em) {
   .th-skills__group {
     flex-basis: calc(50% - 10px);
   }
 }
+.th-skills__group .th-card-heading {
+  justify-content: center;
+}
+.th-skills__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
 
 /* PROCESSES SECTION CONFIG */
 .th-processes {
   width: 100%;
-  background-image: linear-gradient(#191919 0%, #212121 50%, #191919 100%);
 }
 .th-processes__container {
   max-width: 1080px;
@@ -1401,6 +1459,7 @@ i.fa-brands {
   .th-about__info {
     flex-basis: calc(50% - 30px);
     text-align: left;
+    padding-bottom: 40px;
   }
 }
 .th-about__info-heading {
@@ -1417,6 +1476,24 @@ i.fa-brands {
 }
 .th-about__info-text {
   margin-bottom: 20px;
+}
+.th-about__cta {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (min-width: 48em) {
+  .th-about__cta {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 62em) {
+  .th-about__cta {
+    justify-content: flex-start;
+  }
 }
 .th-about__cta .th-button {
   width: 100%;

@@ -4,7 +4,6 @@
 @include theme() {
     &processes {
         @include containerFluid;
-        background-image: var.$color-gradient-1;
 
         &__container {
             @include container(1080px);

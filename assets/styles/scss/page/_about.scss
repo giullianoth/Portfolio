@@ -41,6 +41,7 @@
             @include setResponsiveDesign(var.$breakpoint-large) {
                 @include flex2(60px);
                 text-align: left;
+                padding-bottom: 40px;
             }
 
             &-heading {
@@ -62,6 +63,18 @@
         }
 
         &__cta {
+            @include flex(center, stretch, nowrap);
+            @include column;
+            gap: 12px;
+
+            @include setResponsiveDesign(var.$breakpoint-medium) {
+                @include row;
+            }
+
+            @include setResponsiveDesign(var.$breakpoint-large) {
+                justify-content: flex-start;
+            }
+
             .th-button {
                 @include containerFluid;
 

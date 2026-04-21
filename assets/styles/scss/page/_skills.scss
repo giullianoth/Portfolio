@@ -4,6 +4,7 @@
 @include theme() {
     &skills {
         @include containerFluid;
+        background-image: var.$color-gradient-1;
 
         &__container {
             @include container;
@@ -17,23 +18,21 @@
         &__group {
             @include flex1;
             background-color: var.$color-background-primary;
+            text-align: center;
 
             @include setResponsiveDesign(var.$breakpoint-small) {
                 @include flex2(20px);
             }
+
+            .th-card-heading {
+                justify-content: center;
+            }
         }
 
-        // &__service {
-        //     @include flex1;
-        //     background-color: var.$color-background-primary;
-
-        //     @include setResponsiveDesign(var.$breakpoint-small) {
-        //         @include flex2(20px);
-        //     }
-
-        //     &-text {
-        //         text-align: center;
-        //     }
-        // }
+        &__list {
+            @include flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
     }
 }
