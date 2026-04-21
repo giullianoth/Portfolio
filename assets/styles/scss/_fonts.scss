@@ -1,0 +1,22 @@
+@use "variables" as var;
+@use "mixins" as *;
+
+// FONTS FROM GOOGLE FONTS (https://fonts.google.com/)
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+// FONTS FROM STATIC FILES
+@include setFonts((
+    "weights": (300, 400, 500, 600, 700, 800),
+    "family": "Montserrat",
+    "files": ("Montserrat-VariableFont_wght.ttf"),
+    "path": ("Montserrat"),
+    "format": ("truetype-variations")
+));
+
+@include setFonts((
+    "weights": (300, 400, 500, 600, 700, 800),
+    "family": "Plus Jakarta Sans",
+    "files": ("PlusJakartaSans-VariableFont_wght.ttf"),
+    "path": ("Plus_Jakarta_Sans"),
+    "format": ("truetype-variations")
+));

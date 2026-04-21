@@ -1,11 +1,33 @@
 @use "variables" as *;
 @use "sass:list";
+@use "sass:map";
 @use "sass:math";
 
 // THEME
 @mixin theme() {
     .th- {
         @content;
+    }
+}
+
+// STATIC FONTS
+@mixin setFonts($presets) {
+    $weights: map.get($presets, "weights");
+    $family: map.get($presets, "family");
+    $files: map.get($presets, "files");
+    $path-name: map.get($presets, "path");
+    $format: map.get($presets, "format");
+    $current-file: map.get($presets, "files");
+
+    @for $i from 1 through list.length($weights) {
+        $current-weight: list.nth($weights, $i);
+
+        @font-face {
+            font-family: "#{$family}";
+            src: url("#{$font-path}/#{$path-name}/#{$current-file}") format("#{$format}");
+            font-weight: $current-weight;
+            font-display: swap;
+        }
     }
 }
 
