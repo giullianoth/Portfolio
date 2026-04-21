@@ -4,18 +4,8 @@
 @include theme() {
     &hero {
         @include containerFluid;
-        // background-image: var.$color-gradient-1;
         background-color: var.$color-background-primary;
         min-height: 100vh;
-        @include backgroundOverlay("hero_background_mobile.jpg");
-
-        @include setResponsiveDesign(var.$breakpoint-small) {
-            @include backgroundOverlay("hero_background_tablet.jpg");
-        }
-
-        @include setResponsiveDesign(var.$breakpoint-large) {
-            @include backgroundOverlay("hero_background_desktop.jpg");
-        }
 
         &::after {
             @include absoluteFull(unset);
@@ -34,6 +24,8 @@
             @include container;
             padding-block: var.$section-clearance;
             padding-inline: 0;
+            @include relative;
+            @include indexOverBase;
 
             @include setResponsiveDesign(var.$breakpoint-large) {
                 padding-inline: var.$side-clearance;
@@ -61,7 +53,7 @@
         &__heading {
             margin-bottom: 30px;
 
-            h1 {                
+            h1 {
                 font-size: 1.8em;
                 font-weight: 500;
                 line-height: 1.2;
