@@ -4,7 +4,7 @@ const transitionGap = 10
 const transitionProps = (property = "all", duration = `${transitionDuration / 1000}s`, timingFunction = "ease", delay = "0s") =>
     `${property} ${duration} ${timingFunction} ${delay}`
 
-export function slideDown(element, displayElement = "block") {
+export function slideDown(element, displayElement = "block", callback = undefined) {
     element.style.transition = ""
     element.style.display = displayElement
 
@@ -28,11 +28,15 @@ export function slideDown(element, displayElement = "block") {
         setTimeout(() => {
             element.style.overflow = ""
             element.style.transition = ""
+
+            if (callback) {
+                callback()
+            }
         }, transitionDuration - transitionGap)
     }, transitionGap)
 }
 
-export function slideUp(element, removeElement = false) {
+export function slideUp(element, removeElement = false, callback = undefined) {
     element.style.transition = transitionProps()
     element.style.overflow = "hidden"
     element.style.maxHeight = 0
@@ -51,10 +55,14 @@ export function slideUp(element, removeElement = false) {
         element.style.overflow = ""
         element.style.transition = ""
         removeElement && element.remove()
+
+        if (callback) {
+            callback()
+        }
     }, transitionDuration)
 }
 
-export function fadeIn(element, displayElement = "block") {
+export function fadeIn(element, displayElement = "block", callback = undefined) {
     element.style.transition = transitionProps()
     element.style.opacity = 0
     element.style.display = displayElement
@@ -64,11 +72,15 @@ export function fadeIn(element, displayElement = "block") {
 
         setTimeout(() => {
             element.style.transition = ""
+
+            if (callback) {
+                callback()
+            }
         }, transitionDuration - transitionGap)
     }, transitionGap)
 }
 
-export function fadeOut(element, removeElement = false) {
+export function fadeOut(element, removeElement = false, callback = undefined) {
     element.style.transition = transitionProps()
     element.style.opacity = 0
 
@@ -77,5 +89,9 @@ export function fadeOut(element, removeElement = false) {
         element.style.opacity = ""
         element.style.transition = ""
         removeElement && element.remove()
+
+        if (callback) {
+            callback()
+        }
     }, transitionDuration)
 }

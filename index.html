@@ -38,7 +38,8 @@
 
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
-    <link rel="preload" href="/assets/styles/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/styles/css/style.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="/assets/styles/css/style.min.css">
     </noscript>
@@ -240,7 +241,7 @@
                     em unir interfaces impactantes a códigos robustos e performáticos.</p>
 
                 <div class="th-portfolio__list th-portfolio__list-main">
-                    <article class="th-portfolio__project j_open_modal" data-target="projeto" role="region"
+                    <article class="th-portfolio__project j_open_modal" role="region"
                         aria-label="Projeto Étoile Bistrò">
                         <picture>
                             <source media="(min-width: 992px)" srcset="/assets/images/portfolio/etoile-desktop.png">
@@ -270,8 +271,7 @@
                         </div>
                     </article>
 
-                    <article class="th-portfolio__project j_open_modal" data-target="projeto" role="region"
-                        aria-label="Projeto Fuzion">
+                    <article class="th-portfolio__project j_open_modal" role="region" aria-label="Projeto Fuzion">
                         <picture>
                             <source media="(min-width: 992px)" srcset="/assets/images/portfolio/fuzion_desktop.jpeg">
                             <source media="(min-width: 576px)" srcset="/assets/images/portfolio/fuzion_tablet.jpeg">
@@ -298,7 +298,7 @@
                         </div>
                     </article>
 
-                    <article class="th-portfolio__project j_open_modal" data-target="projeto" role="region"
+                    <article class="th-portfolio__project j_open_modal" role="region"
                         aria-label="Projeto Vivendo de Pixel">
                         <picture>
                             <source media="(min-width: 992px)"
@@ -330,8 +330,7 @@
                         </div>
                     </article>
 
-                    <article class="th-portfolio__project j_open_modal" data-target="projeto" role="region"
-                        aria-label="Projeto Armorel">
+                    <article class="th-portfolio__project j_open_modal" role="region" aria-label="Projeto Armorel">
                         <picture>
                             <source media="(min-width: 992px)" srcset="/assets/images/portfolio/armorel_desktop.jpeg">
                             <source media="(min-width: 576px)" srcset="/assets/images/portfolio/armorel_tablet.jpeg">
@@ -368,7 +367,7 @@
                 </div>
 
                 <div class="th-portfolio__cta">
-                    <button class="th-button j_open_modal" data-target="todos-os-projetos"
+                    <button class="th-button j_open_modal j_open_portfolio" data-target="todos-os-projetos"
                         title="Ver lista completa de projetos">Ver todos</button>
                 </div>
             </div>
@@ -619,6 +618,16 @@
             </div>
         </div>
     </footer>
+
+    <div class="th-modal j_modal j_modal_close" role="dialog" aria-modal="true" aria-hidden="true" id="main-modal" inert>
+        <button class="th-button clear th-modal__close j_modal_close" title="Fechar" aria-label="Fechar modal">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="th-modal__container j_modal_container">
+            <div class="th-modal__wrapper j_modal_content"></div>
+        </div>
+    </div>
 
     <script type="module" src="/assets/scripts/script.js"></script>
 </body>

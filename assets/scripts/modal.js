@@ -1,46 +1,55 @@
 import { fadeIn, fadeOut } from "./effects.js"
 
-const modalElements = Array.from(document.querySelectorAll(".j_modal"))
-const modalTriggers = Array.from(document.querySelectorAll(".j_open_modal"))
-const modalTriggersClose = Array.from(document.querySelectorAll(".j_close_modal"))
+const modal = document.querySelector(".j_modal")
+const modalContent = modal.querySelector(".j_modal_content")
+const modalClose = document.querySelectorAll(".j_modal_close")
+const modalTriggers = document.querySelectorAll(".j_open_modal")
 
 const isVisible = element => window.getComputedStyle(element).display !== "none"
+let lastFocusedElement
 
 const Modal = () => {
+    if (!modal) {
+        return console.warn("Warning: no modal element found with the class 'j_modal'")
+    }
+
     modalTriggers.forEach(trigger => {
         trigger.addEventListener("click", () => {
-            const checkOpenModal = modalElements.find(element => isVisible(element))
+            lastFocusedElement = document.activeElement
 
-            if (checkOpenModal) {
-                fadeOut(checkOpenModal)
-            }
-
-            const { target } = trigger.dataset
-            const modal = modalElements.find(element => element.id === target)
-
-            
-            if (!modal) {
-                return
-            }
-
-            fadeIn(modal)
+            fadeIn(modal, "flex", () => {
+                modal.removeAttribute("inert")
+                modal.removeAttribute("aria-hidden")
+                modal.querySelector(".j_modal_close").focus()
+            })
         })
     })
 
-    modalTriggersClose.forEach(trigger => {
-        trigger.addEventListener("click", ({ target }) => {
-            if (!target.classList.contains("j_close_modal")) {
-                return
+    modalClose.forEach(button => {
+        button.addEventListener("click", event => {
+            const isClickedInsideModal = event.target.closest(".j_modal_container")
+
+            if (event.target.classList.contains("j_modal_close") &&
+                !isClickedInsideModal || event.currentTarget.classList.contains("j_modal_close")) {
+
+                if (document.activeElement) {
+                    document.activeElement.blur()
+                }
+
+                fadeOut(modal, false, () => {
+                    modalContent.innerHTML = ""
+                    modal.setAttribute("inert", "")
+                    modal.setAttribute("aria-hidden", true)
+                    lastFocusedElement?.focus()
+                })
             }
-
-            const modal = modalElements.find(element => isVisible(element))
-
-            if (!modal) {
-                return
-            }
-
-            fadeOut(modal)
         })
+    })
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && !modal.hasAttribute("aria-hidden")) {
+            modal.querySelector(".j_modal_close").click()
+        }
     })
 }
 
