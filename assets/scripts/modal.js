@@ -6,7 +6,6 @@ const modalContent = modal.querySelector(".j_modal_content")
 const modalClose = document.querySelectorAll(".j_modal_close")
 const modalTriggers = document.querySelectorAll(".j_open_modal")
 
-const isVisible = element => window.getComputedStyle(element).display !== "none"
 let lastFocusedElement
 
 const Modal = () => {

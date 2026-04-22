@@ -1,4 +1,5 @@
 import { fadeIn, fadeOut } from "./effects.js"
+import ToggleBlockScroll from "./scroll.js"
 import { isVisible, transitionGap } from "./variables.js"
 
 const menuIcon = document.querySelector(".j_menu_icon")
@@ -8,17 +9,18 @@ const menuLinks = Array.from(menuOverlay.querySelectorAll("a"))
 
 const closeMenu = () => {
     menu.classList.remove("menu-open")
-    fadeOut(menuOverlay)
+    fadeOut(menuOverlay, false, () => {
+        ToggleBlockScroll(false)
+    })
 }
 
 const MobileMenu = () => {
     menuIcon.addEventListener("click", () => {
         if (!isVisible(menuOverlay)) {
-            fadeIn(menuOverlay, "flex")
-
-            setTimeout(() => {
+            fadeIn(menuOverlay, "flex", () => {
                 menu.classList.add("menu-open")
-            }, transitionGap)
+                ToggleBlockScroll(true)
+            })
         } else {
             closeMenu()
         }

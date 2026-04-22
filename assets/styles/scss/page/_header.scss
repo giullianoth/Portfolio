@@ -113,6 +113,8 @@
             @include flex(flex-end);
             overflow: hidden;
             display: none;
+            @include setBrowserPrefix(backdrop-filter, blur(8px), "webkit");
+            background-color: var.$color-background-overlay;
 
             @include setResponsiveDesign(var.$breakpoint-large) {
                 position: static;
@@ -121,24 +123,23 @@
                 overflow: visible;
                 justify-content: center;
                 display: flex !important;
+                backdrop-filter: unset;
             }
         }
 
         &__menu {
             &-container {
                 @include containerFluid(true);
-                @include setBrowserPrefix(backdrop-filter, blur(8px), "webkit");
                 @include transition;
                 max-width: var.$breakpoint-small;
                 padding: 120px 20px 20px 20px;
                 border-left: 8px solid var.$color-primary;
-                background-color: var.$color-background-overlay;
                 transform: translateX(100%);
+                background-color: var.$color-background-primary;
 
                 @include setResponsiveDesign(var.$breakpoint-large) {
                     width: auto;
                     height: auto;
-                    backdrop-filter: unset;
                     max-width: none;
                     padding: 0;
                     border: none;

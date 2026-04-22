@@ -338,6 +338,9 @@ i.fa-brands {
     right: 20px;
   }
 }
+.th-modal__close i {
+  pointer-events: none;
+}
 .th-modal__container {
   width: 100%;
   max-width: 1300px;
@@ -691,6 +694,9 @@ i.fa-brands {
   flex-wrap: wrap;
   overflow: hidden;
   display: none;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: rgba(26, 26, 26, 0.7019607843);
 }
 @media screen and (min-width: 62em) {
   .th-header__overlay {
@@ -700,25 +706,23 @@ i.fa-brands {
     overflow: visible;
     justify-content: center;
     display: flex !important;
+    backdrop-filter: unset;
   }
 }
 .th-header__menu-container {
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
   transition: all 0.3s ease 0s;
   max-width: 576px;
   padding: 120px 20px 20px 20px;
   border-left: 8px solid #E39E22;
-  background-color: rgba(26, 26, 26, 0.7019607843);
   transform: translateX(100%);
+  background-color: #191919;
 }
 @media screen and (min-width: 62em) {
   .th-header__menu-container {
     width: auto;
     height: auto;
-    backdrop-filter: unset;
     max-width: none;
     padding: 0;
     border: none;
@@ -1211,6 +1215,7 @@ i.fa-brands {
   width: 100%;
   max-width: fit-content;
 }
+
 /* ABOUT SECTION CONFIG */
 .th-about {
   width: 100%;
