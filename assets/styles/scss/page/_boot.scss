@@ -263,6 +263,10 @@ i.fa-brands {
                 top: 20px;
                 right: 20px;
             }
+
+            i {
+                pointer-events: none;
+            }
         }
 
         &__container {

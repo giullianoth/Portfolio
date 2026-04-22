@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Étoile Bistrò",
         "description": "Desenvolvimento de interface premium para o setor gastronômico com foco em reserva e experiência do usuário.",
         "tech": [
@@ -9,8 +10,8 @@
         ],
         "images": {
             "desktop": "etoile-desktop.png",
-            "tablet": "etoile.tablet.png",
-            "mobile": "etoile.mobile.png",
+            "tablet": "etoile-tablet.png",
+            "mobile": "etoile-mobile.png",
             "alt": "Screenshot do projeto Étoile Bistrò"
         }
     }

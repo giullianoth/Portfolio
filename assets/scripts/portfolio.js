@@ -6,7 +6,7 @@ const openPortfolioButton = document.querySelector(".j_open_portfolio")
 const portfolioContent = `
     <div class="th-portfolio__list">
         ${portfolioData.map(item => `
-            <article class="th-portfolio__project j_open_modal" role="region" aria-label="Projeto Étoile Bistrò">
+            <article class="th-portfolio__project j_open_modal" role="region" aria-label="Projeto ${item.name}" data-project-id="${item.id}">
                 <picture>
                     <source media="(min-width: 992px)" srcset="/assets/images/portfolio/${item.images.desktop}">
                     <source media="(min-width: 576px)" srcset="/assets/images/portfolio/${item.images.tablet}">
@@ -26,7 +26,7 @@ const portfolioContent = `
                         <strong>Tech:</strong> ${item.tech.join(", ")}
                     </p>
 
-                    <button class="th-button clear" aria-label="Ver detalhes do projeto ${item.name}">
+                    <button class="th-button clear" aria-label="Ver detalhes do projeto ${item.name}" data-project-id="${item.id}">
                         Ver detalhes
                     </button>
                 </div>

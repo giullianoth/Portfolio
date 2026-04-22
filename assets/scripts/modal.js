@@ -1,4 +1,5 @@
 import { fadeIn, fadeOut } from "./effects.js"
+import ToggleBlockScroll from "./scroll.js"
 
 const modal = document.querySelector(".j_modal")
 const modalContent = modal.querySelector(".j_modal_content")
@@ -17,6 +18,8 @@ const Modal = () => {
         trigger.addEventListener("click", () => {
             lastFocusedElement = document.activeElement
 
+            ToggleBlockScroll(true)
+
             fadeIn(modal, "flex", () => {
                 modal.removeAttribute("inert")
                 modal.removeAttribute("aria-hidden")
@@ -29,12 +32,14 @@ const Modal = () => {
         button.addEventListener("click", event => {
             const isClickedInsideModal = event.target.closest(".j_modal_container")
 
-            if (event.target.classList.contains("j_modal_close") &&
-                !isClickedInsideModal || event.currentTarget.classList.contains("j_modal_close")) {
+            if (event.target.classList.contains("j_modal_close") && !isClickedInsideModal
+                || event.currentTarget.classList.contains("j_modal_close_button")) {
 
                 if (document.activeElement) {
                     document.activeElement.blur()
                 }
+
+                ToggleBlockScroll(false)
 
                 fadeOut(modal, false, () => {
                     modalContent.innerHTML = ""
