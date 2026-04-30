@@ -35,6 +35,9 @@ const portfolioContent = `
     </div>
 `
 
+/**
+ * Arranges the portfolio items on a modal screen.
+ */
 const LoadPortfolio = () => {
     openPortfolioButton.addEventListener("click", () => {
         modalContent.innerHTML = portfolioContent

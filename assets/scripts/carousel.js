@@ -1,6 +1,9 @@
 const carouselList = Array.from(document.querySelectorAll(".j_carousel"))
 const groupByCarousel = carouselElement => carouselElement.querySelector(".j_carousel_group")
 
+/**
+ * Carousel features.
+ */
 const Carousel = () => {
     carouselList.forEach(carousel => {
         const { direction, duration } = carousel.dataset

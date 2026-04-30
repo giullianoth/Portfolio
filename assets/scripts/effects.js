@@ -1,9 +1,23 @@
 const transitionDuration = 300
 const transitionGap = 10
 
+/**
+ * Default values for the CSS transition attribute.
+ * @param {string} property Attributes that will be affected
+ * @param {string} duration Duration of transition, in seconds
+ * @param {string} timingFunction The type of function that transition will run
+ * @param {string} delay Duration of delay before transition
+ * @returns {string}
+ */
 const transitionProps = (property = "all", duration = `${transitionDuration / 1000}s`, timingFunction = "ease", delay = "0s") =>
     `${property} ${duration} ${timingFunction} ${delay}`
 
+/**
+ * Applies the slide down effect to an element.
+ * @param {HTMLElement} element The DOM element to apply the effect
+ * @param {string} displayElement Display mode for the element
+ * @param {(() => void) | undefined} callback The function that will run after the effect
+ */
 export function slideDown(element, displayElement = "block", callback = undefined) {
     element.style.transition = ""
     element.style.display = displayElement
@@ -36,6 +50,12 @@ export function slideDown(element, displayElement = "block", callback = undefine
     }, transitionGap)
 }
 
+/**
+ * Applies the slide up effect to an element.
+ * @param {HTMLElement} element The DOM element to apply the effect
+ * @param {boolean} removeElement Indicates if the element will be removed after the effect
+ * @param {(() => void) | undefined} callback The function that will run after the effect
+ */
 export function slideUp(element, removeElement = false, callback = undefined) {
     element.style.transition = transitionProps()
     element.style.overflow = "hidden"
@@ -62,6 +82,12 @@ export function slideUp(element, removeElement = false, callback = undefined) {
     }, transitionDuration)
 }
 
+/**
+ * Applies the fade in effect to an element.
+ * @param {HTMLElement} element The DOM element to apply the effect
+ * @param {string} displayElement Display mode for the element
+ * @param {(() => void) | undefined} callback The function that will run after the effect
+ */
 export function fadeIn(element, displayElement = "block", callback = undefined) {
     element.style.transition = transitionProps()
     element.style.opacity = 0
@@ -80,6 +106,12 @@ export function fadeIn(element, displayElement = "block", callback = undefined) 
     }, transitionGap)
 }
 
+/**
+ * Applies the fade out effect to an element.
+ * @param {HTMLElement} element The DOM element to apply the effect
+ * @param {boolean} removeElement Indicates if the element will be removed after the effect
+ * @param {(() => void) | undefined} callback The function that will run after the effect
+ */
 export function fadeOut(element, removeElement = false, callback = undefined) {
     element.style.transition = transitionProps()
     element.style.opacity = 0

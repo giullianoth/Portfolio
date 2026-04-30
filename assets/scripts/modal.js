@@ -8,6 +8,10 @@ const modalTriggers = document.querySelectorAll(".j_open_modal")
 
 let lastFocusedElement
 
+/**
+ * Controller of the modal element.
+ * @returns {void}
+ */
 const Modal = () => {
     if (!modal) {
         return console.warn("Warning: no modal element found with the class 'j_modal'")
