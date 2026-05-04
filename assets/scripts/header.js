@@ -9,8 +9,10 @@ const header = () => document.querySelector(".j_header")
 /**
  * Adds or removes "scrolling" class according the viewport scroll behavior.
  */
-export const HeaderBehavior = () => {
+const HeaderBehavior = () => {
     window.scrollY > 0
         ? header().classList.add("scrolling")
         : header().classList.remove("scrolling")
 }
+
+export default HeaderBehavior

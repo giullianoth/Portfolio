@@ -10,25 +10,27 @@ let lastFocusedElement
 
 /**
  * Controller of the modal element.
+ * @param {string} content The inner HTML of modal
+ * @param {boolean} fixedHeight Defines if the modal is scrollable or not
  * @returns {void}
  */
-const Modal = () => {
+const Modal = (content, fixedHeight = false) => {
     if (!modal) {
         return console.warn("Warning: no modal element found with the class 'j_modal'")
     }
 
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener("click", () => {
-            lastFocusedElement = document.activeElement
+    fixedHeight
+        ? modalContent.classList.add("fixed-height")
+        : modalContent.classList.remove("fixed-height")
 
-            ToggleBlockScroll(true)
+    modalContent.innerHTML = content
+    lastFocusedElement = document.activeElement
+    ToggleBlockScroll(true)
 
-            fadeIn(modal, "flex", () => {
-                modal.removeAttribute("inert")
-                modal.removeAttribute("aria-hidden")
-                modal.querySelector(".j_modal_close").focus()
-            })
-        })
+    fadeIn(modal, "flex", () => {
+        modal.removeAttribute("inert")
+        modal.removeAttribute("aria-hidden")
+        modal.querySelector(".j_modal_close").focus()
     })
 
     modalClose.forEach(button => {
@@ -51,7 +53,7 @@ const Modal = () => {
                     lastFocusedElement?.focus()
                 })
             }
-        })
+        }, { once: true })
     })
 
     document.addEventListener("keydown", event => {

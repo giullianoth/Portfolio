@@ -105,10 +105,109 @@
         &__cta {
             text-align: center;
             margin-top: 60px;
+            @include flex1;
 
             .th-button {
                 @include containerFluid;
                 max-width: fit-content;
+            }
+        }
+
+        &__expanded {
+            &-project {
+                height: 100%;
+                @include flex(flex-start, stretch, nowrap);
+                @include column;
+                row-gap: 20px;
+            }
+
+            &-content {
+                flex-grow: 1;
+                overflow-y: auto;
+                padding-right: 6px;
+                height: 100%;
+                @include flex(flex-start, stretch, nowrap);
+                @include column;
+
+                @include setResponsiveDesign(var.$breakpoint-large) {
+                    @include row;
+                    overflow: hidden;
+                }
+            }
+
+            &-image {
+                height: 320px;
+                border: 1px solid var.$color-primary;
+                margin-bottom: 20px;
+
+                @include setResponsiveDesign(var.$breakpoint-small) {
+                    height: 480px;
+                }
+
+                @include setResponsiveDesign(var.$breakpoint-large) {
+                    @include flex2;
+                    height: 100%;
+                }
+
+                picture, img {
+                    @include containerFluid(true);
+                }
+
+                img {
+                    @include setBrowserPrefix(object-position, top, "o");
+                    @include transition(object-position, 4s);
+
+                    &:hover {
+                        @include setBrowserPrefix(object-position, bottom, "o");
+                    }
+                }
+            }
+
+            &-info {
+                @include setResponsiveDesign(var.$breakpoint-large) {
+                    @include flex2;
+                    @include flex(flex-end, stretch, nowrap);
+                    @include column;
+                    row-gap: 40px;
+                    padding-left: 40px;
+                }
+            }
+
+            &-text {
+                @include setResponsiveDesign(var.$breakpoint-large) {
+                    max-height: 100%;
+                    overflow-y: auto;
+                }
+            }
+
+            &-title {
+                margin-bottom: 10px;
+
+                h2 {
+                    color: var.$color-primary;
+                }
+            }
+
+            &-actions {
+                font-size: 0.875em;
+                @include flex;
+                gap: 26px;
+
+                &.outside {
+                    @include setResponsiveDesign(var.$breakpoint-large) {
+                        display: none;
+                    }
+                }
+
+                &.inside {
+                    display: none;
+
+                    @include setResponsiveDesign(var.$breakpoint-large) {
+                        display: flex;
+                        justify-content: flex-start;
+                        font-size: 1rem;
+                    }
+                }
             }
         }
     }

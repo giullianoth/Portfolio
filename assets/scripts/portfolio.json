@@ -3,16 +3,23 @@
         "id": 1,
         "name": "Étoile Bistrò",
         "description": "Desenvolvimento de interface premium para o setor gastronômico com foco em reserva e experiência do usuário.",
+        "featured": true,
         "tech": [
             "React",
             "Mongo DB",
             "Node JS"
         ],
         "images": {
+            "thumbDesktop": "etoile-desktop-thumb.png",
+            "thumbTablet": "etoile-tablet-thumb.png",
+            "thumbMobile": "etoile-mobile-thumb.png",
             "desktop": "etoile-desktop.png",
             "tablet": "etoile-tablet.png",
             "mobile": "etoile-mobile.png",
             "alt": "Screenshot do projeto Étoile Bistrò"
-        }
+        },
+        "caseStudy": "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium molestias etdoloresnostrum fuga, error reprehenderit inventore unde deserunt! Voluptas!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus,illum corrupti, placeat temporibus harum et suscipit rem expedita numquam, naminventore ex. Non, reiciendis.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, non? Liberoinventore iusto reiciendis fugit consequuntur?</p>",
+        "repositoryUrl": "https://github.com/giullianoth/Etoile-React",
+        "deployUrl": "https://etoile-psi.vercel.app/"
     }
 ]

@@ -179,7 +179,9 @@ i.fa-brands {
     &button {
         @include transition;
         background-color: var.$color-secondary;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 10px;
         border: none;
         padding: 12px 30px;
         cursor: pointer;
@@ -255,6 +257,7 @@ i.fa-brands {
             right: 7px;
             font-size: 0.7em;
             color: var.$color-primary;
+            outline: none;
             cursor: pointer;
             @include indexLevel3;
 
@@ -286,6 +289,11 @@ i.fa-brands {
             height: 100%;
             overflow-y: auto;
             padding-right: 6px;
+
+            &.fixed-height {
+                overflow: hidden;
+                padding: 0;
+            }
         }
 
         .th-heading h2 {

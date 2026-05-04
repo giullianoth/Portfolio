@@ -241,12 +241,12 @@
                     em unir interfaces impactantes a códigos robustos e performáticos.</p>
 
                 <div class="th-portfolio__list th-portfolio__list-main">
-                    <article class="th-portfolio__project j_open_modal" role="region"
+                    <article class="th-portfolio__project j_open_modal j_project" data-id="1" role="region"
                         aria-label="Projeto Étoile Bistrò">
                         <picture>
-                            <source media="(min-width: 992px)" srcset="/assets/images/portfolio/etoile-desktop.png">
-                            <source media="(min-width: 576px)" srcset="/assets/images/portfolio/etoile-tablet.png">
-                            <img src="/assets/images/portfolio/etoile-mobile.png"
+                            <source media="(min-width: 992px)" srcset="/assets/images/portfolio/etoile-desktop-thumb.png">
+                            <source media="(min-width: 576px)" srcset="/assets/images/portfolio/etoile-tablet-thumb.png">
+                            <img src="/assets/images/portfolio/etoile-mobile-thumb.png"
                                 alt="Screenshot do projeto Étoile Bistrò" loading="lazy"
                                 class="th-portfolio__project-image">
                         </picture>
@@ -271,106 +271,11 @@
                         </div>
                     </article>
 
-                    <article class="th-portfolio__project j_open_modal" role="region" aria-label="Projeto Fuzion">
-                        <picture>
-                            <source media="(min-width: 992px)" srcset="/assets/images/portfolio/fuzion_desktop.jpeg">
-                            <source media="(min-width: 576px)" srcset="/assets/images/portfolio/fuzion_tablet.jpeg">
-                            <img src="/assets/images/portfolio/fuzion_mobile.jpeg" alt="Screenshot do E-commerce Fuzion"
-                                loading="lazy" class="th-portfolio__project-image">
-                        </picture>
-
-                        <div class="th-portfolio__project-info">
-                            <header class="th-portfolio__project-name">
-                                <h3>Fuzion</h3>
-                            </header>
-
-                            <p class="th-portfolio__project-description">
-                                E-commerce de moda com foco em conversão, performance mobile e interface minimalista.
-                            </p>
-
-                            <p class="th-portfolio__project-type">
-                                <strong>Tech Stack:</strong>
-                            </p>
-
-                            <button class="th-button clear" aria-label="Ver detalhes do projeto Fuzion">
-                                Ver detalhes
-                            </button>
-                        </div>
-                    </article>
-
-                    <article class="th-portfolio__project j_open_modal" role="region"
-                        aria-label="Projeto Vivendo de Pixel">
-                        <picture>
-                            <source media="(min-width: 992px)"
-                                srcset="/assets/images/portfolio/vivendo-de-pixel-desktop.jpg">
-                            <source media="(min-width: 576px)"
-                                srcset="/assets/images/portfolio/vivendo-de-pixel-tablet.jpg">
-                            <img src="/assets/images/portfolio/vivendo-de-pixel-mobile.jpg"
-                                alt="Screenshot da Landing Page Vivendo de Pixel" loading="lazy"
-                                class="th-portfolio__project-image">
-                        </picture>
-
-                        <div class="th-portfolio__project-info">
-                            <header class="th-portfolio__project-name">
-                                <h3>Vivendo de Pixel</h3>
-                            </header>
-
-                            <p class="th-portfolio__project-description">
-                                Landing Page estratégica com animações fluidas para venda de infoprodutos de arte
-                                digital.
-                            </p>
-
-                            <p class="th-portfolio__project-type">
-                                <strong>Tech Stack:</strong> HTML5, Sass, JavaScript ES6.
-                            </p>
-
-                            <button class="th-button clear" aria-label="Ver detalhes do projeto Vivendo de Pixel">
-                                Ver detalhes
-                            </button>
-                        </div>
-                    </article>
-
-                    <article class="th-portfolio__project j_open_modal" role="region" aria-label="Projeto Armorel">
-                        <picture>
-                            <source media="(min-width: 992px)" srcset="/assets/images/portfolio/armorel_desktop.jpeg">
-                            <source media="(min-width: 576px)" srcset="/assets/images/portfolio/armorel_tablet.jpeg">
-                            <img src="/assets/images/portfolio/armorel_mobile.jpeg"
-                                alt="Screenshot da loja virtual Armorel" loading="lazy">
-                        </picture>
-
-                        <div class="th-portfolio__project-info">
-                            <header class="th-portfolio__project-name">
-                                <h3>Armorel</h3>
-                            </header>
-
-                            <p class="th-portfolio__project-type">Site / E-commerce</p>
-                        </div>
-
-                        <div class="th-portfolio__project-info">
-                            <header class="th-portfolio__project-name">
-                                <h3>Armorel</h3>
-                            </header>
-
-                            <p class="th-portfolio__project-description">
-                                Redesign e implementação de loja virtual de joias com foco em UX para o público de luxo.
-                            </p>
-
-                            <p class="th-portfolio__project-type">
-                                <strong>Tech Stack:</strong>
-                            </p>
-
-                            <button class="th-button clear" aria-label="Ver detalhes do projeto Armorel">
-                                Ver detalhes
-                            </button>
-                        </div>
-                    </article>
+                    <div class="th-portfolio__cta">
+                        <button class="th-button j_open_modal j_open_portfolio" data-target="all-projects"
+                            title="Ver lista completa de projetos">Ver todos</button>
+                    </div>
                 </div>
-
-                <div class="th-portfolio__cta">
-                    <button class="th-button j_open_modal j_open_portfolio" data-target="todos-os-projetos"
-                        title="Ver lista completa de projetos">Ver todos</button>
-                </div>
-            </div>
         </section>
 
         <section class="th-processes th-dots-pattern" aria-labelledby="processes-heading">
@@ -619,8 +524,10 @@
         </div>
     </footer>
 
-    <div class="th-modal j_modal j_modal_close" role="dialog" aria-modal="true" aria-hidden="true" id="main-modal" inert>
-        <button class="th-button clear th-modal__close j_modal_close j_modal_close_button" title="Fechar" aria-label="Fechar modal">
+    <div class="th-modal j_modal j_modal_close" role="dialog" aria-modal="true" aria-hidden="true" id="main-modal"
+        inert>
+        <button class="th-button clear th-modal__close j_modal_close j_modal_close_button" title="Fechar"
+            aria-label="Fechar modal">
             <i class="fa-solid fa-xmark"></i>
         </button>
 
