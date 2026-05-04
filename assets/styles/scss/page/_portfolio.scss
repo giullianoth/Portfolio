@@ -119,6 +119,7 @@
                 @include flex(flex-start, stretch, nowrap);
                 @include column;
                 row-gap: 20px;
+                @include relative;
             }
 
             &-content {
@@ -177,6 +178,7 @@
                 @include setResponsiveDesign(var.$breakpoint-large) {
                     max-height: 100%;
                     overflow-y: auto;
+                    padding-bottom: 80px;
                 }
             }
 
@@ -188,25 +190,24 @@
                 }
             }
 
+            &-stacks {
+                color: var.$color-text-support;
+                font-size: 0.9em;
+            }
+
             &-actions {
                 font-size: 0.875em;
                 @include flex;
                 gap: 26px;
 
-                &.outside {
-                    @include setResponsiveDesign(var.$breakpoint-large) {
-                        display: none;
-                    }
-                }
-
-                &.inside {
-                    display: none;
-
-                    @include setResponsiveDesign(var.$breakpoint-large) {
-                        display: flex;
-                        justify-content: flex-start;
-                        font-size: 1rem;
-                    }
+                @include setResponsiveDesign(var.$breakpoint-large) {
+                    width: 50%;
+                    padding: 40px 4px 4px 40px;
+                    justify-content: flex-start;
+                    @include absolute(unset, unset);
+                    bottom: 0;
+                    right: 0;
+                    background-color: var.$color-background-secondary;
                 }
             }
         }

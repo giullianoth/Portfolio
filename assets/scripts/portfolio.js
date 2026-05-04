@@ -32,7 +32,7 @@ const portfolioContent = `
                     </button>
                 </div>
             </article>
-        `)}
+        `).join("")}
     </div>
 `
 
@@ -62,35 +62,28 @@ const portfolioContent = `
 const projectContent = project => `
     <article class="th-portfolio__expanded-project">
         <div class="th-portfolio__expanded-content">
-            <div class="th-portfolio__expanded-image">
-                <a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer">
+            <figure class="th-portfolio__expanded-image">
+                <a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" aria-label="Acessar o site do ${project.name}">
                     <picture>
                         <source media="(min-width: ${breakpointLarge}px)" srcset="/assets/images/portfolio/${project.images.desktop}">
                         <source media="(min-width: ${breakpointSmall}px)" srcset="/assets/images/portfolio/${project.images.tablet}">
                         <img src="/assets/images/portfolio/${project.images.mobile}" alt="${project.images.alt}">
                     </picture>
                 </a>
-            </div>
+            </figure>
             <div class="th-portfolio__expanded-info">
                 <div class="th-portfolio__expanded-text th-text-wrapper">
                     <header class="th-portfolio__expanded-title">
                         <h2>${project.name}</h2>
                     </header>
+                    <p class="th-portfolio__expanded-stacks">
+                        <em>${project.tech.join(", ")}</em>
+                    </p>
                     ${project.caseStudy}
-                </div>
-                <div class="th-portfolio__expanded-actions inside">
-                    <a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear">
-                        <i class="fa-solid fa-display"></i>
-                        Deploy
-                    </a>
-                    <a href="${project.repositoryUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear">
-                        <i class="fa-solid fa-code"></i>
-                        Repositório
-                    </a>
                 </div>
             </div>
         </div>
-        <div class="th-portfolio__expanded-actions outside">
+        <footer class="th-portfolio__expanded-actions outside">
             <a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear">
                 <i class="fa-solid fa-display"></i>
                 Deploy
@@ -99,13 +92,9 @@ const projectContent = project => `
                 <i class="fa-solid fa-code"></i>
                 Repositório
             </a>
-        </div>
+        </footer>
     </article>
 `
-
-export const Project = projectId => {
-
-}
 
 /**
  * Arranges the portfolio items on a modal screen.

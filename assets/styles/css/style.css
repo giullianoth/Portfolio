@@ -255,6 +255,7 @@ i.fa-brands {
   background-color: #FFC107;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   column-gap: 10px;
   border: none;
   padding: 12px 30px;
@@ -1231,6 +1232,7 @@ i.fa-brands {
   flex-wrap: nowrap;
   flex-direction: column;
   row-gap: 20px;
+  position: relative;
 }
 .th-portfolio__expanded-content {
   flex-grow: 1;
@@ -1294,6 +1296,7 @@ i.fa-brands {
   .th-portfolio__expanded-text {
     max-height: 100%;
     overflow-y: auto;
+    padding-bottom: 80px;
   }
 }
 .th-portfolio__expanded-title {
@@ -1301,6 +1304,10 @@ i.fa-brands {
 }
 .th-portfolio__expanded-title h2 {
   color: #E39E22;
+}
+.th-portfolio__expanded-stacks {
+  color: #9E9E9E;
+  font-size: 0.9em;
 }
 .th-portfolio__expanded-actions {
   font-size: 0.875em;
@@ -1311,18 +1318,16 @@ i.fa-brands {
   gap: 26px;
 }
 @media screen and (min-width: 62em) {
-  .th-portfolio__expanded-actions.outside {
-    display: none;
-  }
-}
-.th-portfolio__expanded-actions.inside {
-  display: none;
-}
-@media screen and (min-width: 62em) {
-  .th-portfolio__expanded-actions.inside {
-    display: flex;
+  .th-portfolio__expanded-actions {
+    width: 50%;
+    padding: 40px 4px 4px 40px;
     justify-content: flex-start;
-    font-size: 1rem;
+    position: absolute;
+    top: unset;
+    left: unset;
+    bottom: 0;
+    right: 0;
+    background-color: #212121;
   }
 }
 
