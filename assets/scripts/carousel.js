@@ -1,4 +1,10 @@
 const carouselList = Array.from(document.querySelectorAll(".j_carousel"))
+
+/**
+ * The group of a specified carousel
+ * @param {HTMLDivElement} carouselElement The carousel DOM element
+ * @returns {HTMLUListElement}
+ */
 const groupByCarousel = carouselElement => carouselElement.querySelector(".j_carousel_group")
 
 /**
