@@ -489,9 +489,6 @@ i.fa-brands {
   font-weight: 500;
   background: #212121;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
   transition: all 0.3s ease 0s;
   cursor: default;
 }
