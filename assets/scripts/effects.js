@@ -1,5 +1,4 @@
-const transitionDuration = 300
-const transitionGap = 10
+import { transitionDuration, transitionGap } from "./variables.js"
 
 /**
  * Default values for the CSS transition attribute.
