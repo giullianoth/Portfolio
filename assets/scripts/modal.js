@@ -53,7 +53,7 @@ const Modal = (content, fixedHeight = false) => {
                     lastFocusedElement?.focus()
                 })
             }
-        }, { once: true })
+        })
     })
 
     document.addEventListener("keydown", event => {

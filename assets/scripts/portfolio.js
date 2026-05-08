@@ -4,14 +4,19 @@ import portfolioData from "./portfolio.json" with { type: "json" }
 
 const openPortfolioButton = document.querySelector(".j_open_portfolio")
 const clickableProjects = document.querySelectorAll(".j_project")
+const projectsInModal = () => document.querySelectorAll(".j_modal .j_project")
+const backButton = () => document.querySelector(".j_portfolio_back")
 
 /**
  * The HTML content of the portfolio
  */
 const portfolioContent = `
+    <header class="th-heading">
+        <h2>Todos os projetos</h2>
+    </header>
     <div class="th-portfolio__list">
         ${portfolioData.map(item => `
-            <article class="th-portfolio__project j_open_modal" role="region" aria-label="Projeto ${item.name}" data-project-id="${item.id}">
+            <article class="th-portfolio__project j_open_modal j_project" role="region" aria-label="Projeto ${item.name}" data-id="${item.id}">
                 <picture>
                     <source media="(min-width: ${breakpointLarge}px)" srcset="/assets/images/portfolio/${item.images.thumbDesktop}">
                     <source media="(min-width: ${breakpointSmall}px)" srcset="/assets/images/portfolio/${item.images.thumbTablet}">
@@ -57,9 +62,10 @@ const portfolioContent = `
  *  repositoryUrl: string,
  *  deployUrl: string,
  * }} project The project data
+ * @param shouldGoBack Indicates if shoult have a button to go back to portfolio
  * @returns {string}
  */
-const projectContent = project => `
+const projectContent = (project, shouldGoBack = false) => `
     <article class="th-portfolio__expanded-project">
         <div class="th-portfolio__expanded-content">
             <figure class="th-portfolio__expanded-image">
@@ -92,19 +98,20 @@ const projectContent = project => `
                 <i class="fa-solid fa-code"></i>
                 Repositório
             </a>
+            ${shouldGoBack
+        ? `
+                    <button class="th-button clear j_portfolio_back">
+                        <i class="fa-solid fa-circle-chevron-left"></i>
+                        Voltar
+                    </button>    
+                `
+        : ""}
         </footer>
     </article>
 `
 
-/**
- * Arranges the portfolio items on a modal screen.
- */
-const LoadPortfolio = () => {
-    openPortfolioButton.addEventListener("click", () => {
-        Modal(portfolioContent)
-    })
-
-    clickableProjects.forEach(trigger => {
+const openProject = (modalBody, shouldGoBack = false) => {
+    modalBody.forEach(trigger => {
         trigger.addEventListener("click", () => {
             const projectId = parseInt(trigger.dataset.id)
             const project = portfolioData.find(data => projectId === data.id)
@@ -113,8 +120,27 @@ const LoadPortfolio = () => {
                 return console.warn("No project found.")
             }
 
-            Modal(projectContent(project), true)
+            Modal(projectContent(project, shouldGoBack), true)
+
+            if (shouldGoBack) {
+                backButton().addEventListener("click", () => {
+                    Modal(portfolioContent)
+                    openProject(projectsInModal(), true)
+                })
+            }
         })
+    })
+}
+
+/**
+ * Arranges the portfolio items on a modal window.
+ */
+const LoadPortfolio = () => {
+    openProject(clickableProjects)
+
+    openPortfolioButton.addEventListener("click", () => {
+        Modal(portfolioContent)
+        openProject(projectsInModal(), true)
     })
 }
 
