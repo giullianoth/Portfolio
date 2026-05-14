@@ -178,7 +178,7 @@
                 @include setResponsiveDesign(var.$breakpoint-large) {
                     max-height: 100%;
                     overflow-y: auto;
-                    padding-bottom: 80px;
+                    padding-bottom: 60px;
                 }
             }
 
@@ -202,7 +202,7 @@
 
                 @include setResponsiveDesign(var.$breakpoint-large) {
                     width: 50%;
-                    padding: 40px 4px 4px 40px;
+                    padding: 10px 4px 4px 40px;
                     justify-content: flex-start;
                     @include absolute(unset, unset);
                     bottom: 0;

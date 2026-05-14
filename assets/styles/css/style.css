@@ -167,6 +167,15 @@ label {
   font-size: 0.8em;
 }
 
+code {
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: black;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
 input, textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -502,6 +511,18 @@ i.fa-brands {
 }
 .th-text-wrapper p:not(:last-child), .th-text-wrapper ul:not(:last-child), .th-text-wrapper ol:not(:last-child), .th-text-wrapper li:not(:last-child) {
   margin-bottom: 12px;
+}
+.th-text-wrapper h1, .th-text-wrapper h2, .th-text-wrapper h3, .th-text-wrapper h4, .th-text-wrapper h5, .th-text-wrapper h6 {
+  margin-block: 20px;
+}
+.th-text-wrapper ul, .th-text-wrapper ol {
+  padding-left: 40px;
+}
+.th-text-wrapper ul li {
+  list-style-type: disc;
+}
+.th-text-wrapper ol li {
+  list-style: decimal;
 }
 .th-text-wrapper strong {
   font-weight: 700;
@@ -1293,7 +1314,7 @@ i.fa-brands {
   .th-portfolio__expanded-text {
     max-height: 100%;
     overflow-y: auto;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
 }
 .th-portfolio__expanded-title {
@@ -1317,7 +1338,7 @@ i.fa-brands {
 @media screen and (min-width: 62em) {
   .th-portfolio__expanded-actions {
     width: 50%;
-    padding: 40px 4px 4px 40px;
+    padding: 10px 4px 4px 40px;
     justify-content: flex-start;
     position: absolute;
     top: unset;

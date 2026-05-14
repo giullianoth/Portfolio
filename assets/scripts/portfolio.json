@@ -1,6 +1,29 @@
 [
     {
         "id": 1,
+        "name": "GitHub User Profile Search",
+        "description": "Desenvolvimento de aplicação que busca via API, dados de usuário do GitHub.",
+        "featured": true,
+        "tech": [
+            "React",
+            "TypeScript",
+            "GitHub REST API"
+        ],
+        "images": {
+            "thumbDesktop": "github-profile-desktop-thumb.jpeg",
+            "thumbTablet": "github-profile-tablet-thumb.jpg",
+            "thumbMobile": "github-profile-mobile-thumb.jpg",
+            "desktop": "github-profile-desktop.jpeg",
+            "tablet": "github-profile-tablet.jpeg",
+            "mobile": "github-profile-mobile.jpeg",
+            "alt": "Screenshot do projeto GitHub User Profile Search"
+        },
+        "caseStudy": "<p>Esta é uma solução para o desafio de busca de usuários do GitHub da plataforma <a href=\"https://devchallenges.io/challenge/github-profile\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a>. O projeto permite explorar perfis de desenvolvedores utilizando a <strong>API oficial do GitHub</strong>, focando em performance e experiência do usuário.</p><p>Os usuários devem ser capazes de:</p><ul><li>Pesquisar usuários do GitHub em tempo real com sugestões (Autocomplete).</li><li>Visualizar detalhes como Nome, Bio, Avatar e data de atualização.</li><li>Ver o tempo relativo da última atualização (ex: \"updated 4 days ago\").</li><li>Receber alertas amigáveis caso o limite de requisições da API seja atingido.</li><li>Navegar em uma interface responsiva e otimizada.</li></ul><p>Este projeto utiliza um <strong>Personal Access Token (Classic)</strong> para elevar o limite de requisições de 60 para 5.000 por hora. O token foi configurado com escopos nulos (apenas acesso público) seguindo o princípio do privilégio mínimo para maior segurança.</p><p>Este projeto me permitiu aprender:</p><ul><li><strong>Consumo Inteligente de APIs:</strong> Aprendi a lidar com o comportamento assíncrono do <code>fetch</code> combinando buscas de lista com buscas de detalhes individuais usando <code>Promise.all</code> para melhorar a percepção de velocidade.</li><li><strong>Gerenciamento de Rate Limits:</strong> Implementei um sistema de tratamento de erro HTTP 403 para informar o usuário quando o limite de requisições do GitHub expira, garantindo que o app não \"quebre\" silenciosamente.</li><li><strong>Lógica de Tempo Relativo:</strong> Desenvolvi uma função personalizada para calcular a diferença entre datas e exibir formatos humanos (segundos, minutos, horas ou dias), evitando dependências externas pesadas.</li></ul>",
+        "repositoryUrl": "https://github.com/giullianoth/GitHubProfile-DevChallenges",
+        "deployUrl": "https://github-profile-lac-zeta.vercel.app/"
+    },
+    {
+        "id": 2,
         "name": "Étoile Bistrò",
         "description": "Desenvolvimento de interface premium para o setor gastronômico com foco em reserva e experiência do usuário.",
         "featured": true,

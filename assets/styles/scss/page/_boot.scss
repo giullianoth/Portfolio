@@ -95,6 +95,13 @@ label {
     font-size: 0.8em;
 }
 
+code {
+    display: inline-block;
+    padding: 1px 5px;
+    background-color: black;
+    @include borderRadius(2px);
+}
+
 input, textarea {
     @include setBrowserPrefix(appearance, none);
     font-family: inherit;
@@ -412,6 +419,22 @@ i.fa-brands {
             &:not(:last-child) {
                 margin-bottom: 12px;
             }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-block: 20px;
+        }
+
+        ul, ol {
+            padding-left: 40px;
+        }
+
+        ul li {
+            list-style-type: disc;
+        }
+
+        ol li {
+            list-style: decimal;
         }
 
         strong {

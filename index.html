@@ -220,6 +220,7 @@
                             <span class="th-card-badge">Prototipagem Alta Fidelidade</span>
                             <span class="th-card-badge">Design Systems</span>
                             <span class="th-card-badge">Figma</span>
+                            <span class="th-card-badge">WordPress / Elementor</span>
                         </div>
                         <p class="th-skills__description">
                             Criação de interfaces intuitivas e centradas no usuário, garantindo que o design seja fiel à
@@ -242,11 +243,44 @@
                     em unir interfaces impactantes a códigos robustos e performáticos.</p>
 
                 <div class="th-portfolio__list th-portfolio__list-main">
-                    <article class="th-portfolio__project j_open_modal j_project" data-id="1" role="region"
+                    <article class="th-portfolio__project j_project" data-id="1" role="region"
+                        aria-label="Projeto GitHub User Profile Search">
+                        <picture>
+                            <source media="(min-width: 992px)"
+                                srcset="/assets/images/portfolio/github-profile-desktop-thumb.jpeg">
+                            <source media="(min-width: 576px)"
+                                srcset="/assets/images/portfolio/github-profile-tablet-thumb.jpg">
+                            <img src="/assets/images/portfolio/github-profile-mobile-thumb.jpg"
+                                alt="Screenshot do projeto GitHub User Profile Search" loading="lazy"
+                                class="th-portfolio__project-image">
+                        </picture>
+
+                        <div class="th-portfolio__project-info">
+                            <header class="th-portfolio__project-name">
+                                <h3>GitHub User Profile Search</h3>
+                            </header>
+
+                            <p class="th-portfolio__project-description">
+                                Desenvolvimento de aplicação que busca via API, dados de usuário do GitHub.
+                            </p>
+
+                            <p class="th-portfolio__project-type">
+                                <strong>Tech:</strong> React, TypeScript, GitHub REST API
+                            </p>
+
+                            <button class="th-button clear" aria-label="Ver detalhes do projeto Étoile Bistrò">
+                                Ver detalhes
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="th-portfolio__project j_project" data-id="2" role="region"
                         aria-label="Projeto Étoile Bistrò">
                         <picture>
-                            <source media="(min-width: 992px)" srcset="/assets/images/portfolio/etoile-desktop-thumb.png">
-                            <source media="(min-width: 576px)" srcset="/assets/images/portfolio/etoile-tablet-thumb.png">
+                            <source media="(min-width: 992px)"
+                                srcset="/assets/images/portfolio/etoile-desktop-thumb.png">
+                            <source media="(min-width: 576px)"
+                                srcset="/assets/images/portfolio/etoile-tablet-thumb.png">
                             <img src="/assets/images/portfolio/etoile-mobile-thumb.png"
                                 alt="Screenshot do projeto Étoile Bistrò" loading="lazy"
                                 class="th-portfolio__project-image">
@@ -273,8 +307,7 @@
                     </article>
 
                     <div class="th-portfolio__cta">
-                        <button class="th-button j_open_modal j_open_portfolio" data-target="all-projects"
-                            title="Ver lista completa de projetos">Ver todos</button>
+                        <button class="th-button j_open_portfolio" title="Ver lista completa de projetos">Ver todos</button>
                     </div>
                 </div>
         </section>
@@ -519,14 +552,13 @@
                 </small>
 
                 <small class="th-footer__copyright-text th-footer__link">
-                    <a href="#">Privacidade & Termos</a>
+                    <a href="#" class="j_open_terms">Privacidade & Termos</a>
                 </small>
             </div>
         </div>
     </footer>
 
-    <div class="th-modal j_modal j_modal_close" role="dialog" aria-modal="true" aria-hidden="true" id="main-modal"
-        inert>
+    <div class="th-modal j_modal j_modal_close" role="dialog" aria-modal="true" aria-hidden="true" id="main-modal" inert>
         <button class="th-button clear th-modal__close j_modal_close j_modal_close_button" title="Fechar"
             aria-label="Fechar modal">
             <i class="fa-solid fa-xmark"></i>
