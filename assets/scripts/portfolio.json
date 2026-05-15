@@ -1,6 +1,29 @@
 [
     {
         "id": 1,
+        "name": "Rest Countries API",
+        "description": "Desenvolvimento de aplicação que lista países do mundo através de API.",
+        "featured": true,
+        "tech": [
+            "React",
+            "TypeScript",
+            "Rest Countries API"
+        ],
+        "images": {
+            "thumbDesktop": "rest-countries-desktop-thumb.jpg",
+            "thumbTablet": "rest-countries-tablet-thumb.jpg",
+            "thumbMobile": "rest-countries-mobile-thumb.jpg",
+            "desktop": "rest-countries-desktop.jpg",
+            "tablet": "rest-countries-tablet.jpg",
+            "mobile": "rest-countries-mobile.jpg",
+            "alt": "Screenshot do projeto Rest Countries API"
+        },
+        "caseStudy": "<p>Esta é um projeto proposto como desafio pela plataforma <a href=\"https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca\" target=\"_blank\" rel=\"noopener noreferrer\">Frontend Mentor</a>, que consiste em uma página que lista os países do mundo através da API Rest Countries.</p><p>Os usuários devem ser capazes de:</p><ul><li>Visualizar todos os países da API na página inicial.</li><li>Pesquisar por um país usando um campo input.</li><li>Filtrar países por região (continente).</li><li>Clicar em um país para ver informações detalhadas.</li><li>Clicar na página de detalhes para acessar a lista de países fronteiriços.</li><li>Alternar o esquema de cores entre modo claro e escuro.</li></ul><p>Este projeto foi construído com:</p><ul><li><strong>React (v18+)</strong> - Componentes Funcionais e Hooks.</li><li><strong>TypeScript</strong> - Para tipagem estática e segurança de código.</li><li><strong>React Icons</strong> - Iconografia flexível.</li><li><strong>CSS Modules</strong> - Estilização Encapsulada.</li><li><strong>Fetch API</strong> - Busca assíncrona de dados.</li><li><strong>Mobile-first workflow</strong> - Design responsivo.</li></ul><p>Neste projeto, foquei em criar uma interface de usuário verdadeiramente personalizada e performática. Um dos maiores desafios foi a customização do elemento select e a otimização das chamadas de API.</p><ul><li>Contornei as limitações nativas dos navegadores (especialmente no Firefox) criando um componente Select totalmente customizado com estados do React.</li><li>Implementei <code>useMemo</code> e <code>useCallback</code> para garantir que funções e valores sejam recalculados apenas quando necessário, prevenindo renderizações desnecessárias.</li></ul>",
+        "repositoryUrl": "https://github.com/giullianoth/REST-Countries-API_Frontend-Mentor_React",
+        "deployUrl": "https://rest-countries-api-mu-azure.vercel.app/"
+    },
+    {
+        "id": 2,
         "name": "GitHub User Profile Search",
         "description": "Desenvolvimento de aplicação que busca via API, dados de usuário do GitHub.",
         "featured": true,
@@ -23,7 +46,7 @@
         "deployUrl": "https://github-profile-lac-zeta.vercel.app/"
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Étoile Bistrò",
         "description": "Desenvolvimento de interface premium para o setor gastronômico com foco em reserva e experiência do usuário.",
         "featured": true,
