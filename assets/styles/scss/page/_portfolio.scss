@@ -47,6 +47,14 @@
                 @include flex3(20px);
             }
 
+            &.hidden {
+                display: none;
+
+                @include setResponsiveDesign(var.$breakpoint-large) {
+                    display: block;
+                }
+            }
+
             &:hover {
                 border-color: var.$color-secondary;
 

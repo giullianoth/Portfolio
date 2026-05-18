@@ -1184,6 +1184,14 @@ i.fa-brands {
     flex-basis: calc(33.3333333333% - 13.3333333333px);
   }
 }
+.th-portfolio__project.hidden {
+  display: none;
+}
+@media screen and (min-width: 62em) {
+  .th-portfolio__project.hidden {
+    display: block;
+  }
+}
 .th-portfolio__project:hover {
   border-color: #FFC107;
 }

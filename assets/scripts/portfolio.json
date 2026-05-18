@@ -111,7 +111,7 @@
             "mobile": "armorel-mobile.png",
             "alt": "Screenshot do projeto Armorel"
         },
-        "caseStudy": "",
+        "caseStudy": "<p>Este projeto surgiu de um <a href=\"https://youtu.be/9FwXqHSmWhw?si=b0f2nqX0C-QyWDcG\" target=\"_blank\" rel=\"noopener noreferrer\">vídeo tutorial do Descomplocando Sites</a>, onde é ensinado a criação de uma plataforma e-commerce voltada para a venda de semijóias, utilizando o CMS WordPress, junto com as extensões Elementor e WooCommerce.</p><p>Meu desafio aqui foi replicar as páginas desta plataforma utilizando HTML, CSS e JavaScript puros, a fim de construir cada estrutura detalhadamente, com código limpo e semântico, implementando algumas interações com o usuário, como a visualização de imagem do produto, escolha da quantidade e formulários na página de checkout.</p><p>Neste projeto eu coloquei em prática a utilização do preprocessador CSS (Sass), o que possibilita maior escalabilidade no desenvolvimento dos estilos, reaproveitamento de linhas de código e facilidade na manutenibilidade.</p>",
         "repositoryUrl": "https://github.com/giullianoth/Armorel",
         "deployUrl": "https://armorel.vercel.app/"
     }
