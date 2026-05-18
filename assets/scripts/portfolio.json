@@ -64,8 +64,55 @@
             "mobile": "etoile-mobile.png",
             "alt": "Screenshot do projeto Étoile Bistrò"
         },
-        "caseStudy": "<p>Este projeto foi um exercício prático de <strong>Desenvolvimento Front-end</strong> para criar uma nova versão de layout para o projeto Fullstack ensinado <a href=\"https://www.youtube.com/watch?v=g-NjMVMFARg&list=PL45Hr6NzteIJQyvk6v0T78Ye8IsGm0mYS\" target=\"_blank\" rel=\"noopener noreferrer\">neste tutorial por Eduardo Pazitto</a>, com foco em responsividade e semântica.</p><p>Como o objetivo principal do tutorial é a utilização do NodeJS, conexão com banco de dados e comunicação via API, não houve uma maior preocupação em elaborar um código hierarquicamente estruturado, embora alguns conceitos de usabilidade, como design responsivo, tenham sido mencionados e aplicados.</p><p>Com isso, eu decidi unir a dinâmica da comunicação do front-end com o back-end e os conceitos das boas práticas de UX/UI, utilizando, por ora, o React puro, com estilização modular e componentização.</p>",
+        "caseStudy": "<p>Este projeto foi um exercício prático de <strong>Desenvolvimento Front-end</strong> para criar uma nova versão de layout para o projeto Fullstack ensinado <a href=\"https://www.youtube.com/watch?v=g-NjMVMFARg&list=PL45Hr6NzteIJQyvk6v0T78Ye8IsGm0mYS\" target=\"_blank\" rel=\"noopener noreferrer\">neste tutorial por Eduardo Pazitto</a>, com foco em responsividade e semântica.</p><p>Como o objetivo principal do tutorial é a utilização do NodeJS, conexão com banco de dados e comunicação via API, não houve uma maior preocupação em elaborar um código hierarquicamente estruturado, embora alguns conceitos de usabilidade, como design responsivo, tenham sido mencionados e aplicados.</p><p>Com isso, eu decidi unir a dinâmica da comunicação do front-end com o back-end e os conceitos das boas práticas de UX/UI, utilizando, por ora, o React puro, com estilização modular e componentização.</p><p><strong>Obs.:</strong> O deploy ainda é a versão com HTML estático.</p>",
         "repositoryUrl": "https://github.com/giullianoth/Etoile-React",
         "deployUrl": "https://etoile-psi.vercel.app/"
+    },
+    {
+        "id": 4,
+        "name": "Country Quiz",
+        "description": "Aplicação de perguntas e respostas sobre países do mundo",
+        "featured": false,
+        "tech": [
+            "React",
+            "Next JS",
+            "TypeScript",
+            "Axios",
+            "Rest Countries API"
+        ],
+        "images": {
+            "thumbDesktop": "country-quiz-desktop-thumb.jpeg",
+            "thumbTablet": "country-quiz-tablet-thumb.jpeg",
+            "thumbMobile": "country-quiz-mobile-thumb.jpeg",
+            "desktop": "country-quiz-desktop.jpeg",
+            "tablet": "country-quiz-tablet.jpeg",
+            "mobile": "country-quiz-mobile.jpeg",
+            "alt": "Screenshot do app Country Quiz"
+        },
+        "caseStudy": "<p>Esta é uma solução de um quiz proposta pela plataforma <a href=\"https://devchallenges.io/challenge/country-quizz\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a>. Trata-se de um jogo de quiz dinâmico e interativo focado em conhecimentos geográficos. A aplicação utiliza dados em tempo real da <a href=\"https://restcountries.com/\" target=\"_blank\" rel=\"noopener noreferrer\">REST Countries API</a> para gerar perguntas aleatórias sobre bandeiras, capitais, moedas, regiões e idiomas de países ao redor do mundo. Desenvolvido com Next.js e TypeScript, o projeto foca em uma experiência de usuário fluida e lógica de estado robusta.</p><p>Os usuários devem ser capazes de:</p><ul><li>Visualizar perguntas com múltiplas opções.</li><li>Responder uma pergunta e visualizar em tempo real se está correta ou errada.</li><li>Navegar entre as perguntas já respondidas.</li><li>Visualizar a página de congratulações e o resultado do quiz.</li></ul><p>O projeto foi construído com:</p><ul><li><strong>Next.js 15</strong> - Componentes dos lados Cliente/Servidor.</li><li><strong>React 19</strong> - Utilizando o novo React Compiler para memorização automática.</li><li><strong>TypeScript</strong> - Interfaces para tipagem da API.</li><li><strong>Axios</strong> - Consumo de dados reais.</li><li><strong>REST COUNTRIES API</strong> - Instâncias personalizadas e gerenciamento global de requisições.</li><li><strong>CSS Modules</strong> - Estilização isolada e escalável.</li></ul><p>Este projeto me permitiu aprender:</p><ul><li><strong>Gerenciamento de Estado Complexo:</strong> Implementação de lógica de quiz centralizada em Custom Hooks, facilitando a comunicação entre componentes e o controle de fluxo do jogo.</li><li><strong>Consumo de API com Axios:</strong> Tratamento de dados assíncronos e processamento de payloads complexos da REST Countries API para transformá-los em interfaces TypeScript seguras.</li><li><strong>Algoritmos de Randomização:</strong> Criação de lógica para selecionar países e gerar \"distratores\" (opções incorretas) de forma dinâmica, garantindo que o quiz nunca se repita da mesma forma.</li><li><strong>Experiência do Usuário (UX):</strong> Uso de temporizadores (<code>setTimeout</code>) e estados de carregamento para criar uma transição suave entre a resposta do usuário e a próxima pergunta.</li><li><strong>Escalabilidade com TypeScript:</strong> Definição de interfaces rigorosas para modelos de perguntas e dados geográficos, prevenindo erros em tempo de desenvolvimento.</li></ul>",
+        "repositoryUrl": "https://github.com/giullianoth/CountryQuiz-DevChallenges",
+        "deployUrl": "https://country-quiz-sigma.vercel.app/"
+    },
+    {
+        "id": 5,
+        "name": "Armorel",
+        "description": "Desenvolvimento de layout de loja virtual de semijóias",
+        "featured": false,
+        "tech": [
+            "Sass",
+            "JavaScript"
+        ],
+        "images": {
+            "thumbDesktop": "armorel-desktop-thumb.jpeg",
+            "thumbTablet": "armorel-tablet-thumb.jpeg",
+            "thumbMobile": "armorel-mobile-thumb.png",
+            "desktop": "armorel-desktop.jpeg",
+            "tablet": "armorel-tablet.jpeg",
+            "mobile": "armorel-mobile.png",
+            "alt": "Screenshot do projeto Armorel"
+        },
+        "caseStudy": "",
+        "repositoryUrl": "https://github.com/giullianoth/Armorel",
+        "deployUrl": "https://armorel.vercel.app/"
     }
 ]
