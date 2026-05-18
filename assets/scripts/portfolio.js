@@ -89,7 +89,7 @@ const projectContent = (project, shouldGoBack = false) => `
                 </div>
             </div>
         </div>
-        <footer class="th-portfolio__expanded-actions outside">
+        <footer class="th-portfolio__expanded-actions">
             <a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear">
                 <i class="fa-solid fa-display"></i>
                 Deploy

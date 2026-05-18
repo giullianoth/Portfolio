@@ -198,7 +198,7 @@
             &-actions {
                 font-size: 0.875em;
                 @include flex;
-                gap: 26px;
+                gap: 12px 26px;
 
                 @include setResponsiveDesign(var.$breakpoint-large) {
                     width: 50%;

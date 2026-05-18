@@ -1333,7 +1333,7 @@ i.fa-brands {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 26px;
+  gap: 12px 26px;
 }
 @media screen and (min-width: 62em) {
   .th-portfolio__expanded-actions {
