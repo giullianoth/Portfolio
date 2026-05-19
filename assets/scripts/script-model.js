@@ -40,14 +40,57 @@ const openPortfolioButton = document.querySelector(".j_open_portfolio")
 const clickableProjects = document.querySelectorAll(".j_project")
 const projectsInModal = () => document.querySelectorAll(".j_modal .j_project")
 const backButton = () => document.querySelector(".j_portfolio_back")
+const translatedProjects = lang => portfolioData[lang]
 
-const portfolioContent = `<header class="th-heading"><h2>Todos os projetos</h2></header><div class="th-portfolio__list">${portfolioData.map(item => `<article class="th-portfolio__project j_open_modal j_project" role="region" aria-label="Projeto ${item.name}" data-id="${item.id}"><picture><source media="(min-width: ${breakpointLarge}px)" srcset="/assets/images/portfolio/${item.images.thumbDesktop}"><source media="(min-width: ${breakpointSmall}px)" srcset="/assets/images/portfolio/${item.images.thumbTablet}"><img src="/assets/images/portfolio/${item.images.thumbMobile}" alt="${item.images.alt}" loading="lazy" class="th-portfolio__project-image"></picture><div class="th-portfolio__project-info"><header class="th-portfolio__project-name"><h3>${item.name}</h3></header><p class="th-portfolio__project-description">${item.description}</p><p class="th-portfolio__project-type"><strong>Tech:</strong> ${item.tech.join(", ")}</p><button class="th-button clear" aria-label="Ver detalhes do projeto ${item.name}" data-id="${item.id}">Ver detalhes</button></div></article>`).join("")}</div>`
+const portfolioContent = (lang = "pt") => {
+    const portfolioTitle = {
+        pt: "Todos os projetos",
+        en: "All projects"
+    }
 
-const projectContent = (project, shouldGoBack = false) => `<article class="th-portfolio__expanded-project"><div class="th-portfolio__expanded-content"><figure class="th-portfolio__expanded-image"><a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" aria-label="Acessar o site do ${project.name}"><picture><source media="(min-width: ${breakpointLarge}px)" srcset="/assets/images/portfolio/${project.images.desktop}"><source media="(min-width: ${breakpointSmall}px)" srcset="/assets/images/portfolio/${project.images.tablet}"><img src="/assets/images/portfolio/${project.images.mobile}" alt="${project.images.alt}"></picture></a></figure><div class="th-portfolio__expanded-info"><div class="th-portfolio__expanded-text th-text-wrapper"><header class="th-portfolio__expanded-title"><h2>${project.name}</h2></header><p class="th-portfolio__expanded-stacks"><em>${project.tech.join(", ")}</em></p>${project.caseStudy}</div></div></div><footer class="th-portfolio__expanded-actions"><a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear"><i class="fa-solid fa-display"></i>Deploy</a><a href="${project.repositoryUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear"><i class="fa-solid fa-code"></i>Repositório</a>${shouldGoBack ? `<button class="th-button clear j_portfolio_back"><i class="fa-solid fa-circle-chevron-left"></i>Voltar</button>` : ""}</footer></article>`
+    const projectAriaLabel = (projectName) => ({
+        pt: `Projeto ${projectName}`,
+        en: `${projectName} project`
+    })
+
+    const actionAriaLabel = (projectName) => ({
+        pt: `Ver detalhes do projeto ${projectName}`,
+        en: `View details of ${projectName} project`
+    })
+
+    const buttonLabel = {
+        pt: "Ver detalhes",
+        en: "View details"
+    }
+
+    return `<header class="th-heading"><h2>${portfolioTitle[lang]}</h2></header><div class="th-portfolio__list">${translatedProjects(lang).map(item => `<article class="th-portfolio__project j_open_modal j_project" role="region" aria-label="${projectAriaLabel(item.name)[lang]}" data-id="${item.id}" data-lang="${lang}"><picture><source media="(min-width: ${breakpointLarge}px)" srcset="/assets/images/portfolio/${item.images.thumbDesktop}"><source media="(min-width: ${breakpointSmall}px)" srcset="/assets/images/portfolio/${item.images.thumbTablet}"><img src="/assets/images/portfolio/${item.images.thumbMobile}" alt="${item.images.alt}" loading="lazy" class="th-portfolio__project-image"></picture><div class="th-portfolio__project-info"><header class="th-portfolio__project-name"><h3>${item.name}</h3></header><p class="th-portfolio__project-description">${item.description}</p><p class="th-portfolio__project-type"><strong>Tech:</strong> ${item.tech.join(", ")}</p><button class="th-button clear" aria-label="${actionAriaLabel(item.name)[lang]}" data-id="${item.id}">${buttonLabel[lang]}</button></div></article>`).join("")}</div>`
+}
+
+const projectContent = (project, shouldGoBack = false, lang = "pt") => {
+    const imageAriaLabel = {
+        pt: `Acessar o site do ${project.name}`,
+        en: `Access ${project.name} site`
+    }
+
+    const repositoryButtonLabel = {
+        pt: "Repositório",
+        en: "Repository"
+    }
+
+    const backButtonLabel = {
+        pt: "Voltar",
+        en: "Back"
+    }
+
+    return `<article class="th-portfolio__expanded-project"><div class="th-portfolio__expanded-content"><figure class="th-portfolio__expanded-image"><a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" aria-label="${imageAriaLabel[lang]}"><picture><source media="(min-width: ${breakpointLarge}px)" srcset="/assets/images/portfolio/${project.images.desktop}"><source media="(min-width: ${breakpointSmall}px)" srcset="/assets/images/portfolio/${project.images.tablet}"><img src="/assets/images/portfolio/${project.images.mobile}" alt="${project.images.alt}"></picture></a></figure><div class="th-portfolio__expanded-info"><div class="th-portfolio__expanded-text th-text-wrapper"><header class="th-portfolio__expanded-title"><h2>${project.name}</h2></header><p class="th-portfolio__expanded-stacks"><em>${project.tech.join(", ")}</em></p>${project.caseStudy}</div></div></div><footer class="th-portfolio__expanded-actions"><a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear"><i class="fa-solid fa-display"></i>Deploy</a><a href="${project.repositoryUrl}" target="_blank" rel="noopener noreferrer" class="th-button clear"><i class="fa-solid fa-code"></i>${repositoryButtonLabel[lang]}</a>${shouldGoBack ? `<button class="th-button clear j_portfolio_back"><i class="fa-solid fa-circle-chevron-left"></i>${backButtonLabel[lang]}</button>` : ""}</footer></article>`
+}
 
 const termsLink = document.querySelector(".j_open_terms")
 
-const termsContent = `<section class="th-terms"><header class="th-heading"><h2>Privacidade & Termos de Uso</h2></header><div class="th-text-wrapper"><h3>1. Transparência e Dados</h3><p>Este site é um portfólio profissional. A coleta de dados ocorre de forma mínima e apenas nos seguintes cenários:</p><ul><li><strong>Formulário de Contato:</strong> Ao enviar uma mensagem, os dados (Nome e E-mail) são utilizados exclusivamente para responder à sua solicitação profissional.</li><li><strong>Analytics:</strong> Podemos utilizar ferramentas de análise (como Google Analytics) para entender o volume de visitas e melhorar a experiência de navegação através de cookies anônimos.</li></ul><h3>2. Uso de Imagens e Propriedade Intelectual</h3><p>Todo o conteúdo, design e código-fonte deste portfólio são de propriedade de <strong>Giulliano Guimarães</strong>, exceto onde indicado o contrário (como logos de empresas clientes ou tecnologias de terceiros).</p><p>A reprodução total ou parcial para fins comerciais sem autorização prévia é proibida.</p><h3>3. Responsabilidade</h3><p>Os links externos (para redes sociais ou projetos em produção) possuem suas próprias políticas de privacidade. Não me responsabilizo pelo conteúdo ou práticas de sites de terceiros.</p><h3>4. Seus Direitos</h3><p>De acordo com a <strong><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Lei Geral de Proteção de Dados Pessoais (LGPD)</a></strong>, você tem o direito de solicitar a exclusão de qualquer dado enviado através do formulário de contato a qualquer momento. Para isso, basta entrar em contato através do e-mail disponível na seção de contato.</p></div></section>`
+const termsContent = ({
+    pt: `<section><header class="th-heading"><h2>Privacidade & Termos de Uso</h2></header><div class="th-text-wrapper"><h3>1. Transparência e Dados</h3><p>Este site é um portfólio profissional. A coleta de dados ocorre de forma mínima e apenas nos seguintes cenários:</p><ul><li><strong>Formulário de Contato:</strong> Ao enviar uma mensagem, os dados (Nome e E-mail) são utilizados exclusivamente para responder à sua solicitação profissional.</li><li><strong>Analytics:</strong> Podemos utilizar ferramentas de análise (como Google Analytics) para entender o volume de visitas e melhorar a experiência de navegação através de cookies anônimos.</li></ul><h3>2. Uso de Imagens e Propriedade Intelectual</h3><p>Todo o conteúdo, design e código-fonte deste portfólio são de propriedade de <strong>Giulliano Guimarães</strong>, exceto onde indicado o contrário (como logos de empresas clientes ou tecnologias de terceiros).</p><p>A reprodução total ou parcial para fins comerciais sem autorização prévia é proibida.</p><h3>3. Responsabilidade</h3><p>Os links externos (para redes sociais ou projetos em produção) possuem suas próprias políticas de privacidade. Não me responsabilizo pelo conteúdo ou práticas de sites de terceiros.</p><h3>4. Seus Direitos</h3><p>De acordo com a <strong><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Lei Geral de Proteção de Dados Pessoais (LGPD)</a></strong>, você tem o direito de solicitar a exclusão de qualquer dado enviado através do formulário de contato a qualquer momento. Para isso, basta entrar em contato através do e-mail disponível na seção de contato.</p></div></section>`,
+    en: `<section><header class="th-heading"><h2>Privacy & Terms of Use</h2></header><div class="th-text-wrapper"><h3>1. Transparency and Data</h3><p>This website is a professional portfolio. Data collection occurs minimally and only in the following scenarios:</p><ul><li><strong>Contact Form:</strong> When you send a message, the data (Name and Email) is used exclusively to respond to your professional request.</li><li><strong>Analytics:</strong> We can use analytics tools (such as Google Analytics) to understand the volume of visits and improve the browsing experience through anonymous cookies.</li></ul><h3>2. Use of Images and Intellectual Property</h3><p>All content, design, and source code in this portfolio are the property of <strong>Giulliano Guimarães</strong>, except where otherwise indicated (such as client company logos or third-party technologies).</p><p>Total or partial reproduction for commercial purposes without prior authorization is prohibited.</p><h3>3. Responsability</h3><p>External links (to social media or projects in production) have their own privacy policies. I am not responsible for the content or practices of third-party websites.</p><h3>4. Your Rights</h3><p>According to the <strong><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Brazilian General Data Protection Law (LGPD)</a></strong>, you have the right to request the deletion of any data submitted through the contact form at any time. To do so, simply contact us via the email address available in the contact section.</p></div></section>`
+})
 
 // FUNCTIONS
 
@@ -251,18 +294,19 @@ Carousel()
 const openProject = (modalBody, shouldGoBack = false) => {
     modalBody.forEach(trigger => {
         trigger.addEventListener("click", () => {
+            const lang = trigger.dataset.lang || "pt"
             const projectId = parseInt(trigger.dataset.id)
-            const project = portfolioData.find(data => projectId === data.id)
+            const project = translatedProjects(lang).find(data => projectId === data.id)
 
             if (!project) {
                 return console.warn("No project found.")
             }
 
-            Modal(projectContent(project, shouldGoBack), true)
+            Modal(projectContent(project, shouldGoBack, lang), true)
 
             if (shouldGoBack) {
                 backButton().addEventListener("click", () => {
-                    Modal(portfolioContent)
+                    Modal(portfolioContent(lang))
                     openProject(projectsInModal(), true)
                 })
             }
@@ -301,13 +345,15 @@ copyYearField.innerText = new Date().getFullYear()
 openProject(clickableProjects)
 
 openPortfolioButton.addEventListener("click", () => {
-    Modal(portfolioContent)
+    const lang = openPortfolioButton.dataset.lang || "pt"
+    Modal(portfolioContent(lang))
     openProject(projectsInModal(), true)
 })
 
 termsLink.addEventListener("click", event => {
     event.preventDefault()
-    Modal(termsContent)
+    const lang = termsLink.dataset.lang || "pt"
+    Modal(termsContent[lang])
 })
 
 window.addEventListener("scroll", () => {

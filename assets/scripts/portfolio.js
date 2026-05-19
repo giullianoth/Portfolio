@@ -93,10 +93,10 @@ const portfolioContent = (lang = "pt") => {
  * @returns {string}
  */
 const projectContent = (project, shouldGoBack = false, lang = "pt") => {
-    const imageAriaLabel = (projectName) => ({
-        pt: `Acessar o site do ${projectName}`,
-        en: `Access ${projectName} site`
-    })
+    const imageAriaLabel = {
+        pt: `Acessar o site do ${project.name}`,
+        en: `Access ${project.name} site`
+    }
 
     const repositoryButtonLabel = {
         pt: "Repositório",
@@ -112,7 +112,7 @@ const projectContent = (project, shouldGoBack = false, lang = "pt") => {
         <article class="th-portfolio__expanded-project">
             <div class="th-portfolio__expanded-content">
                 <figure class="th-portfolio__expanded-image">
-                    <a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" aria-label="${imageAriaLabel(project.name)[lang]}">
+                    <a href="${project.deployUrl}" target="_blank" rel="noopener noreferrer" aria-label="${imageAriaLabel[lang]}">
                         <picture>
                             <source media="(min-width: ${breakpointLarge}px)" srcset="/assets/images/portfolio/${project.images.desktop}">
                             <source media="(min-width: ${breakpointSmall}px)" srcset="/assets/images/portfolio/${project.images.tablet}">
