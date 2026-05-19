@@ -1,118 +1,238 @@
-[
-    {
-        "id": 1,
-        "name": "Rest Countries API",
-        "description": "Desenvolvimento de aplicação que lista países do mundo através de API.",
-        "featured": true,
-        "tech": [
-            "React",
-            "TypeScript",
-            "Rest Countries API"
-        ],
-        "images": {
-            "thumbDesktop": "rest-countries-desktop-thumb.jpg",
-            "thumbTablet": "rest-countries-tablet-thumb.jpg",
-            "thumbMobile": "rest-countries-mobile-thumb.jpg",
-            "desktop": "rest-countries-desktop.jpg",
-            "tablet": "rest-countries-tablet.jpg",
-            "mobile": "rest-countries-mobile.jpg",
-            "alt": "Screenshot do projeto Rest Countries API"
+{
+    "pt": [
+        {
+            "id": 1,
+            "name": "Rest Countries API",
+            "description": "Desenvolvimento de aplicação que lista países do mundo através de API.",
+            "featured": true,
+            "tech": [
+                "React",
+                "TypeScript",
+                "Rest Countries API"
+            ],
+            "images": {
+                "thumbDesktop": "rest-countries-desktop-thumb.jpg",
+                "thumbTablet": "rest-countries-tablet-thumb.jpg",
+                "thumbMobile": "rest-countries-mobile-thumb.jpg",
+                "desktop": "rest-countries-desktop.jpg",
+                "tablet": "rest-countries-tablet.jpg",
+                "mobile": "rest-countries-mobile.jpg",
+                "alt": "Screenshot do projeto Rest Countries API"
+            },
+            "caseStudy": "<p>Esta é um projeto proposto como desafio pela plataforma <a href=\"https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca\" target=\"_blank\" rel=\"noopener noreferrer\">Frontend Mentor</a>, que consiste em uma página que lista os países do mundo através da API Rest Countries.</p><p>Os usuários devem ser capazes de:</p><ul><li>Visualizar todos os países da API na página inicial.</li><li>Pesquisar por um país usando um campo input.</li><li>Filtrar países por região (continente).</li><li>Clicar em um país para ver informações detalhadas.</li><li>Clicar na página de detalhes para acessar a lista de países fronteiriços.</li><li>Alternar o esquema de cores entre modo claro e escuro.</li></ul><p>Este projeto foi construído com:</p><ul><li><strong>React (v18+)</strong> - Componentes Funcionais e Hooks.</li><li><strong>TypeScript</strong> - Para tipagem estática e segurança de código.</li><li><strong>React Icons</strong> - Iconografia flexível.</li><li><strong>CSS Modules</strong> - Estilização Encapsulada.</li><li><strong>Fetch API</strong> - Busca assíncrona de dados.</li><li><strong>Mobile-first workflow</strong> - Design responsivo.</li></ul><p>Neste projeto, foquei em criar uma interface de usuário verdadeiramente personalizada e performática. Um dos maiores desafios foi a customização do elemento select e a otimização das chamadas de API.</p><ul><li>Contornei as limitações nativas dos navegadores (especialmente no Firefox) criando um componente Select totalmente customizado com estados do React.</li><li>Implementei <code>useMemo</code> e <code>useCallback</code> para garantir que funções e valores sejam recalculados apenas quando necessário, prevenindo renderizações desnecessárias.</li></ul>",
+            "repositoryUrl": "https://github.com/giullianoth/REST-Countries-API_Frontend-Mentor_React",
+            "deployUrl": "https://rest-countries-api-mu-azure.vercel.app/"
         },
-        "caseStudy": "<p>Esta é um projeto proposto como desafio pela plataforma <a href=\"https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca\" target=\"_blank\" rel=\"noopener noreferrer\">Frontend Mentor</a>, que consiste em uma página que lista os países do mundo através da API Rest Countries.</p><p>Os usuários devem ser capazes de:</p><ul><li>Visualizar todos os países da API na página inicial.</li><li>Pesquisar por um país usando um campo input.</li><li>Filtrar países por região (continente).</li><li>Clicar em um país para ver informações detalhadas.</li><li>Clicar na página de detalhes para acessar a lista de países fronteiriços.</li><li>Alternar o esquema de cores entre modo claro e escuro.</li></ul><p>Este projeto foi construído com:</p><ul><li><strong>React (v18+)</strong> - Componentes Funcionais e Hooks.</li><li><strong>TypeScript</strong> - Para tipagem estática e segurança de código.</li><li><strong>React Icons</strong> - Iconografia flexível.</li><li><strong>CSS Modules</strong> - Estilização Encapsulada.</li><li><strong>Fetch API</strong> - Busca assíncrona de dados.</li><li><strong>Mobile-first workflow</strong> - Design responsivo.</li></ul><p>Neste projeto, foquei em criar uma interface de usuário verdadeiramente personalizada e performática. Um dos maiores desafios foi a customização do elemento select e a otimização das chamadas de API.</p><ul><li>Contornei as limitações nativas dos navegadores (especialmente no Firefox) criando um componente Select totalmente customizado com estados do React.</li><li>Implementei <code>useMemo</code> e <code>useCallback</code> para garantir que funções e valores sejam recalculados apenas quando necessário, prevenindo renderizações desnecessárias.</li></ul>",
-        "repositoryUrl": "https://github.com/giullianoth/REST-Countries-API_Frontend-Mentor_React",
-        "deployUrl": "https://rest-countries-api-mu-azure.vercel.app/"
-    },
-    {
-        "id": 2,
-        "name": "GitHub User Profile Search",
-        "description": "Desenvolvimento de aplicação que busca via API, dados de usuário do GitHub.",
-        "featured": true,
-        "tech": [
-            "React",
-            "TypeScript",
-            "GitHub REST API"
-        ],
-        "images": {
-            "thumbDesktop": "github-profile-desktop-thumb.jpeg",
-            "thumbTablet": "github-profile-tablet-thumb.jpg",
-            "thumbMobile": "github-profile-mobile-thumb.jpg",
-            "desktop": "github-profile-desktop.jpeg",
-            "tablet": "github-profile-tablet.jpeg",
-            "mobile": "github-profile-mobile.jpeg",
-            "alt": "Screenshot do projeto GitHub User Profile Search"
+        {
+            "id": 2,
+            "name": "GitHub User Profile Search",
+            "description": "Desenvolvimento de aplicação que busca via API, dados de usuário do GitHub.",
+            "featured": true,
+            "tech": [
+                "React",
+                "TypeScript",
+                "GitHub REST API"
+            ],
+            "images": {
+                "thumbDesktop": "github-profile-desktop-thumb.jpeg",
+                "thumbTablet": "github-profile-tablet-thumb.jpg",
+                "thumbMobile": "github-profile-mobile-thumb.jpg",
+                "desktop": "github-profile-desktop.jpeg",
+                "tablet": "github-profile-tablet.jpeg",
+                "mobile": "github-profile-mobile.jpeg",
+                "alt": "Screenshot do projeto GitHub User Profile Search"
+            },
+            "caseStudy": "<p>Esta é uma solução para o desafio de busca de usuários do GitHub da plataforma <a href=\"https://devchallenges.io/challenge/github-profile\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a>. O projeto permite explorar perfis de desenvolvedores utilizando a <strong>API oficial do GitHub</strong>, focando em performance e experiência do usuário.</p><p>Os usuários devem ser capazes de:</p><ul><li>Pesquisar usuários do GitHub em tempo real com sugestões (Autocomplete).</li><li>Visualizar detalhes como Nome, Bio, Avatar e data de atualização.</li><li>Ver o tempo relativo da última atualização (ex: \"updated 4 days ago\").</li><li>Receber alertas amigáveis caso o limite de requisições da API seja atingido.</li><li>Navegar em uma interface responsiva e otimizada.</li></ul><p>Este projeto utiliza um <strong>Personal Access Token (Classic)</strong> para elevar o limite de requisições de 60 para 5.000 por hora. O token foi configurado com escopos nulos (apenas acesso público) seguindo o princípio do privilégio mínimo para maior segurança.</p><p>Este projeto me permitiu aprender:</p><ul><li><strong>Consumo Inteligente de APIs:</strong> Aprendi a lidar com o comportamento assíncrono do <code>fetch</code> combinando buscas de lista com buscas de detalhes individuais usando <code>Promise.all</code> para melhorar a percepção de velocidade.</li><li><strong>Gerenciamento de Rate Limits:</strong> Implementei um sistema de tratamento de erro HTTP 403 para informar o usuário quando o limite de requisições do GitHub expira, garantindo que o app não \"quebre\" silenciosamente.</li><li><strong>Lógica de Tempo Relativo:</strong> Desenvolvi uma função personalizada para calcular a diferença entre datas e exibir formatos humanos (segundos, minutos, horas ou dias), evitando dependências externas pesadas.</li></ul>",
+            "repositoryUrl": "https://github.com/giullianoth/GitHubProfile-DevChallenges",
+            "deployUrl": "https://github-profile-lac-zeta.vercel.app/"
         },
-        "caseStudy": "<p>Esta é uma solução para o desafio de busca de usuários do GitHub da plataforma <a href=\"https://devchallenges.io/challenge/github-profile\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a>. O projeto permite explorar perfis de desenvolvedores utilizando a <strong>API oficial do GitHub</strong>, focando em performance e experiência do usuário.</p><p>Os usuários devem ser capazes de:</p><ul><li>Pesquisar usuários do GitHub em tempo real com sugestões (Autocomplete).</li><li>Visualizar detalhes como Nome, Bio, Avatar e data de atualização.</li><li>Ver o tempo relativo da última atualização (ex: \"updated 4 days ago\").</li><li>Receber alertas amigáveis caso o limite de requisições da API seja atingido.</li><li>Navegar em uma interface responsiva e otimizada.</li></ul><p>Este projeto utiliza um <strong>Personal Access Token (Classic)</strong> para elevar o limite de requisições de 60 para 5.000 por hora. O token foi configurado com escopos nulos (apenas acesso público) seguindo o princípio do privilégio mínimo para maior segurança.</p><p>Este projeto me permitiu aprender:</p><ul><li><strong>Consumo Inteligente de APIs:</strong> Aprendi a lidar com o comportamento assíncrono do <code>fetch</code> combinando buscas de lista com buscas de detalhes individuais usando <code>Promise.all</code> para melhorar a percepção de velocidade.</li><li><strong>Gerenciamento de Rate Limits:</strong> Implementei um sistema de tratamento de erro HTTP 403 para informar o usuário quando o limite de requisições do GitHub expira, garantindo que o app não \"quebre\" silenciosamente.</li><li><strong>Lógica de Tempo Relativo:</strong> Desenvolvi uma função personalizada para calcular a diferença entre datas e exibir formatos humanos (segundos, minutos, horas ou dias), evitando dependências externas pesadas.</li></ul>",
-        "repositoryUrl": "https://github.com/giullianoth/GitHubProfile-DevChallenges",
-        "deployUrl": "https://github-profile-lac-zeta.vercel.app/"
-    },
-    {
-        "id": 3,
-        "name": "Étoile Bistrò",
-        "description": "Desenvolvimento de interface premium para o setor gastronômico com foco em reserva e experiência do usuário.",
-        "featured": true,
-        "tech": [
-            "React",
-            "Mongo DB",
-            "Node JS"
-        ],
-        "images": {
-            "thumbDesktop": "etoile-desktop-thumb.png",
-            "thumbTablet": "etoile-tablet-thumb.png",
-            "thumbMobile": "etoile-mobile-thumb.png",
-            "desktop": "etoile-desktop.png",
-            "tablet": "etoile-tablet.png",
-            "mobile": "etoile-mobile.png",
-            "alt": "Screenshot do projeto Étoile Bistrò"
+        {
+            "id": 3,
+            "name": "Étoile Bistrò",
+            "description": "Desenvolvimento de interface premium para o setor gastronômico com foco em reserva e experiência do usuário.",
+            "featured": true,
+            "tech": [
+                "React",
+                "Mongo DB",
+                "Node JS"
+            ],
+            "images": {
+                "thumbDesktop": "etoile-desktop-thumb.png",
+                "thumbTablet": "etoile-tablet-thumb.png",
+                "thumbMobile": "etoile-mobile-thumb.png",
+                "desktop": "etoile-desktop.png",
+                "tablet": "etoile-tablet.png",
+                "mobile": "etoile-mobile.png",
+                "alt": "Screenshot do projeto Étoile Bistrò"
+            },
+            "caseStudy": "<p>Este projeto foi um exercício prático de <strong>Desenvolvimento Front-end</strong> para criar uma nova versão de layout para o projeto Fullstack ensinado <a href=\"https://www.youtube.com/watch?v=g-NjMVMFARg&list=PL45Hr6NzteIJQyvk6v0T78Ye8IsGm0mYS\" target=\"_blank\" rel=\"noopener noreferrer\">neste tutorial por Eduardo Pazitto</a>, com foco em responsividade e semântica.</p><p>Como o objetivo principal do tutorial é a utilização do NodeJS, conexão com banco de dados e comunicação via API, não houve uma maior preocupação em elaborar um código hierarquicamente estruturado, embora alguns conceitos de usabilidade, como design responsivo, tenham sido mencionados e aplicados.</p><p>Com isso, eu decidi unir a dinâmica da comunicação do front-end com o back-end e os conceitos das boas práticas de UX/UI, utilizando, por ora, o React puro, com estilização modular e componentização.</p><p><strong>Obs.:</strong> O deploy ainda é a versão com HTML estático.</p>",
+            "repositoryUrl": "https://github.com/giullianoth/Etoile-React",
+            "deployUrl": "https://etoile-psi.vercel.app/"
         },
-        "caseStudy": "<p>Este projeto foi um exercício prático de <strong>Desenvolvimento Front-end</strong> para criar uma nova versão de layout para o projeto Fullstack ensinado <a href=\"https://www.youtube.com/watch?v=g-NjMVMFARg&list=PL45Hr6NzteIJQyvk6v0T78Ye8IsGm0mYS\" target=\"_blank\" rel=\"noopener noreferrer\">neste tutorial por Eduardo Pazitto</a>, com foco em responsividade e semântica.</p><p>Como o objetivo principal do tutorial é a utilização do NodeJS, conexão com banco de dados e comunicação via API, não houve uma maior preocupação em elaborar um código hierarquicamente estruturado, embora alguns conceitos de usabilidade, como design responsivo, tenham sido mencionados e aplicados.</p><p>Com isso, eu decidi unir a dinâmica da comunicação do front-end com o back-end e os conceitos das boas práticas de UX/UI, utilizando, por ora, o React puro, com estilização modular e componentização.</p><p><strong>Obs.:</strong> O deploy ainda é a versão com HTML estático.</p>",
-        "repositoryUrl": "https://github.com/giullianoth/Etoile-React",
-        "deployUrl": "https://etoile-psi.vercel.app/"
-    },
-    {
-        "id": 4,
-        "name": "Country Quiz",
-        "description": "Aplicação de perguntas e respostas sobre países do mundo",
-        "featured": false,
-        "tech": [
-            "React",
-            "Next JS",
-            "TypeScript",
-            "Axios",
-            "Rest Countries API"
-        ],
-        "images": {
-            "thumbDesktop": "country-quiz-desktop-thumb.jpeg",
-            "thumbTablet": "country-quiz-tablet-thumb.jpeg",
-            "thumbMobile": "country-quiz-mobile-thumb.jpeg",
-            "desktop": "country-quiz-desktop.jpeg",
-            "tablet": "country-quiz-tablet.jpeg",
-            "mobile": "country-quiz-mobile.jpeg",
-            "alt": "Screenshot do app Country Quiz"
+        {
+            "id": 4,
+            "name": "Country Quiz",
+            "description": "Aplicação de perguntas e respostas sobre países do mundo",
+            "featured": false,
+            "tech": [
+                "React",
+                "Next JS",
+                "TypeScript",
+                "Axios",
+                "Rest Countries API"
+            ],
+            "images": {
+                "thumbDesktop": "country-quiz-desktop-thumb.jpeg",
+                "thumbTablet": "country-quiz-tablet-thumb.jpeg",
+                "thumbMobile": "country-quiz-mobile-thumb.jpeg",
+                "desktop": "country-quiz-desktop.jpeg",
+                "tablet": "country-quiz-tablet.jpeg",
+                "mobile": "country-quiz-mobile.jpeg",
+                "alt": "Screenshot do app Country Quiz"
+            },
+            "caseStudy": "<p>Esta é uma solução de um quiz proposta pela plataforma <a href=\"https://devchallenges.io/challenge/country-quizz\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a>. Trata-se de um jogo de quiz dinâmico e interativo focado em conhecimentos geográficos. A aplicação utiliza dados em tempo real da <a href=\"https://restcountries.com/\" target=\"_blank\" rel=\"noopener noreferrer\">REST Countries API</a> para gerar perguntas aleatórias sobre bandeiras, capitais, moedas, regiões e idiomas de países ao redor do mundo. Desenvolvido com Next.js e TypeScript, o projeto foca em uma experiência de usuário fluida e lógica de estado robusta.</p><p>Os usuários devem ser capazes de:</p><ul><li>Visualizar perguntas com múltiplas opções.</li><li>Responder uma pergunta e visualizar em tempo real se está correta ou errada.</li><li>Navegar entre as perguntas já respondidas.</li><li>Visualizar a página de congratulações e o resultado do quiz.</li></ul><p>O projeto foi construído com:</p><ul><li><strong>Next.js 15</strong> - Componentes dos lados Cliente/Servidor.</li><li><strong>React 19</strong> - Utilizando o novo React Compiler para memorização automática.</li><li><strong>TypeScript</strong> - Interfaces para tipagem da API.</li><li><strong>Axios</strong> - Consumo de dados reais.</li><li><strong>REST COUNTRIES API</strong> - Instâncias personalizadas e gerenciamento global de requisições.</li><li><strong>CSS Modules</strong> - Estilização isolada e escalável.</li></ul><p>Este projeto me permitiu aprender:</p><ul><li><strong>Gerenciamento de Estado Complexo:</strong> Implementação de lógica de quiz centralizada em Custom Hooks, facilitando a comunicação entre componentes e o controle de fluxo do jogo.</li><li><strong>Consumo de API com Axios:</strong> Tratamento de dados assíncronos e processamento de payloads complexos da REST Countries API para transformá-los em interfaces TypeScript seguras.</li><li><strong>Algoritmos de Randomização:</strong> Criação de lógica para selecionar países e gerar \"distratores\" (opções incorretas) de forma dinâmica, garantindo que o quiz nunca se repita da mesma forma.</li><li><strong>Experiência do Usuário (UX):</strong> Uso de temporizadores (<code>setTimeout</code>) e estados de carregamento para criar uma transição suave entre a resposta do usuário e a próxima pergunta.</li><li><strong>Escalabilidade com TypeScript:</strong> Definição de interfaces rigorosas para modelos de perguntas e dados geográficos, prevenindo erros em tempo de desenvolvimento.</li></ul>",
+            "repositoryUrl": "https://github.com/giullianoth/CountryQuiz-DevChallenges",
+            "deployUrl": "https://country-quiz-sigma.vercel.app/"
         },
-        "caseStudy": "<p>Esta é uma solução de um quiz proposta pela plataforma <a href=\"https://devchallenges.io/challenge/country-quizz\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a>. Trata-se de um jogo de quiz dinâmico e interativo focado em conhecimentos geográficos. A aplicação utiliza dados em tempo real da <a href=\"https://restcountries.com/\" target=\"_blank\" rel=\"noopener noreferrer\">REST Countries API</a> para gerar perguntas aleatórias sobre bandeiras, capitais, moedas, regiões e idiomas de países ao redor do mundo. Desenvolvido com Next.js e TypeScript, o projeto foca em uma experiência de usuário fluida e lógica de estado robusta.</p><p>Os usuários devem ser capazes de:</p><ul><li>Visualizar perguntas com múltiplas opções.</li><li>Responder uma pergunta e visualizar em tempo real se está correta ou errada.</li><li>Navegar entre as perguntas já respondidas.</li><li>Visualizar a página de congratulações e o resultado do quiz.</li></ul><p>O projeto foi construído com:</p><ul><li><strong>Next.js 15</strong> - Componentes dos lados Cliente/Servidor.</li><li><strong>React 19</strong> - Utilizando o novo React Compiler para memorização automática.</li><li><strong>TypeScript</strong> - Interfaces para tipagem da API.</li><li><strong>Axios</strong> - Consumo de dados reais.</li><li><strong>REST COUNTRIES API</strong> - Instâncias personalizadas e gerenciamento global de requisições.</li><li><strong>CSS Modules</strong> - Estilização isolada e escalável.</li></ul><p>Este projeto me permitiu aprender:</p><ul><li><strong>Gerenciamento de Estado Complexo:</strong> Implementação de lógica de quiz centralizada em Custom Hooks, facilitando a comunicação entre componentes e o controle de fluxo do jogo.</li><li><strong>Consumo de API com Axios:</strong> Tratamento de dados assíncronos e processamento de payloads complexos da REST Countries API para transformá-los em interfaces TypeScript seguras.</li><li><strong>Algoritmos de Randomização:</strong> Criação de lógica para selecionar países e gerar \"distratores\" (opções incorretas) de forma dinâmica, garantindo que o quiz nunca se repita da mesma forma.</li><li><strong>Experiência do Usuário (UX):</strong> Uso de temporizadores (<code>setTimeout</code>) e estados de carregamento para criar uma transição suave entre a resposta do usuário e a próxima pergunta.</li><li><strong>Escalabilidade com TypeScript:</strong> Definição de interfaces rigorosas para modelos de perguntas e dados geográficos, prevenindo erros em tempo de desenvolvimento.</li></ul>",
-        "repositoryUrl": "https://github.com/giullianoth/CountryQuiz-DevChallenges",
-        "deployUrl": "https://country-quiz-sigma.vercel.app/"
-    },
-    {
-        "id": 5,
-        "name": "Armorel",
-        "description": "Desenvolvimento de layout de loja virtual de semijóias",
-        "featured": false,
-        "tech": [
-            "Sass",
-            "JavaScript"
-        ],
-        "images": {
-            "thumbDesktop": "armorel-desktop-thumb.jpeg",
-            "thumbTablet": "armorel-tablet-thumb.jpeg",
-            "thumbMobile": "armorel-mobile-thumb.png",
-            "desktop": "armorel-desktop.jpeg",
-            "tablet": "armorel-tablet.jpeg",
-            "mobile": "armorel-mobile.png",
-            "alt": "Screenshot do projeto Armorel"
+        {
+            "id": 5,
+            "name": "Armorel",
+            "description": "Desenvolvimento de layout de loja virtual de semijóias",
+            "featured": false,
+            "tech": [
+                "Sass",
+                "JavaScript"
+            ],
+            "images": {
+                "thumbDesktop": "armorel-desktop-thumb.jpeg",
+                "thumbTablet": "armorel-tablet-thumb.jpeg",
+                "thumbMobile": "armorel-mobile-thumb.png",
+                "desktop": "armorel-desktop.jpeg",
+                "tablet": "armorel-tablet.jpeg",
+                "mobile": "armorel-mobile.png",
+                "alt": "Screenshot do projeto Armorel"
+            },
+            "caseStudy": "<p>Este projeto surgiu de um <a href=\"https://youtu.be/9FwXqHSmWhw?si=b0f2nqX0C-QyWDcG\" target=\"_blank\" rel=\"noopener noreferrer\">vídeo tutorial do Descomplocando Sites</a>, onde é ensinado a criação de uma plataforma e-commerce voltada para a venda de semijóias, utilizando o CMS WordPress, junto com as extensões Elementor e WooCommerce.</p><p>Meu desafio aqui foi replicar as páginas desta plataforma utilizando HTML, CSS e JavaScript puros, a fim de construir cada estrutura detalhadamente, com código limpo e semântico, implementando algumas interações com o usuário, como a visualização de imagem do produto, escolha da quantidade e formulários na página de checkout.</p><p>Neste projeto eu coloquei em prática a utilização do preprocessador CSS (Sass), o que possibilita maior escalabilidade no desenvolvimento dos estilos, reaproveitamento de linhas de código e facilidade na manutenibilidade.</p>",
+            "repositoryUrl": "https://github.com/giullianoth/Armorel",
+            "deployUrl": "https://armorel.vercel.app/"
+        }
+    ],
+    "en": [
+        {
+            "id": 1,
+            "name": "Rest Countries API",
+            "description": "Development of an application that lists countries worldwide via API.",
+            "featured": true,
+            "tech": [
+                "React",
+                "TypeScript",
+                "Rest Countries API"
+            ],
+            "images": {
+                "thumbDesktop": "rest-countries-desktop-thumb.jpg",
+                "thumbTablet": "rest-countries-tablet-thumb.jpg",
+                "thumbMobile": "rest-countries-mobile-thumb.jpg",
+                "desktop": "rest-countries-desktop.jpg",
+                "tablet": "rest-countries-tablet.jpg",
+                "mobile": "rest-countries-mobile.jpg",
+                "alt": "Screenshot of the Rest Countries API project"
+            },
+            "caseStudy": "<p>This is a project proposed as a challenge by the <a href=\"https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca\" target=\"_blank\" rel=\"noopener noreferrer\">Frontend Mentor</a> platform, consisting of a page that lists the countries of the world through the REST Countries API.</p><p>Users should be able to:</p><ul><li>View all countries in the API on the homepage.</li><li>Search for a country using an input field.</li><li>Filter countries by region.</li><li>Click on a country to see detailed information.</li><li>Click on the details page to access the list of bordering countries.</li><li>Switch the color scheme between light and dark mode.</li></ul><p>This project was built with:</p><ul><li><strong>React (v18+)</strong> - Functional Components and Hooks.</li><li><strong>TypeScript</strong> - For static typing and code security.</li><li><strong>React Icons</strong> - Flexible iconography.</li><li><strong>CSS Modules</strong> - Encapsulated Styling.</li><li><strong>Fetch API</strong> - Asynchronous data retrieval.</li><li><strong>Mobile-first workflow</strong> - Responsive design.</li></ul><p>In this project, I focused on creating a truly customized and high-performing user interface. One of the biggest challenges was customizing the select element and optimizing the API calls.</p><ul><li>I bypassed the native limitations of browsers (especially Firefox) by creating a fully customized Select component with React states.I implemented useMemo and useCallback to ensure that functions and values ​​are recalculated only when necessary, preventing unnecessary renders.</li><li>I implemented <code>useMemo</code> and <code>useCallback</code> to ensure that functions and values ​​are recalculated only when necessary, preventing unnecessary renders.</li></ul>",
+            "repositoryUrl": "https://github.com/giullianoth/REST-Countries-API_Frontend-Mentor_React",
+            "deployUrl": "https://rest-countries-api-mu-azure.vercel.app/"
         },
-        "caseStudy": "<p>Este projeto surgiu de um <a href=\"https://youtu.be/9FwXqHSmWhw?si=b0f2nqX0C-QyWDcG\" target=\"_blank\" rel=\"noopener noreferrer\">vídeo tutorial do Descomplocando Sites</a>, onde é ensinado a criação de uma plataforma e-commerce voltada para a venda de semijóias, utilizando o CMS WordPress, junto com as extensões Elementor e WooCommerce.</p><p>Meu desafio aqui foi replicar as páginas desta plataforma utilizando HTML, CSS e JavaScript puros, a fim de construir cada estrutura detalhadamente, com código limpo e semântico, implementando algumas interações com o usuário, como a visualização de imagem do produto, escolha da quantidade e formulários na página de checkout.</p><p>Neste projeto eu coloquei em prática a utilização do preprocessador CSS (Sass), o que possibilita maior escalabilidade no desenvolvimento dos estilos, reaproveitamento de linhas de código e facilidade na manutenibilidade.</p>",
-        "repositoryUrl": "https://github.com/giullianoth/Armorel",
-        "deployUrl": "https://armorel.vercel.app/"
-    }
-]
+        {
+            "id": 2,
+            "name": "GitHub User Profile Search",
+            "description": "Developing an application that retrieves user data from GitHub via API.",
+            "featured": true,
+            "tech": [
+                "React",
+                "TypeScript",
+                "GitHub REST API"
+            ],
+            "images": {
+                "thumbDesktop": "github-profile-desktop-thumb.jpeg",
+                "thumbTablet": "github-profile-tablet-thumb.jpg",
+                "thumbMobile": "github-profile-mobile-thumb.jpg",
+                "desktop": "github-profile-desktop.jpeg",
+                "tablet": "github-profile-tablet.jpeg",
+                "mobile": "github-profile-mobile.jpeg",
+                "alt": "Screenshot of the GitHub User Profile Search project"
+            },
+            "caseStudy": "<p>This is a solution to the GitHub user search challenge from the <a href=\"https://devchallenges.io/challenge/github-profile\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a> platform. The project allows you to explore developer profiles using the <strong>official GitHub API</strong>, focusing on performance and user experience.</p><p>Users should be able to:</p><ul><li>Search GitHub users in real time with suggestions (Autocomplete).</li><li>View details such as Name, Bio, Avatar, and update date.</li><li>View the relative time of the last update (e.g., \"updated 4 days ago\").</li><li>Receive friendly alerts if the API request limit is reached.</li><li>Navigate using a responsive and optimized interface.</li></ul><p>This project uses a <strong>Personal Access Token (Classic)</strong> to increase the request limit from 60 to 5,000 per hour. The token was configured with null scopes (public access only) following the principle of least privilege for greater security.</p><p>This project allowed me to learn:</p><ul><li><strong>Intelligent API Consumption:</strong> I learned how to handle the asynchronous <code>fetch</code> behavior by combining list fetches with individual detail fetches using <code>Promise.all</code> to improve perceived speed.</li><li><strong>Rate Limit Management:</strong> I implemented an HTTP 403 error handling system to inform the user when the GitHub request limit expires, ensuring that the app doesn't \"break\" silently.</li><li><strong>Relative Time Logic:</strong> I developed a custom function to calculate the difference between dates and display human-readable formats (seconds, minutes, hours, or days), avoiding heavy external dependencies.</li></ul>",
+            "repositoryUrl": "https://github.com/giullianoth/GitHubProfile-DevChallenges",
+            "deployUrl": "https://github-profile-lac-zeta.vercel.app/"
+        },
+        {
+            "id": 3,
+            "name": "Étoile Bistrò",
+            "description": "Development of a premium interface for the food service industry, focusing on reservations and user experience.",
+            "featured": true,
+            "tech": [
+                "React",
+                "Mongo DB",
+                "Node JS"
+            ],
+            "images": {
+                "thumbDesktop": "etoile-desktop-thumb.png",
+                "thumbTablet": "etoile-tablet-thumb.png",
+                "thumbMobile": "etoile-mobile-thumb.png",
+                "desktop": "etoile-desktop.png",
+                "tablet": "etoile-tablet.png",
+                "mobile": "etoile-mobile.png",
+                "alt": "Screenshot of the Étoile Bistrò project"
+            },
+            "caseStudy": "<p>This project was a practical Front-end Development exercise to create a new layout version for the Fullstack project taught <a href=\"https://www.youtube.com/watch?v=g-NjMVMFARg&list=PL45Hr6NzteIJQyvk6v0T78Ye8IsGm0mYS\" target=\"_blank\" rel=\"noopener noreferrer\">in this tutorial by Eduardo Pazitto</a>, focusing on responsiveness and semantics.</p><p>Since the main objective of the tutorial is the use of NodeJS, database connection, and API communication, there was no major concern in developing a hierarchically structured code, although some usability concepts, such as responsive design, were mentioned and applied.</p><p>With this in mind, I decided to combine the communication dynamics of the front-end with the back-end and the concepts of UX/UI best practices, using, for now, pure React, with modular styling and componentization.</p><p><strong>Note:</strong> The deployment is still the version with static HTML.</p>",
+            "repositoryUrl": "https://github.com/giullianoth/Etoile-React",
+            "deployUrl": "https://etoile-psi.vercel.app/"
+        },
+        {
+            "id": 4,
+            "name": "Country Quiz",
+            "description": "Question and answer application about countries of the world.",
+            "featured": false,
+            "tech": [
+                "React",
+                "Next JS",
+                "TypeScript",
+                "Axios",
+                "Rest Countries API"
+            ],
+            "images": {
+                "thumbDesktop": "country-quiz-desktop-thumb.jpeg",
+                "thumbTablet": "country-quiz-tablet-thumb.jpeg",
+                "thumbMobile": "country-quiz-mobile-thumb.jpeg",
+                "desktop": "country-quiz-desktop.jpeg",
+                "tablet": "country-quiz-tablet.jpeg",
+                "mobile": "country-quiz-mobile.jpeg",
+                "alt": "Screenshot of the Country Quiz app"
+            },
+            "caseStudy": "<p>This is a quiz solution proposed by the <a href=\"https://devchallenges.io/challenge/country-quizz\" target=\"_blank\" rel=\"noopener noreferrer\">devchallenges.io</a> platform. It's a dynamic and interactive quiz game focused on geographical knowledge. The application uses real-time data from the <a href=\"https://restcountries.com/\" target=\"_blank\" rel=\"noopener noreferrer\">REST Countries API</a> to generate random questions about flags, capitals, currencies, regions, and languages ​​of countries around the world. Developed with Next.js and TypeScript, the project focuses on a fluid user experience and robust state logic.</p><p>Users should be able to:</p><ul><li>View questions with multiple options.</li><li>Answer a question and see in real time if it's correct or incorrect.</li><li>Browse through previously answered questions.</li><li>View the congratulations page and the quiz results.</li></ul><p>The project was built with:</p><ul><li><strong>Next.js 15</strong> - Client/Server side components.</li><li><strong>React 19</strong> - Using the new React Compiler for automatic memorization.</li><li><strong>TypeScript</strong> - Interfaces for API typing.</li><li><strong>Axios</strong> - Actual data usage.</li><li><strong>REST COUNTRIES API</strong> - Custom instances and global request management.</li><li><strong>CSS Modules</strong> - Isolated and scalable styling.</li></ul><p>This project allowed me to learn:</p><ul><li><strong>Complex State Management:</strong> Implementation of quiz logic centralized in Custom Hooks, facilitating communication between components and controlling the game flow.</li><li><strong>API Consumption with Axios:</strong> Handling asynchronous data and processing complex payloads from the REST Countries API to transform them into secure TypeScript interfaces.</li><li><strong>Randomization Algorithms:</strong> Creating logic to select countries and dynamically generate \"distractors\" (incorrect options), ensuring that the quiz is never repeated in the same way.</li><li><strong>User Experience (UX):</strong> Using timers (<code>setTimeout</code>) and loading states to create a smooth transition between the user's response and the next question.</li><li><strong>Scalability with TypeScript:</strong> Defining rigorous interfaces for question templates and geographic data, preventing errors during development.</li></ul>",
+            "repositoryUrl": "https://github.com/giullianoth/CountryQuiz-DevChallenges",
+            "deployUrl": "https://country-quiz-sigma.vercel.app/"
+        },
+        {
+            "id": 5,
+            "name": "Armorel",
+            "description": "Development of an online store layout for costume jewelry.",
+            "featured": false,
+            "tech": [
+                "Sass",
+                "JavaScript"
+            ],
+            "images": {
+                "thumbDesktop": "armorel-desktop-thumb.jpeg",
+                "thumbTablet": "armorel-tablet-thumb.jpeg",
+                "thumbMobile": "armorel-mobile-thumb.png",
+                "desktop": "armorel-desktop.jpeg",
+                "tablet": "armorel-tablet.jpeg",
+                "mobile": "armorel-mobile.png",
+                "alt": "Screenshot of the Armorel project."
+            },
+            "caseStudy": "<p>This project originated from a <a href=\"https://youtu.be/9FwXqHSmWhw?si=b0f2nqX0C-QyWDcG\" target=\"_blank\" rel=\"noopener noreferrer\">tutorial video by Descomplocando Sites</a>, which teaches how to create an e-commerce platform for selling costume jewelry using the WordPress CMS, along with the Elementor and WooCommerce extensions.</p><p>My challenge here was to replicate the pages of this platform using pure HTML, CSS, and JavaScript, in order to build each structure in detail, with clean and semantic code, implementing some user interactions, such as displaying product images, choosing the quantity, and forms on the checkout page.</p><p>In this project, I implemented the use of the CSS preprocessor (Sass), which allows for greater scalability in style development, reuse of code lines, and ease of maintainability.</p>",
+            "repositoryUrl": "https://github.com/giullianoth/Armorel",
+            "deployUrl": "https://armorel.vercel.app/"
+        }
+    ]
+}
