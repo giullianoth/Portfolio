@@ -28,6 +28,7 @@
 
         &__container {
             @include flex(space-between, center, nowrap);
+            gap: 20px;
             padding-block: 0 !important;
             @include container;
         }
@@ -38,12 +39,30 @@
             }
         }
 
+        &__language {
+            @include containerFluid;
+            @include flex(flex-end);
+            gap: 8px;
+
+            @include setResponsiveDesign(var.$breakpoint-large) {
+                width: auto;
+                order: 3;
+            }
+
+            .th-button {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
         &__navigation {
             @include transition;
             padding-block: 20px;
 
             @include setResponsiveDesign(var.$breakpoint-large) {
                 padding: 0 !important;
+                @include containerFluid;
+                @include flex(flex-end);
             }
 
             &.menu-open {

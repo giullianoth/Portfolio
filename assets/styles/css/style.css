@@ -310,6 +310,10 @@ i.fa-brands {
 .th-button.clear:hover {
   color: #E0E0E0 !important;
 }
+.th-button.small {
+  font-size: 0.7em;
+  padding: 6px 16px;
+}
 .th-modal {
   position: fixed;
   top: 0;
@@ -631,6 +635,7 @@ i.fa-brands {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  gap: 20px;
   padding-block: 0 !important;
   max-width: 1300px;
   padding-inline: 20px;
@@ -645,6 +650,24 @@ i.fa-brands {
 .th-header__logo img {
   width: 36px;
 }
+.th-header__language {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media screen and (min-width: 62em) {
+  .th-header__language {
+    width: auto;
+    order: 3;
+  }
+}
+.th-header__language .th-button {
+  width: 26px;
+  height: 26px;
+}
 .th-header__navigation {
   transition: all 0.3s ease 0s;
   padding-block: 20px;
@@ -652,6 +675,11 @@ i.fa-brands {
 @media screen and (min-width: 62em) {
   .th-header__navigation {
     padding: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 .th-header__navigation.menu-open .th-header__icon-bar {

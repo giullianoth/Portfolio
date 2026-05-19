@@ -243,6 +243,11 @@ i.fa-brands {
                 color: var.$color-text !important;
             }
         }
+
+        &.small {
+            font-size: 0.7em;
+            padding: 6px 16px;
+        }
     }
 
     &modal {
