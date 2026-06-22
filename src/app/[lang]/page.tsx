@@ -9,12 +9,17 @@ import Footer from "@/components/Footer";
 import { ContentByLanguage, LanguageProps } from "@/types/language";
 import { Metadata } from "next";
 import { metadataDescription, metadataKeywords, metadataOgDescription, metadataTitle } from "@/data/page-content/metadata";
+import { headers } from "next/headers"
+import { urlByEnvironment } from "@/data/page-url";
 
 type Props = {
   params: Promise<LanguageProps>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const headersList = await headers();
+  const url = urlByEnvironment(headersList.get("host")!);
+
   const { lang } = await params;
   const langKey = lang ? lang : "pt" as keyof ContentByLanguage;
 
@@ -33,10 +38,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: currentTitle,
       description: currentOgDescription,
       type: "website",
-      url: `https://tharsoweb.com.br/${langKey}`,
+      url: `${url}/${langKey}`,
       images: [
         {
-          url: "https://tharsoweb.com.br/assets/images/social_share_image.jpg",
+          url: `${url}/public/images/social_share_image.jpg`,
           width: 1200,
           height: 630,
           alt: currentTitle,
@@ -50,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: "@giullianoth",
       title: currentTitle,
       description: currentOgDescription,
-      images: ["https://tharsoweb.com.br/assets/images/social_share_image.jpg"],
+      images: [`${url}/public/images/social_share_image.jpg`],
     },
     icons: {
       icon: "/images/favicon.ico",
