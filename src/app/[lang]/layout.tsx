@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import "../globals.css";
 import { metadataDescription } from "@/data/page-content/metadata";
-import { LanguageProps } from "@/types/language";
+import { ContentByLanguage } from "@/types/language";
 
 type Props = {
   children: React.ReactNode;
-  params: Promise<LanguageProps>;
+  params: Promise<{ lang: string }>;
 };
 
 const montserrat = Montserrat({
@@ -26,7 +26,8 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children, params }: Props) {
-  const { lang } = await params;
+  const resolvedParams = await params;
+  const lang = resolvedParams.lang as keyof ContentByLanguage;
 
   return (
     <html
