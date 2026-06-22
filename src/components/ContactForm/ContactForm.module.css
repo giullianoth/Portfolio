@@ -1,0 +1,26 @@
+.form__fieldErrorMessage,
+.form__successMessage,
+.form__errorMessage {
+    display: block;
+    padding: 6px 12px;
+}
+
+.form__fieldErrorMessage {
+    font-size: 0.8em;
+    background-color: var(--color-error);
+    padding: 2px 6px;
+}
+
+.form__successMessage {
+    background-color: var(--color-success);
+}
+
+.form__errorMessage {
+    background-color: var(--color-error);
+}
+
+@media screen and (max-width: 36em) {
+    .form button {
+        font-size: 0.8em;
+    }
+}

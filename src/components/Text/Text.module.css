@@ -1,0 +1,38 @@
+.text {
+    p, li {
+        line-height: 1.3;
+        font-weight: 300;
+    }
+
+    p:not(:last-child), ul:not(:last-child), ol:not(:last-child), li:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-block: 20px;
+    }
+
+    ul, ol {
+        padding-left: 40px;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ol li {
+        list-style: decimal;
+    }
+
+    strong {
+        font-weight: 700
+    }
+
+    a {
+        color: var(--color-primary);
+    }
+
+    a:not(:has(svg)):hover {
+        text-decoration: underline;
+    }
+}

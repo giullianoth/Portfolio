@@ -1,0 +1,17 @@
+.brand {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-size: 1em;
+    font-family: var(--font-plus-jakarta-sans);
+    font-weight: 400;
+}
+
+.brand.spaced {
+    letter-spacing: 0.2em;
+}
+
+@media screen and (min-width: 36em) {
+    .brand {
+        font-size: 1.4em;
+    }
+}

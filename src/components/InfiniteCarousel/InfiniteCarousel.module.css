@@ -1,0 +1,38 @@
+.carousel {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.carousel__group {
+    display: flex;
+}
+
+.carousel__group.left {
+    animation: spin_to_left linear infinite;
+}
+
+.carousel__group.right {
+    animation: spin_to_right linear infinite;
+}
+
+@keyframes spin_to_left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes spin_to_right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

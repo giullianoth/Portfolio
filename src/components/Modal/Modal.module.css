@@ -1,0 +1,118 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    background: transparent;
+    transition: opacity 0.3s ease, visibility 0.3s ease, display 0.3s ease allow-discrete;
+    opacity: 0;
+    visibility: hidden;
+    border: none;
+    padding: 20px;
+    color: inherit;
+    display: none;
+}
+
+.modal[open] {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal::backdrop {
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, display 0.3 ease allow-discrete;
+}
+
+.modal[open]::backdrop {
+    background-color: var(--color-background-overlay);
+    backdrop-filter: blur(8px);
+}
+
+.modal.closing::backdrop {
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.modal.closing {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal__close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 0.7em;
+}
+
+.modal__container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin-inline: auto;
+    background-color: var(--color-background-secondary);
+    height: calc(100vh - 40px);
+    border: 2px solid var(--color-text-support);
+    padding: 20px;
+}
+
+.modal__content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 3px;
+}
+
+.modal__content.fixed {
+    overflow: hidden;
+    padding: 0;
+}
+
+.modal__content h2 {
+    font-size: 1.4em;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+@starting-style {
+    .modal[open] {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .modal[open]::backdrop {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .modal {
+        padding: 40px;
+    }
+
+    .modal__container {
+        height: calc(100vh - 80px);
+    }
+
+    .modal__content h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .modal__close {
+        font-size: 1em;
+        top: 20px;
+        right: 20px;
+    }
+}

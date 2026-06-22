@@ -1,168 +1,120 @@
-# Giulliano Tharso - Portfólio
+# Giulliano Guimarães | Portfolio
 
-[![HTML 5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-[![CSS 3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![Sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)](https://sass-lang.com/)
+- Disponível em | Available in: **Português - BR | English**
 
----
-**Disponível em | _Avaliable in_: Português - BR | _English_**
-
-<Introdução>
-
-*<Introdução>*
-
-## Conteúdo | Content
-
-- [Status do projeto | Project status](#status-do-projeto--project-status)
-- [Layout](#layout)
-- [Tecnologias utilizadas | Technologies used](#tecnologias-utilizadas--technologies-used)
-- [Como instalar | How to install](#como-instalar--how-to-install)
-- [Autor | Author](#autor--author)
+> Site pessoal de portfólio bilingue focado em alta performance, desenvolvido com Next.js (App Router), TypeScript e focado em práticas modernas de UX/UI.
+>
+> *A high-performance, bilingual personal portfolio website developed with Next.js (App Router), TypeScript, and focused on modern UX/UI practices.*
 
 ---
 
-## Status do projeto | Project status
+## 🚀 Tecnologias e Ferramentas | *Technologies and Tools*
 
-Layout do projeto finalizado, com algumas funcionalidades a serem implementadas. Aberto a correções e propostas de melhoria.
+O projeto foi construído utilizando o ecossistema mais moderno do ecossistema React/Next.js:
 
-*Finished project layout, with some features to be implemented. Open to corrections and suggestions for improvement.*
+* **Framework:** [Next.js](https://nextjs.org/) (App Router)
+* **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+* **Estilização:** CSS Modules (com foco em arquitetura Mobile-First e Semântica HTML)
+* **Validação de Dados:** [Zod](https://zod.dev/)
+* **E-mails** [EmailJS](https://www.emailjs.com/) (Integração segura via Node.js Server Actions)
+* **Ícones** [React Icons](https://react-icons.github.io/react-icons/) (Otimizado via tree-shaking)
 
-## Layout
+*The project was built using the most modern ecosystem of the React/Next.js ecosystem:*
 
-Construído a partir do método *mobile-first*, o projeto é responsivo, ou seja, é adaptável aos mais variados tamanhos e resoluções de telas, conforme demonstrado a seguir.
-
-*Built from the mobile-first method, the project is responsive, that is, it is adaptable to the most varied sizes and screen resolutions, as shown below.*
-
-![Captura de tela em 375px | Screenshot in 375px]()
-
-Captura de tela em 375px | Screenshot in 375px
-
----
-
-![Captura de tela em 768px | Screenshot in 768px]()
-
-Captura de tela em 768px | Screenshot in 768px
+* *__Framework:__ [Next.js](https://nextjs.org/) (App Router)*
+* *__Language:__ [TypeScript](https://www.typescriptlang.org/)*
+* *__Styling:__ CSS Modules (with a focus on Mobile-First architecture and HTML semantics)*
+* *__Data Validation:__ [Zod](https://zod.dev/)*
+* *__Emails:__ [EmailJS](https://www.emailjs.com/) (Secure integration via Node.js Server Actions)*
+* *__Icons:__ [React Icons](https://react-icons.github.io/react-icons/) (Optimized via tree-shaking)*
 
 ---
 
-![Captura de tela em 1440px | Screenshot in 1440px]()
+## 💎 Diferenciais Técnicos & Performance | *Technical Advantages & Performance*
 
-Captura de tela em 1440px | Screenshot in 1440px
+Este projeto foi desenhado sob rígidos padrões de engenharia de software para garantir pontuações máximas no **Google PageSpeed Insights**:
+
+* **Internacionalização Dinâmica (i18n):** Arquitetura escalável baseada em Rotas Dinâmicas (`/[lang]`), unificando o código estrutural para renderização em múltiplos idiomas (PT-BR / EN) sem duplicação de componentes.
+* **Server Actions & Segurança:** Gerenciamento de formulários utilizando o hook `useActionState` nativo do React. O envio de e-mails via EmailJS é processado estritamente no lado do servidor (`"use server"`), ocultando chaves privadas e tokens contra engenharia reversa no cliente.
+* **Otimização Extrema de Recursos:** 
+    * Remoção completa de scripts de terceiros e CDNs pesadas (como fontes injetadas e scripts do Font Awesome).
+    * Uso do pacote nativo `next/font` para auto-hospedar e otimizar fontes do Google localmente durante o build, eliminando *Layout Shifts* (CLS) e reduzindo o tempo de carregamento no mobile.
+* **Persistência de Dados (UX):** Formulários inteligentes que mantêm os dados digitados na tela utilizando propriedades `defaultValue` em cenários de falha na validação, prevenindo retrabalho de digitação por parte do usuário.
+
+*This project was designed under strict software engineering standards to ensure top scores in __Google PageSpeed ​​Insights__:*
+
+* *__Dynamic Internationalization (i18n):__ Scalable architecture based on Dynamic Routes (`/[lang]`), unifying the structural code for rendering in multiple languages ​​(PT-BR / EN) without component duplication.*
+* *__Server Actions & Security:__ Form management using React's native `useActionState` hook. Sending emails via EmailJS is processed strictly on the server side (`"use server"`), hiding private keys and tokens from reverse engineering on the client.*
+* *__Extreme Resource Optimization:__* 
+    * *Complete removal of third-party scripts and heavy CDNs (such as injected fonts and Font Awesome scripts).*
+    * *Using the native `next/font` package to self-host and optimize Google fonts locally during build, eliminating* Layout Shifts *(CLS) and reducing mobile loading times.*
+* *__Data Persistence (UX):__ Intelligent forms that retain data entered on the screen using `defaultValue` properties in validation failure scenarios, preventing users from having to re-enter their data.*
 
 ---
 
-Você também pode conferir a página acessando este link: [https://tharsoweb.vercel.app/](https://tharsoweb.vercel.app/).
+## 🛠️ Como Executar Localmente | *How to Run Locally*
 
-**Observação:** Por se tratar de um projeto para fins acadêmicos, os links contidos na página não funcionarão, exceto os dois últimos localizados no rodapé e os botões para determinada ação.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/giullianoth/portfolio.git
+   ```
 
-*You can also check the page by accessing this link: [https://tharsoweb.vercel.app/](https://tharsoweb.vercel.app/).*
-
-*__Note:__ As it is a project for academic purposes, the links contained on the page will not work, except for the last two located in the footer and the buttons for a certain action.*
-
-## Tecnologias utilizadas | Technologies used
-
-Foram utilizadas as seguintes tecnologias para a construção desta página:
-
-*The following technologies were used to build this page:*
-
-- [HTML 5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [CSS 3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [Sass](https://sass-lang.com/)
-
-Vale lembrar que foram aplicados o uso de tags semânticas ao HTML, para tornar a página com acessibilidade facilitada e seguir as boas práticas do desenvolvimento web.
-
-O uso do preprocessador CSS (nesse caso o Sass) torna mais produtiva a aplicação das folhas de estilo, o que possibilita a manutenibilidade posteriormente.
-
-*It is worth remembering that the use of semantic tags was applied to the HTML, to make the page easier to access and follow the good practices of web development.*
-
-*Using the CSS preprocessor (in this case Sass) makes the application of stylesheets more productive, which enables later maintainability.*
-
-## Como instalar | How to install
-
-Para baixar e instalar o projeto no seu computador, siga os seguintes passos:
-
-- Instale o editor [VS Code](https://code.visualstudio.com/) (recomendo fortemente, mas se há outro editor do seu gosto, não tem problema) e abra o projeto nele.
-- Se você está usando VS Code, instale a extensão "[Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)", ela que vai converter seu Sass em CSS. Após instalado:
-    - Clique no ícone de engrenagem, depois em "Configurações de extensão" e depois em "settins.json";
-    - Em ```settings.json``` acrescente os seguintes parâmetros:
-    ```json
-    "liveSassCompile.settings.formats":[ 
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "assets/styles/css"
-        },
-        {
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "assets/styles/css"
-        },
-    ]
-    ```
-    - Depois, na parte inferior do editor, clique em "Watch Sass".
-- Se você não está usando VS Code, você precisa instalar o [Node JS](https://nodejs.org/en) para usar o Sass.
-    - Depois de instalar o Node JS, abra o prompt de comando e navegue até o diretório do projeto.
-    ```
-    cd [caminho do projeto]
-    ```
-    - Instale o Sass com o ```npm```.
-    ```
-    npm install -g sass
-    ```
-    - Ative o compilador com o seguinte comando: (Para criar a versão minificada do CSS utilize a flag ```--style=compressed```)
-    ```
-    sass assets/styles/scss/style.scss:assets/styles/css/style.css --watch
-    ```
-- **Importante:** o projeto usa JavaScript em módulos, ou seja, vários arquivos modulares conversando entre si. Dessa forma, seu funcionamento não se dará pela execução direta do ```index.html``` (abrindo-o direto no navegador), mas sim por meio de sua execução em um servidor local. Se você usa o VS Code, instale a extensão [Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) e execute clicando no botão "Go Live". Caso não utilize o VS Code, uma alternativa é instalar o [XAMPP](https://www.apachefriends.org/pt_br/index.html) ou usar o [Node JS](https://nodejs.org/en).
-- Divirta-se!
-
-*To download and install the project on your computer, follow these steps:*
-
-- *Install the [VS Code](https://code.visualstudio.com/) editor (I highly recommend it, but if there's another editor you like, no problem) and open the project in it.*
-- *If you are using VS Code, install the "[Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)" extension, which will convert your Sass into CSS. After installed:*
-    - *Click on the gear icon, then on "Extension settings" and then on "settins.json";*
-    - *In ```settings.json``` add the following parameters:*
-    ```json
-    "liveSassCompile.settings.formats":[ 
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "assets/styles/css"
-        },
-        {
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "assets/styles/css"
-        },
-    ]
-    ```
-    - *Then, at the bottom of the editor, click on "Watch Sass".*
-- *If you are not using VS Code, you need to install [Node JS](https://nodejs.org/en) to use Sass.*
-    - *After installing Node JS, open the command prompt and navigate to your project directory.*
-    ```
-    cd [project path]
-    ```
-    - *Install Sass with ```npm```.*
-    ```
-    npm install -g sass
-    ```
-    - *Activate the compiler with the following command: (To create the minified version of the CSS use the flag ```--style=compressed```)*
-    ```
-    sass assets/styles/scss/style.scss:assets/styles/css/style.css --watch
+2. Instale as dependências do projeto:
+    ```bash
+    npm install
     ```
 
-- *__Important:__ the project uses JavaScript in modules, that is, several modular files talking to each other. In this way, its operation will not occur by direct execution of index.html (opening it directly in the browser), but by means of its execution on a local server. If you use VS Code, install the [Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension and run it by clicking the "Go Live" button. If you don't use VS Code, an alternative is to install [XAMPP](https://www.apachefriends.org/pt_br/index.html) or use [Node JS](https://nodejs.org/en).*
-- *Enjoy it!*
+3. Crie um arquivo ```.env.local``` na raiz do projeto e configure as chaves do seu serviço EmailJS:
+    ```
+    EMAILJS_SERVICE_ID=seu_service_id
+    EMAILJS_TEMPLATE_ID=seu_template_id
+    EMAILJS_PUBLIC_KEY=sua_public_key
+    EMAILJS_PRIVATE_KEY=sua_private_key
+    ```
 
-## Autor | Author
+4. Execute o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
+
+5. Abra http://localhost:3000 no seu navegador.
+
+---
+
+
+1. *Clone this repository:*
+   ```bash
+   git clone https://github.com/giullianoth/portfolio.git
+   ```
+
+2. *Install the project dependencies:*
+    ```bash
+    npm install
+    ```
+
+3. *Create a `.env.local` file in the project root and configure the keys for your EmailJS service:*
+    ```
+    EMAILJS_SERVICE_ID=your_service_id
+    EMAILJS_TEMPLATE_ID=your_template_id
+    EMAILJS_PUBLIC_KEY=your_public_key
+    EMAILJS_PRIVATE_KEY=your_private_key
+    ```
+
+4. *Run the development server:*
+    ```bash
+    npm run dev
+    ```
+
+5. *Open http://localhost:3000 in your browser.*
+
+---
+
+## Autor | *Author*
 
 Feito com :heart: por este cara sonhador:
 
 *Made with :heart: by this dreamy guy:*
 
 | <img src="https://avatars.githubusercontent.com/u/106249494?v=4" width="100px" style="border-radius: 50%"> **Giulliano Guimarães** |
-| ---------------------------------------------------------------------------------------------------------------------------------- |
+| --- |
 |[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/giullianoth) [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/giullianoth/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giullianoth/) [![GMail](https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white)](mailto:llthguimaraes@gmail.com) |
----

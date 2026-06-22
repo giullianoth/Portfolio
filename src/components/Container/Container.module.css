@@ -1,0 +1,12 @@
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: var(--section-clearance-mobile) var(--side-clearance);
+    margin-inline: auto;
+}
+
+@media screen and (min-width: 36em) {
+    .container {
+        padding-block: var(--section-clearance);
+    }
+}

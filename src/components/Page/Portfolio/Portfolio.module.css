@@ -1,0 +1,19 @@
+.portfolio {
+    width: 100%;
+}
+
+.portfolio__cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.portfolio__cta button {
+    width: 100%;
+    max-width: fit-content;
+}
+
+@media screen and (min-width: 62em) {
+    .portfolio__project:last-child {
+        display: none;
+    }
+}

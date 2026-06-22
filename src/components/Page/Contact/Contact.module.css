@@ -1,0 +1,73 @@
+.contact {
+    width: 100%;
+}
+
+.contact__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 600px !important;
+}
+
+.contact__wrapper {
+    flex-basis: 100%;
+}
+
+.contact__wrapper header {
+    margin-bottom: 40px;
+}
+
+.contact__channel {
+    color: var(--color-primary);
+}
+
+.contact__channel:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contact__channel a, .contact__channel p {
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact__channel a:hover,
+.contact__channel p:hover {
+    opacity: 1;
+}
+
+.contact__channel svg {
+    flex-basis: 40px;
+}
+
+.contact__channel a .contact__channelLabel {
+    flex-basis: calc(100% - 40px - 12px);
+}
+
+.contact__channelAlternative {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (min-width: 62em) {
+    .contact__container {
+        max-width: var(--container-width) !important;
+    }
+
+    .contact__wrapper {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .contact__channel a {
+        opacity: 0.6;
+    }
+
+    .contact__channel p svg {
+        transform: rotate(270deg);
+    }
+}
