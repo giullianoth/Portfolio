@@ -2,7 +2,7 @@ import { LanguageProps } from "@/types/language";
 import styles from "./Skills.module.css";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaPenNib } from "react-icons/fa";
 import { frontendSkills, frontendSkillsDescription, frontendSkillsLabel, skillsTagline, skillsTitle, webDesignSkills, webDesignSkillsDescription, webDesignSkillsLabel } from "@/data/page-content/skills";
 import Grid from "@/components/Grid";
 
@@ -37,7 +37,7 @@ export default function Skills({ lang = "pt" }: LanguageProps) {
 
                     <Card
                         title="Web Design (UX/UI)"
-                        titleIcon={<FaCode />}
+                        titleIcon={<FaPenNib />}
                         badgeItems={webDesignSkillsContent}
                         content={webDesignSkillsDescription[lang]}
                         ariaLabel={webDesignSkillsLabel[lang]}
