@@ -31,7 +31,9 @@
   --transition: all 0.3s ease;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -71,7 +73,12 @@ body.mo-scroll {
   padding-right: var(--scrollbar-width);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-montserrat);
   color: var(--color-title);
 }
@@ -128,7 +135,8 @@ code {
   border-radius: 2px;
 }
 
-input, textarea {
+input,
+textarea {
   -webkit-appearance: none;
   appearance: none;
   font-family: inherit;
@@ -142,7 +150,8 @@ input, textarea {
   resize: none;
 }
 
-input.secondary-background, textarea.secondary-background {
+input.secondary-background,
+textarea.secondary-background {
   background-color: var(--color-background-secondary);
 }
 
@@ -228,8 +237,8 @@ svg {
 }
 
 .button.large {
-  font-size: 1.4em;
-  padding-block: 18px;
+  font-size: 1.2em;
+  padding-block: 14px;
 }
 
 .button.small {
@@ -256,7 +265,9 @@ svg {
 /* RESPONSIVE DESIGN */
 
 @media screen and (min-width: 36em) {
-  form button, form input[type=submit] {
+
+  form button,
+  form input[type=submit] {
     flex-basis: unset;
     margin-inline: auto
   }
@@ -277,7 +288,9 @@ svg {
 }
 
 @media screen and (min-width: 62em) {
-  form button, form input[type=submit] {
+
+  form button,
+  form input[type=submit] {
     margin: 0;
   }
 
@@ -290,5 +303,10 @@ svg {
   .tagline {
     margin-inline: 0;
     text-align: left;
+  }
+
+  .button.large {
+    font-size: 1.4em;
+    padding-block: 18px;
   }
 }
